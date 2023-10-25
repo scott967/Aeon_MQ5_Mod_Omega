@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Aeon MQ 5 Helix 6.1.9 -->
+<!-- Isengard 7.1.10 -->
+<!-- Krypton 9.1.15/9.2.3 -->
+<!-- Leia 10.3.0/10.6.0 -->
+<!-- Matrix 11.3.0 -->
+<!-- Nexus 12.3.0/12.5.0 -->
+<window>
+	<controls>
+		<control type="group">
+			<include>Animation_TopDialogPopup</include>
+			<include>Dialogs_DoubleBar</include>
+			<control type="label" id="1">
+				<include>Dialogs_Label1</include>
+			</control>
+			<control type="textbox" id="9">
+				<include>DialogTextBox</include>
+				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+				<label></label>
+			</control>
+			<control type="grouplist">
+				<orientation>horizontal</orientation>
+				<align>center</align>
+				<left>0</left>
+				<top>45</top>
+				<width>1920</width>
+				<control type="button" id="10">
+					<!-- no/canx -->
+					<height>44</height>
+					<width>225</width>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>FFFFFAF0</textcolor>
+					<focusedcolor>FF101010</focusedcolor>
+					<font>Font_18A</font>
+					<label>106</label>
+					<textoffsetx>0</textoffsetx>
+					<textwidth>270</textwidth>
+					<texturefocus>settings_button_focus.png</texturefocus>
+					<texturenofocus></texturenofocus>
+					<onleft>11</onleft>
+					<onright>11</onright>
+					<onup>11</onup>
+					<ondown>11</ondown>
+				</control>
+				<control type="button" id="11">
+					<!-- yes -->
+					<height>44</height>
+					<width>225</width>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>FFFFFAF0</textcolor>
+					<focusedcolor>FF101010</focusedcolor>
+					<font>Font_18A</font>
+					<label>107</label>
+					<textoffsetx>0</textoffsetx>
+					<textwidth>270</textwidth>
+					<texturefocus>settings_button_focus.png</texturefocus>
+					<texturenofocus></texturenofocus>
+					<onleft>10</onleft>
+					<onright>10</onright>
+					<onup>10</onup>
+					<ondown>10</ondown>
+				</control>
+				<control type="button" id="12">
+					<!-- extra / unused -->
+					<height>44</height>
+					<width>225</width>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>FFFFFAF0</textcolor>
+					<focusedcolor>FF101010</focusedcolor>
+					<font>Font_18A</font>
+					<label></label>
+					<textoffsetx>0</textoffsetx>
+					<textwidth>270</textwidth>
+					<texturefocus>settings_button_focus.png</texturefocus>
+					<texturenofocus></texturenofocus>
+					<onleft>10</onleft>
+					<onright>10</onright>
+					<onup>10</onup>
+					<ondown>10</ondown>
+				</control>
+			</control>
+			<control type="progress" id="20">
+				<!-- was 404? -->
+				<top>90</top>
+				<include>Dialogs_Progress</include>
+				<info>System.Progressbar</info>
+			</control>
+			<control type="label">
+				<left>910</left>
+				<top>1</top>
+				<width>100</width>
+				<height>52</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>$VAR[value_headercolor]</textcolor>
+				<font>Font_18A</font>
+				<!-- <scroll>true</scroll> -->
+				<label>$INFO[System.Progressbar,,%]</label>
+			</control>
+		</control>
+	</controls>
+</window>

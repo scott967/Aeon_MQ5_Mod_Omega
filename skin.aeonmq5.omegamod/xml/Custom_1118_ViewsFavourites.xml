@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Nexus 12.4.0 new window favourites -->
+
+
+<window id="1118" type="dialog">
+	<defaultcontrol always="true">9030</defaultcontrol>
+	<onunload condition="Container.Content(favourites)">AlarmClock(refreshview,ActivateWindowAndFocus(favouritesbrowser, 9940,0),0:01,true)</onunload>
+	<controls>
+		<control type="group">
+			<include>Animation_DialogPopup</include>
+			<control type="image">
+				<left>165</left>
+				<top>0</top>
+				<width>45</width>
+				<height>1080</height>
+				<texture flipx="true">shadow.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<left>1710</left>
+				<top>0</top>
+				<width>45</width>
+				<height>1080</height>
+				<texture>shadow.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<left>210</left>
+				<top>0</top>
+				<width>1500</width>
+				<height>1080</height>
+				<texture>darkgrey.png</texture>
+				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+				<include>Animation_DefaultGlass</include>
+			</control>
+			<control type="image">
+				<left>210</left>
+				<top>0</top>
+				<width>1500</width>
+				<height>120</height>
+				<texture>black.png</texture>
+				<colordiffuse>90FFFFFF</colordiffuse>
+			</control>
+			<control type="label">
+				<left>322</left>
+				<top>8</top>
+				<width>1278</width>
+				<height>45</height>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>31479</label>
+				<font>Font_32</font>
+				<textcolor>FFFFFAF0</textcolor>
+			</control>
+			<control type="label">
+				<left>322</left>
+				<top>68</top>
+				<width>1278</width>
+				<height>45</height>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>31140</label>
+				<font>Font_18A</font>
+				<textcolor>FFFFFAF0</textcolor>
+			</control>
+			<control type="grouplist" id="9030">
+				<left>210</left>
+				<top>150</top>
+				<width>1500</width>
+				<height>900</height>
+				<itemgap>0</itemgap>
+				<onleft>Dialog.Close(1118)</onleft>
+				<onright>Dialog.Close(1118)</onright>
+				<control type="button" id="19299">
+					<!-- Enable all -->
+					<include content="content_views_favourites">
+						<param name="content">$INFO[Container.Content]</param>
+					</include>
+					<!-- <radioposx>1341</radioposx> -->
+					<label>188</label>
+					<!-- <selected>Skin.HasSetting(viewsets_video)</selected> -->
+				</control>
+				<control type="radiobutton" id="19254">
+					<!-- Poster -->
+					<!-- 54 -->
+					<radioposx>1341</radioposx>
+					<label>31808</label>
+					<onclick>Skin.ToggleSetting(viewposter_favourites)</onclick>
+					<selected>Skin.HasSetting(viewposter_favourites)</selected>
+				</control>
+				<control type="radiobutton" id="19255">
+					<!-- Low List -->
+					<!-- 55 -->
+					<radioposx>1341</radioposx>
+					<label>31807</label>
+					<onclick>Skin.ToggleSetting(viewlowlist_favourites)</onclick>
+					<selected>Skin.HasSetting(viewlowlist_favourites)</selected>
+				</control>
+				<control type="radiobutton" id="19256">
+					<!-- Wall -->
+					<!-- 56 -->
+					<radioposx>1341</radioposx>
+					<label>31805</label>
+					<onclick>Skin.ToggleSetting(viewwall_favourites)</onclick>
+					<selected>Skin.HasSetting(viewwall_favourites)</selected>
+				</control>
+				<control type="radiobutton" id="19259">
+					<!-- RightList -->
+					<!-- 59 -->
+					<radioposx>1341</radioposx>
+					<label>31828</label>
+					<onclick>Skin.ToggleSetting(viewrightlist_favourites)</onclick>
+					<selected>Skin.HasSetting(viewrightlist_favourites)</selected>
+				</control>
+				<control type="radiobutton" id="19262">
+					<!-- Panel -->
+					<!-- 62 -->
+					<radioposx>1341</radioposx>
+					<label>31818</label>
+					<onclick>Skin.ToggleSetting(viewpanel_favourites)</onclick>
+					<selected>Skin.HasSetting(viewpanel_favourites)</selected>
+				</control>
+				<control type="radiobutton" id="19258">
+					<!-- CoverFlow -->
+					<!-- 58 -->
+					<radioposx>1341</radioposx>
+					<label>31810</label>
+					<onclick>Skin.ToggleSetting(viewcoverflow_favourites)</onclick>
+					<selected>Skin.HasSetting(viewcoverflow_favourites)</selected>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>
