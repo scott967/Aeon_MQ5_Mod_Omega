@@ -9,7 +9,7 @@
 <includes>
 	<!-- ################################################ Value/General ################################################ -->
 	<variable name="SkinVersion">
-		<value>12.7.0 Nexusmod[COLOR=80FFFFFF] | [/COLOR]02/28/2023</value>
+		<value>13.7.0 Omegamod[COLOR=80FFFFFF] | [/COLOR]10/31/2023</value>
 	</variable>
 	<variable name="Sub_GoTo">
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(subid),movies)">6001</value>
