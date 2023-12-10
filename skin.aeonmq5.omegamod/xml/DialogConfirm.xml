@@ -5,18 +5,20 @@
 <!-- Leia 10.3.0/10.6.0 -->
 <!-- Matrix 11.3.0 -->
 <!-- Nexus 12.3.0/12.5.0 -->
+<!-- Omega 13.7.0 -->
 <window>
 	<controls>
 		<control type="group">
 			<include>Animation_TopDialogPopup</include>
 			<include>Dialogs_DoubleBar</include>
 			<control type="label" id="1">
+				<description>Heading label</description>
 				<include>Dialogs_Label1</include>
+				<width>200</width>
 			</control>
 			<control type="textbox" id="9">
 				<include>DialogTextBox</include>
 				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
-				<label></label>
 			</control>
 			<control type="grouplist">
 				<orientation>horizontal</orientation>
@@ -44,7 +46,7 @@
 					<ondown>11</ondown>
 				</control>
 				<control type="button" id="11">
-					<!-- yes -->
+					<!-- yes/OK -->
 					<height>44</height>
 					<width>225</width>
 					<align>center</align>

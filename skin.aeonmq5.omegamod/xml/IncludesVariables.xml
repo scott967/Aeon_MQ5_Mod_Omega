@@ -6,6 +6,7 @@
 <!-- Leia 10.2.3 /10.2.4/10.2.5/10.2.6/10.2.8/10.3.0/10.5.0/10.5.1/10.5.2/10.6.0/10.6.1/10.6.2 -->
 <!-- Matrix 11.0.1/11.0.2/11.0.4/11.0.5/11.1.1/11.2.0/11.3.0 -->
 <!-- Nexus 12.2.0/12.3.0/12.4.0 favorites/12.5.0/12.7.0 -->
+<!-- Omega 13.7.0 -->
 <includes>
 	<!-- ################################################ Value/General ################################################ -->
 	<variable name="SkinVersion">
@@ -5284,6 +5285,12 @@
 		<!-- List setting -->
 		<value condition="Container(100).HasFocus(27)">$LOCALIZE[13007]</value>
 		<!-- Reset -->
+		<value condition="Container(100).HasFocus(28)">$LOCALIZE[35110]</value>
+		<!-- Game Ports -->
+		<value condition="Container(100).HasFocus(29)">$LOCALIZE[35172]</value>
+		<!-- Game Players -->
+		<value condition="Container(100).HasFocus(30)">$LOCALIZE[35249]</value>
+		<!-- Game Save / Load -->
 	</variable>
 	<variable name="TextDir">
 		<value condition="String.IsEqual(System>Language,hebrew) | String.IsEqual(System.Language,arabic)">right</value>

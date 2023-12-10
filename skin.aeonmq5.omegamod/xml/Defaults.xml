@@ -3,11 +3,11 @@
 <!-- Krypton 9.1.18/9.2.1 window IDs -->
 <!-- Leia 10.2.5/10.5.2/10.6.1/10.6.2 -->
 <!-- Nexus add colorbutton 12.2.0/12.3.0 --> 
+<!-- Omega 13.7.0 -->
 <includes>
 	<default type="image">
 		<left>0</left>
 		<top>0</top>
-		<texture />
 	</default>
 	<default type="label">
 		<left>0</left>

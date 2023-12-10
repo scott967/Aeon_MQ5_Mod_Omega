@@ -1,0 +1,561 @@
+<!-- Omega 13.7.0 -->
+
+<includes>
+	<include name="gamedialogcommons">
+		<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1270</width>
+				<height>3</height>
+				<texture>grey.png</texture>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>777</top>
+				<width>1270</width>
+				<height>3</height>
+				<texture>grey.png</texture>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1270</width>
+				<height>780</height>
+				<texture>darkgrey.png</texture>
+				<colordiffuse>F0FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<left>-45</left>
+				<top>0</top>
+				<width>45</width>
+				<height>780</height>
+				<texture flipx="true">shadow.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<!-- <control type="image">
+				<left>748</left>
+				<top>0</top>
+				<width>45</width>
+				<height>780</height>
+				<texture>shadow.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control> -->
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1020</width>
+				<height>780</height>
+				<texture>black.png</texture>
+				<colordiffuse>90FFFFFF</colordiffuse>
+			</control>
+			<!-- <control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1020</width>
+				<height>48</height>
+				<texture>black.png</texture>
+				<colordiffuse>90FFFFFF</colordiffuse>
+			</control> -->
+			<control type="image">
+				<left>1269</left>
+				<top>0</top>
+				<width>45</width>
+				<height>780</height>
+				<texture>shadow.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<left>1020</left>
+				<top>0</top>
+				<width>244</width>
+				<height>780</height>
+				<texture>grey.png</texture>
+				<colordiffuse>90FFFFFF</colordiffuse>
+			</control>
+	</include>
+    <include name="GameDialogControllers">
+        <control type="group">	<!-- gamecontrollers window-->
+			<left>326</left>
+			<top>150</top>
+			<width>1270</width>
+			<height>780</height>
+			<include>gamedialogcommons</include>
+			<control type="label">
+				<!-- header controller configuration -->
+				<left>45</left>
+				<top>0</top>
+				<width>1020</width>
+				<height>48</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>$VAR[value_headercolor]</textcolor>
+				<font>Font_18</font>
+				<label>$LOCALIZE[35058]</label>
+			</control>
+            <control type="textbox" id="32">
+				<!-- controller description -->
+				<left>45</left>
+				<top>600</top>
+				<width>690</width>
+				<height>180</height>
+				<align>justify</align>
+				<aligny>center</aligny>
+				<textcolor>FFFFFAF0</textcolor>
+				<font>Font_18A</font>
+			</control>
+			<control type="grouplist" id="3">
+				<description>controller profiles CONTROL_CONTROLLER_LIST</description>
+				<left>0</left>
+				<top>124</top>
+				<width>225</width>
+				<height>653</height>
+				<itemgap>0</itemgap>
+				<onup>3</onup>
+				<ondown>3</ondown>
+				<onleft>9000</onleft>
+				<onright>5</onright>
+			</control>
+			<control type="grouplist" id="5">
+				<description>CONTROL_FEATURE_LIST buttons</description>
+				<left>750</left>
+				<top>124</top>
+				<width>225</width>
+				<height>656</height>
+				<itemgap>0</itemgap>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<onleft>3</onleft>
+				<onright>61</onright>
+				<pagecontrol>61</pagecontrol>
+			</control>
+			<control type="button" id="10">
+                <description>CONTROL_CONTROLLER_BUTTON_TEMPLATE</description>
+				<width>225</width>
+                <textoffsetx>0</textoffsetx>
+                <align>center</align>
+                <font>Font_18</font>
+			</control>
+			<control type="button" id="7">
+                <description>CONTROL_FEATURE_BUTTON_TEMPLATE</description>
+				<width>225</width>
+                <textoffsetx>0</textoffsetx>
+                <align>center</align>
+                <font>Font_18</font>
+			</control>
+			<control type="label" id="8">
+                <description>CONTROL_FEATURE_GROUP_TITLE</description>
+				<width>225</width>
+				<height>45</height>
+                <align>right</align>
+				<textcolor>FFFFFAF0</textcolor>
+			</control>
+			<control type="image" id="9">
+                <description>CONTROL_FEATURE_SEPARATOR</description>
+				<height>3</height>
+                <width>225</width>
+				<texture>separator.png</texture>
+			</control>
+			<control type="gamecontroller" id="31">
+                <description>CONTROL_GAME_CONTROLLER</description>
+				<left>232</left>
+				<top>180</top>
+				<width>495</width>
+				<height>375</height>
+			</control>
+			<control type="label">
+				<!-- Heading label Controller profiles-->
+				<left>0</left>
+				<top>60</top>
+				<width>225</width>
+				<height>48</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>FFFFFAF0</textcolor>
+				<font>Font_18</font>
+				<label>$LOCALIZE[35050]</label>
+			</control>
+			<control type="label">
+                <!-- buttons -->
+				<left>795</left>
+				<top>60</top>
+				<width>225</width>
+				<height>48</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[35059]</label>
+				<textcolor>FFFFFAF0</textcolor>
+			</control>
+			<control type="scrollbar" id="61">
+				<include>ScrollBar_Vertical</include>
+				<left>975</left>
+				<top>124</top>
+				<height>600</height>
+				<onleft>5</onleft>
+				<onright>9000</onright>
+				<ondown>61</ondown>
+				<onup>61</onup>
+			</control>
+			<control type="grouplist" id="9000">
+				<left>1020</left>
+				<top>63</top>
+				<onleft>61</onleft>
+				<onright>3</onright>
+				<control type="button" id="18">
+					<!-- OK CONTROL_CLOSE_BUTTON -->
+					<include>SettingsDialogButton</include>
+					<label>$LOCALIZE[186]</label>
+					<onleft>5</onleft>
+					<onright>5</onright>
+				</control>
+				<control type="button" id="19">
+					<!-- Reset CONTROL_RESET_BUTTON -->
+					<include>SettingsDialogButton</include>
+					<label>$LOCALIZE[13007]</label>
+					<onleft>5</onleft>
+					<onright>5</onright>
+				</control>
+				<control type="button" id="20">
+					<!-- Get More CONTROL_GET_MORE -->
+					<include>SettingsDialogButton</include>
+					<label>$LOCALIZE[21452]</label>
+					<onleft>5</onleft>
+					<onright>5</onright>
+				</control>
+                <control type="button" id="21">
+					<!-- CONTROL_FIX_SKIPPING -->
+					<include>SettingsDialogButton</include>
+					<label>$LOCALIZE[35019]</label>
+					<onleft>5</onleft>
+					<onright>5</onright>
+				</control>
+                <control type="button" id="22">
+					<!-- CONTROL_GET_ALL -->
+					<include>SettingsDialogButton</include>
+					<label>$LOCALIZE[35021]</label>
+					<onleft>5</onleft>
+					<onright>5</onright>
+				</control>
+                <control type="button" id="17">
+					<!-- CONTROL_HELP_BUTTON -->
+					<include>SettingsDialogButton</include>
+					<label>$LOCALIZE[10043]</label>
+					<onleft>5</onleft>
+					<onright>5</onright>
+				</control>
+			</control>
+		</control>
+    </include>
+    <include name="GameDialogPorts">
+        <control type="group">	<!-- gameports window -->
+			<left>326</left>
+			<top>150</top>
+			<width>1270</width>
+			<height>780</height>
+			<include>gamedialogcommons</include>
+            <control type="label" id="2">
+				<!-- header CONTROL_PORT_DIALOG_LABEL -->
+				<left>45</left>
+				<top>0</top>
+				<width>1020</width>
+				<height>48</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>$VAR[value_headercolor]</textcolor>
+				<font>Font_18</font>
+			</control>
+			<control type="group">
+				<description>Content area</description>
+				<top>100</top>
+				<bottom>30</bottom>
+				<left>30</left>
+				<right>30</right>
+				<control type="group">
+					<description>Port list</description>
+					<width>1430</width>
+					<height>700</height>
+					<control type="list" id="3">
+						<description>Port item list CONTROL_PORT_LIST</description>
+						<onright>9000</onright>
+						<onup>3</onup>
+						<ondown>3</ondown>
+						<pagecontrol>62</pagecontrol>
+						<scrolltime tween="sine">200</scrolltime>
+						<orientation>vertical</orientation>
+						<itemlayout width="900" height="100">
+							<control type="group">
+								<control type="label">
+									<top>0</top>
+									<left>20</left>
+									<label>$INFO[ListItem.Label]</label>
+									<font>Font_22A</font>
+									<align>left</align>
+									<aligny>center</aligny>
+								</control>
+								<control type="label">
+									<top>0</top>
+									<right>132</right>
+									<label>$INFO[ListItem.Label2]</label>
+									<font>Font_22A</font>
+									<shadowcolor>text_shadow</shadowcolor>
+									<align>right</align>
+									<aligny>center</aligny>
+								</control>
+								<control type="gamecontroller">
+									<right>12</right>
+									<width>100</width>
+									<texture>$INFO[ListItem.Icon]</texture>
+									<portaddress>$INFO[ListItem.FilenameAndPath]</portaddress>
+									<controllerdiffuse>button-fo.png</controllerdiffuse>
+								</control>
+							</control>
+						</itemlayout>
+						<focusedlayout width="900" height="100">
+							<control type="group">
+								<control type="image">
+									<top>-20</top>
+									<bottom>-20</bottom>
+									<left>-20</left>
+									<right>-20</right>
+									<texture border="40">button-fo.png</texture>
+									<visible>Control.HasFocus(3)</visible>
+								</control>
+								<control type="label">
+									<top>0</top>
+									<left>20</left>
+									<label>$INFO[ListItem.Label]</label>
+									<font>Font_22</font>
+									<align>left</align>
+									<aligny>center</aligny>
+								</control>
+								<control type="label">
+									<top>0</top>
+									<right>132</right>
+									<label>$INFO[ListItem.Label2]</label>
+									<font>Font_22A</font>
+									<align>right</align>
+									<aligny>center</aligny>
+								</control>
+								<control type="gamecontroller">
+									<right>12</right>
+									<width>100</width>
+									<texture>$INFO[ListItem.Icon]</texture>
+									<portaddress>$INFO[ListItem.FilenameAndPath]</portaddress>
+									<controllerdiffuse>button-fo.png</controllerdiffuse>
+								</control>
+							</control>
+						</focusedlayout>
+					</control>
+				</control>
+				<control type="scrollbar" id="62">
+					<left>1430</left>
+					<width>12</width>
+					<onright>9000</onright>
+					<onleft>3</onleft>
+					<onup>62</onup>
+					<ondown>62</ondown>
+					<orientation>vertical</orientation>
+				</control>
+			</control>
+			<control type="grouplist" id="9000">
+				<left>1020</left>
+				<top>63</top>
+				<width>330</width>
+				<onleft>3</onleft>
+				<control type="button" id="18">
+					<description>CONTROL_CLOSE_BUTTON</description>
+					<include>SettingsDialogButton</include>
+					<label>$LOCALIZE[186]</label>
+				</control>
+				<control type="button" id="19">
+					<description>CONTROL_RESET_BUTTON</description>
+					<include>SettingsDialogButton</include>
+					<label>$LOCALIZE[13007]</label>
+				</control>
+			</control>
+		</control>
+    </include>
+    <include name="GameDialogAgents">
+        <control type="group">	<!-- gameagents window-->
+			<left>326</left>
+			<top>150</top>
+			<width>1270</width>
+			<height>780</height>
+			<include>gamedialogcommons</include>
+            <control type="label" id="2">
+				<!-- header  -->
+				<left>45</left>
+				<top>0</top>
+				<width>1020</width>
+				<height>48</height>
+				<align>left</align>
+				<aligny>center</aligny>
+                <label>$LOCALIZE[35172]</label>
+				<textcolor>$VAR[value_headercolor]</textcolor>
+				<font>Font_18</font>
+			</control>
+			<control type="group">
+				<description>Content area</description>
+				<top>110</top>
+                <height>600</height>
+                <width>963</width>
+				<left>40</left>
+				<control type="group">
+					<description>Area of the dialog for ports</description>
+					<height>96</height>
+					<control type="button" id="3">
+						<description>Ports button</description>
+						<top>-20</top>
+						<left>20</left>
+                        <width>200</width>
+						<ondown>5</ondown>
+						<label>$LOCALIZE[35110]</label>
+						<font>Font_18</font>
+						<textoffsetx>20</textoffsetx>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>ActivateWindow(GamePorts)</onclick>
+					</control>
+					<control type="gamecontrollerlist" id="4">
+						<description>CONTROL_ACTIVE_PORT_LIST Length should fit 13 listitems (12 controllers and one "controller disconnected" indicator).</description>
+						<left>180</left>
+						<top>-30</top>
+						<width>740</width>
+						<height>60</height>
+						<orientation>horizontal</orientation>
+						<align>left</align>
+						<enable>false</enable>
+						<itemlayout width="56" height="56">
+							<control type="gamecontroller">
+								<texture>$INFO[ListItem.Icon]</texture>
+								<controlleraddress>$INFO[ListItem.FilenameAndPath]</controlleraddress>
+								<!-- <controllerdiffuse>button-fo.png</controllerdiffuse> -->
+							</control>
+						</itemlayout>
+						<focusedlayout width="56" height="56">
+							<control type="gamecontroller">
+								<texture>$INFO[ListItem.Icon]</texture>
+								<controlleraddress>$INFO[ListItem.FilenameAndPath]</controlleraddress>
+								<!-- <controllerdiffuse>button-fo.png</controllerdiffuse> -->
+							</control>
+						</focusedlayout>
+					</control>
+				</control>
+				<control type="group">
+					<description>Area of the dialog for players</description>
+					<top>136</top>
+					<height>576</height>
+					<!-- <control type="image">
+						<description>Player list background</description>
+						<top>-20</top>
+						<bottom>-20</bottom>
+						<left>-20</left>
+						<right>-20</right>
+						<texture border="40">buttons/dialogbutton-nofo.png</texture>
+					</control> -->
+					<control type="list" id="5">
+						<description>CONTROL_AGENT_LIST Player list</description>
+						<onup>5</onup>
+						<ondown>5</ondown>
+						<onleft>3</onleft>
+						<onright>9000</onright>
+						<pagecontrol>62</pagecontrol>
+						<scrolltime tween="sine">200</scrolltime>
+						<orientation>vertical</orientation>
+						<itemlayout width="1740" height="96">
+							<control type="label">
+								<description>Player name</description>
+								<top>0</top>
+								<left>20</left>
+								<label>$INFO[ListItem.Label]</label>
+								<font>Font_18A</font>
+								<align>left</align>
+								<aligny>center</aligny>
+							</control>
+							<control type="gamecontrollerlist">
+								<description>Player's game controller list. Length should fit 13 listitems (12 players and one "input disabled" indicator).</description>
+								<top>20</top>
+								<left>200</left>
+								<width>1288</width>
+								<height>100</height>
+								<orientation>horizontal</orientation>
+								<align>right</align>
+								<enable>false</enable>
+								<itemlayout width="96" height="96">
+									<control type="gamecontroller">
+										<peripherallocation>$INFO[ListItem.FilenameAndPath]</peripherallocation>
+										<!-- <controllerdiffuse>button-fo.png</controllerdiffuse> -->
+									</control>
+								</itemlayout>
+								<focusedlayout width="96" height="96">
+									<control type="gamecontroller">
+										<peripherallocation>$INFO[ListItem.FilenameAndPath]</peripherallocation>
+										<!-- <controllerdiffuse>button-fo.png</controllerdiffuse> -->
+									</control>
+								</focusedlayout>
+							</control>
+						</itemlayout>
+						<focusedlayout width="1740" height="96">
+							<control type="image">
+								<top>-20</top>
+								<bottom>-20</bottom>
+								<left>-20</left>
+								<right>-20</right>
+								<texture border="40">button-fo.png</texture>
+								<visible>Control.HasFocus(5)</visible>
+							</control>
+							<control type="label">
+								<description>Player name</description>
+								<top>0</top>
+								<left>20</left>
+								<label>$INFO[ListItem.Label]</label>
+								<font>Font_18A</font>
+                                <aligny>center</aligny>
+								<align>left</align>
+							</control>
+							<control type="gamecontrollerlist">
+								<description>Player's game controller list. Length should fit 13 listitems (12 players and one "input disabled" indicator).</description>
+								<right>0</right>
+								<width>1248</width>
+								<orientation>horizontal</orientation>
+								<align>right</align>
+								<enable>false</enable>
+								<itemlayout width="96" height="40">
+									<control type="gamecontroller">
+										<peripherallocation>$INFO[ListItem.FilenameAndPath]</peripherallocation>
+										<controllerdiffuse>button-fo.png</controllerdiffuse>
+									</control>
+								</itemlayout>
+								<focusedlayout width="96" height="40">
+									<control type="gamecontroller">
+										<peripherallocation>$INFO[ListItem.FilenameAndPath]</peripherallocation>
+										<controllerdiffuse>button-fo.png</controllerdiffuse>
+									</control>
+								</focusedlayout>
+							</control>
+						</focusedlayout>
+					</control>
+				</control>
+				<control type="scrollbar" id="62">
+					<left>1430</left>
+					<width>12</width>
+					<onleft>4</onleft>
+					<onright>9000</onright>
+					<onup>62</onup>
+					<ondown>62</ondown>
+					<orientation>vertical</orientation>
+				</control>
+			</control>
+			<control type="grouplist" id="9000">
+				<top>63</top>
+				<left>1020</left>
+				<onleft>62</onleft>
+				<onright>3</onright>
+				<control type="button" id="18">
+					<description>CONTROL_AGENT_CLOSE_BUTTON</description>
+					<include>SettingsDialogButton</include>
+					<label>$LOCALIZE[186]</label>
+				</control>
+			</control>
+		</control>
+    </include>
+</includes>

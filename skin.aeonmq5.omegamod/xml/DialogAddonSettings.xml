@@ -5,6 +5,7 @@
 <!-- Leia 10.2.5 addon settings changes #12125/10.6.2 -->
 <!-- Matrix 11.3.0 -->
 <!-- Nexus 12.3.0 -->
+<!-- Omega 13.7.0 -->
 <window>
 	<defaultcontrol always="true">5</defaultcontrol>
 	<controls>
@@ -92,7 +93,7 @@
 			</control>
 			<control type="textbox" id="6">
 			<!-- window template for settings description -->
-				<left>360</left>
+				<left>380</left>
 				<top>786</top>
 				<width>1560</width>
 				<height>135</height>

@@ -6,6 +6,7 @@
 <!-- Leia 10.2.7/10.2.8/10.3.0/10.4.0/10.5.0/10.5.1/10.5.2/10.6.0/10.6.1/10.6.2/10.6.3 -->
 <!-- Matrix 11.0.1/11.0.2/11.0.4/11.0.5/11.1.1/11.2.0/11.3.0 -->
 <!-- Nexus 12.3.0/12.4.0 favourites/ 12.5.0 -->
+<!-- Omega 13.7.0 IncludesSelectDialog/IncludesControllerDialog -->
 <includes>
 	<include file="Defaults.xml" />
 	<include file="IncludesVariables.xml" />
@@ -19,6 +20,8 @@
 	<include file="IncludesWeather.xml" />
 	<include file="IncludesTopMenu.xml" />
 	<include file="IncludesLyrics.xml" />
+	<include file="IncludesSelectDialog.xml" />
+	<include file="IncludesControllerDialog.xml" />
 	<include file="ViewsWide_51.xml" />
 	<!-- 51 -->
 	<include file="ViewsBanner_52.xml" />
@@ -2215,7 +2218,7 @@
 		<scroll>true</scroll>
 	</include>
 	<include name="Dialogs_Label2">
-		<right>15</right>
+		<left>1155</left>
 		<top>2</top>
 		<width>750</width>
 		<height>39</height>
@@ -2266,11 +2269,11 @@
 		<colordiffuse>F9FFFFFF</colordiffuse>
 	</include>
 	<include name="DialogTextBox">
-		<left>405</left>
+		<left>230</left>
 		<top>-10</top>
-		<width>750</width>
-		<height>95</height>
-		<align>right</align>
+		<width>1290</width>
+		<height>49</height>
+		<align>justify</align>
 		<font>Font_17A</font>
 		<textcolor>FFFFFAF0</textcolor>
 		<scroll>true</scroll>
@@ -4766,7 +4769,7 @@
 		</focusedlayout>
 		<content>
 			<item id="16">
-				<!-- resume (play) -->
+				<!-- resume (pause / resume) -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_game_resume),disable)]</property>
 				<icon>osd_menu_play.png</icon>
@@ -4784,9 +4787,9 @@
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_reset),disable)">Skin.SetString(osd_game_reset,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_reset),disable)">Skin.Reset(osd_game_reset,disable)</onclick>
 				<visible>[!String.Contains(skin.string(osd_game_reset),disable) | Skin.HasSetting(customosd)]</visible>
-			</item>
+			</item>			
 			<item id="5">
-				<!-- input settings -->
+				<!-- controls (input settings game controllers) -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_game_input),disable)]</property>
 				<icon>osd_menu_controls.png</icon>
@@ -4806,7 +4809,7 @@
 				<visible>[!String.Contains(skin.string(osd_game_videofilter),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="7">
-				<!-- video stretch-->
+				<!-- stretch mode (video stretch) -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_game_videostretch),disable)]</property>
 				<icon>osd_menu_video.png</icon>
@@ -4816,7 +4819,7 @@
 				<visible>[!String.Contains(skin.string(osd_game_videostretch),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="8">
-				<!-- video rotation-->
+				<!-- rotation (video rotation) -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_game_videorotation),disable)]</property>
 				<icon>osd_menu_video.png</icon>
@@ -4824,6 +4827,36 @@
 				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_videorotation),disable)">Skin.SetString(osd_game_videorotation,disable)</onclick>
 				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_videorotation),disable)">Skin.Reset(osd_game_videorotation,disable)</onclick>
 				<visible>[!String.Contains(skin.string(osd_game_videorotation),disable) | Skin.HasSetting(customosd)]</visible>
+			</item>
+			<item id="28">
+				<!-- Ports (gameports) -->
+				<label></label>
+				<property name="condition">$INFO[skin.string(osd_game_ports),disable)]</property>
+				<icon>osd_menu_ports.png</icon>
+				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(gameports)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_ports),disable)">Skin.SetString(osd_game_ports,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_ports),disable)">Skin.Reset(osd_game_ports,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_game_ports),disable) | Skin.HasSetting(customosd)]</visible>
+			</item>
+			<item id="29">
+				<!-- gameplayers-->
+				<label></label>
+				<property name="condition">$INFO[skin.string(osd_game_agents),disable)]</property>
+				<icon>osd_menu_agents.png</icon>
+				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(gameagents)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_ports),disable)">Skin.SetString(osd_game_agents,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_ports),disable)">Skin.Reset(osd_game_agents,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_game_agents),disable) | Skin.HasSetting(customosd)]</visible>
+			</item>
+			<item id="30">
+				<!-- gamesaves-->
+				<label></label>
+				<property name="condition">$INFO[skin.string(osd_game_saves),disable)]</property>
+				<icon>osd_menu_saves.png</icon>
+				<onclick condition="!Skin.HasSetting(customosd)">ActivateWindow(ingamesaves)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + !String.Contains(skin.string(osd_game_ports),disable)">Skin.SetString(osd_game_saves,disable)</onclick>
+				<onclick condition="Skin.HasSetting(customosd) + String.Contains(skin.string(osd_game_ports),disable)">Skin.Reset(osd_game_saves,disable)</onclick>
+				<visible>[!String.Contains(skin.string(osd_game_saves),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="9">
 				<!-- game advanced settings-->
@@ -4836,7 +4869,7 @@
 				<visible>[!String.Contains(skin.string(osd_game_advsettings),disable) | Skin.HasSetting(customosd)]</visible>
 			</item>
 			<item id="22">
-				<!-- stop -->
+				<!-- exit -->
 				<label></label>
 				<property name="condition">$INFO[skin.string(osd_game_stop),disable)]</property>
 				<icon>osd_menu_stop.png</icon>
