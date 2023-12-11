@@ -1,4 +1,8 @@
-[B][COLOR=FFFF8C00]BUILD 12.7.0 - RELEASE DATE 10/31/2023[/COLOR][/B]
+[B][COLOR=FFFF8C00]BUILD 13.7.0 - RELEASE DATE 12/15/2023[/COLOR][/B]
+New:  Support for retrogames controller features
+New:  Movie versions
+
+[B][COLOR=FFFF8C00]BUILD 12.7.0 - [/COLOR][/B]
 Fix:  Replace posx with left / posy with top
 Note:  Basis for Aeon MQ5 OmegaMod
 
