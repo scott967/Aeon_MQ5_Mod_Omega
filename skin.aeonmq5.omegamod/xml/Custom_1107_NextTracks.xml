@@ -4,6 +4,7 @@
 <!-- Leia 10.4.0/10.6.0 -->
 <!-- Matrix 11.1.1 -->
 <!-- Nexus 12.6.0 -->
+<!-- Omega 13.7.0 -->
 <window id="1107" type="dialog">
 	<!-- was safe id 5600 -->
 	<defaultcontrol>604</defaultcontrol>
@@ -83,7 +84,7 @@
 			</control>
 			<control type="button">
 				<!-- Para Menu OSD Menu -->
-				<left>1500</left>>
+				<left>1500</left>
 				<top>519</top>
 				<width>375</width>
 				<height>30</height>
@@ -106,7 +107,7 @@
 				<colordiffuse>80FFFAF0</colordiffuse>
 				<include>Animation_Fade</include>
 			</control>
-			<control type="panel" id="604">
+			<control type="panel" id="604">  <!-- panel for all next tracks -->
 				<left>60</left>
 				<top>112</top>
 				<width>1860</width>
@@ -129,21 +130,23 @@
 						<aspectratio align="center">stretch</aspectratio>
 					</control>
 					<control type="label">
-						<right>21r</right>
-						<top>4</top>
+						<left>20</left>
+						<top>9</top>
 						<width>75</width>
 						<height>27</height>
 						<align>right</align>
+						<aligny>center</aligny>
 						<font>Font_18A</font>
 						<label>$INFO[ListItem.Label]</label>
 						<textcolor>$VAR[value_headercolor]</textcolor>
 					</control>
 					<control type="label">
 						<left>96</left>
-						<top>4</top>
+						<top>9</top>
 						<width>495</width>
 						<height>27</height>
 						<align>left</align>
+						<aligny>center</aligny>
 						<font>Font_18A</font>
 						<label>$INFO[ListItem.Label2]</label>
 						<textcolor>B5FFFAF0</textcolor>
@@ -179,21 +182,23 @@
 						<aspectratio align="center">stretch</aspectratio>
 					</control>
 					<control type="label">
-						<right>21r</right>
-						<top>4</top>
+						<left>20</left>
+						<top>9</top>
 						<width>75</width>
 						<height>27</height>
 						<align>right</align>
+						<aligny>center</aligny>
 						<font>Font_18A</font>
 						<label>$INFO[ListItem.Label]</label>
 						<textcolor>$VAR[value_headercolor]</textcolor>
 					</control>
 					<control type="label">
 						<left>96</left>
-						<top>4</top>
+						<top>9</top>
 						<width>495</width>
 						<height>27</height>
 						<align>left</align>
+						<aligny>center</aligny>
 						<font>Font_18A</font>
 						<label>$INFO[ListItem.Label2]</label>
 						<textcolor>FFFFFAF0</textcolor>
