@@ -22,6 +22,7 @@
 	<include file="IncludesLyrics.xml" />
 	<include file="IncludesSelectDialog.xml" />
 	<include file="IncludesControllerDialog.xml" />
+	<include file="IncludesVideoVersion.xml" />
 	<include file="ViewsWide_51.xml" />
 	<!-- 51 -->
 	<include file="ViewsBanner_52.xml" />

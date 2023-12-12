@@ -1313,6 +1313,13 @@
 							<onclick>SendClick(movieinformation,8)</onclick>
 							<visible>Container.Content(sets)</visible>
 						</item>
+						<item id="25">
+							<!-- Movie Versions -->
+							<label>40000</label>
+							<onclick>SendClick(movieinformation,14)</onclick>
+							<!-- <visible>Container.Content(Movies) + !Skin.HasSetting(trailers) + System.AddonIsEnabled(script.cinema.experience) + !System.AddonIsEnabled(script.cinemavision)</visible> -->
+							<visible>String.IsEqual(ListItem.DBType,movie)</visible>
+						</item>
 						<item id="4">
 							<!-- Cinema Ex -->
 							<label>31066</label>
