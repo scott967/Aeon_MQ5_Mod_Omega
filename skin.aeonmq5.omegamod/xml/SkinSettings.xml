@@ -6,6 +6,7 @@
 <!-- Leia 10.3.0/10.4.0/10.6.2 -->
 <!-- Matrix 11.0.4/11.1.1/11.2.0/11.3.0 -->
 <!-- Nexus 12.3.0/12.5.0/12.6.0 -->
+<!-- Omega 13.7.0 versions -->
 <!-- 9100 Main selector menu list -->
 <!-- 9001 - general settings -->
 <!-- 9002 Home window settings -->
@@ -1004,6 +1005,19 @@
 							<texture>thumb_box.png</texture>
 							<visible>Container(403).HasFocus(10)</visible>
 						</control>
+						<control type="image">
+							<include>CaseSelectorReflect</include>
+							<!-- reflexo -->
+							<colordiffuse>$INFO[Skin.String(case_versions)]</colordiffuse>
+							<texture flipy="true" diffuse="thumb_box_reflect.png" background="true">thumb_box.png</texture>
+							<visible>Container(403).HasFocus(11)</visible>
+						</control>
+						<control type="image">
+							<include>CaseSelector</include>
+							<colordiffuse>$INFO[Skin.String(case_versions)]</colordiffuse>
+							<texture>thumb_box.png</texture>
+							<visible>Container(403).HasFocus(11)</visible>
+						</control>
 						<!-- codec icon displayed on case -->
 						<control type="image">
 							<left>588</left>
@@ -1095,6 +1109,14 @@
 							<icon>$VAR[value_codecuhd]</icon>
 							<onclick>Skin.SetString(custom_case,case_uhd)</onclick>
 							<onclick>Skin.SetString(custom_codec,codec_uhd)</onclick>
+							<onclick>SetFocus(165)</onclick>
+						</item>
+						<item id="11">
+							<!-- versions -->
+							<label></label>
+							<icon>$VAR[value_codecversions]</icon>
+							<onclick>Skin.SetString(custom_case,case_versions)</onclick>
+							<onclick>Skin.SetString(custom_codec,codec_versions)</onclick>
 							<onclick>SetFocus(165)</onclick>
 						</item>
 					</content>
@@ -1304,6 +1326,12 @@
 							<onclick>Skin.SetString($INFO[skin.string(custom_codec)],uhd)</onclick>
 							<onclick>AlarmClock(casedone,SetFocus(403),0:01,true)</onclick>
 						</item>
+						<item id="12">
+							<label></label>
+							<icon>flags/source/versions.png</icon>
+							<onclick>Skin.SetString($INFO[skin.string(custom_codec)],versions)</onclick>
+							<onclick>AlarmClock(casedone,SetFocus(403),0:01,true)</onclick>
+						</item>
 					</content>
 				</control>
 				<control type="image">
@@ -1330,7 +1358,7 @@
 					<colordiffuse>C3FFFFFF</colordiffuse>
 				</control>
 				<control type="group">
-					<!-- Seletor de cores do estojo -->
+					<!-- Case color selector -->
 					<left>360</left>
 					<control type="image">
 						<left>0</left>
@@ -1559,10 +1587,29 @@
 							<onclick>SetFocus(150)</onclick>
 							<visible>Container(403).HasFocus(10)</visible>
 						</control>
+						<control type="colorbutton" id="40311">
+							<!-- <left>1300</left>
+							<top>100</top> -->
+							<width>320</width>
+							<label></label>
+							<aligny>center</aligny>
+							<textwidth>400</textwidth>
+							<textcolor>none</textcolor>
+							<colorposx>180</colorposx>
+							<colorposy>-7</colorposy>
+							<colorwidth>150</colorwidth>
+							<colorheight>76</colorheight>
+							<colorbox>$INFO[skin.string(case_versions)]</colorbox>
+							<texturecolormask>color-button-box.png</texturecolormask>
+							<texturecolordisabledmask>color-button-box.png</texturecolordisabledmask>
+							<onclick>Skin.SetColor($INFO[skin.string(custom_case)],31296,$INFO[skin.string(case_versions)])</onclick>
+							<onclick>SetFocus(150)</onclick>
+							<visible>Container(403).HasFocus(11)</visible>
+						</control>
 					</control>
 				</control>
 			</control>
-			<!-- ########################################################## SELETOR DE ETIQUETA ASSISTIDO ########################################################## -->
+			<!-- ########################################################## ASSISTED LABEL SELECTOR ########################################################## -->
 			<control type="group">
 				<left>360</left>
 				<visible>Container(9100).HasFocus(33)</visible>

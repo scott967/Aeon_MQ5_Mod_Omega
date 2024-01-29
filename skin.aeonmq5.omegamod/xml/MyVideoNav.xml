@@ -6,6 +6,7 @@
 <!-- Leia 10.3.0/10.4.0/10.6.1/10.6.2/10.6.3 -->
 <!-- Matrix 11.0.2/11.0.4/11.2.0 -->
 <!-- Nexus 12.3.0/12.5.0 -->
+<!-- Omega 13.7.0 versions -->
 <window>
 	<defaultcontrol always="true">51</defaultcontrol>
 	<menucontrol>9900</menucontrol>
@@ -221,11 +222,11 @@
 							<!-- Mpaa -->
 							<include>FlagImage</include>
 							<texture>$VAR[value_mpaa]</texture>
-							<visible>!String.IsEmpty(ListItem.Mpaa)</visible>
+							<visible>!String.IsEmpty(ListItem.Mpaa) + !ListItem.HasVideoVersions</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!String.IsEmpty(ListItem.Mpaa)</visible>
+							<visible>!String.IsEmpty(ListItem.Mpaa) + !ListItem.HasVideoVersions</visible>
 						</control>
 						<control type="group">
 							<!-- Rating -->
@@ -256,61 +257,61 @@
 							<!-- Codec -->
 							<include>FlagImage</include>
 							<texture>$VAR[value_videocodec]</texture>
-							<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
+							<visible>!String.IsEmpty(ListItem.VideoCodec) + !ListItem.HasVideoVersions</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
+							<visible>!String.IsEmpty(ListItem.VideoCodec) + !ListItem.HasVideoVersions</visible>
 						</control>
 						<control type="image">
 							<!-- Resolution -->
 							<include>FlagImage</include>
 							<texture>$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
-							<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
+							<visible>!String.IsEmpty(ListItem.VideoResolution) + !ListItem.HasVideoVersions</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
+							<visible>!String.IsEmpty(ListItem.VideoResolution) + !ListItem.HasVideoVersions</visible>
 						</control>
 						<control type="image">
 							<!-- Aspect -->
 							<include>FlagImage</include>
 							<texture>$INFO[ListItem.VideoAspect,flags/aspectratio/,.png]</texture>
-							<visible>!String.IsEmpty(ListItem.VideoAspect)</visible>
+							<visible>!String.IsEmpty(ListItem.VideoAspect) + !ListItem.HasVideoVersions</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!String.IsEmpty(ListItem.VideoAspect)</visible>
+							<visible>!String.IsEmpty(ListItem.VideoAspect) + !ListItem.HasVideoVersions</visible>
 						</control>
 						<control type="image">
 							<!-- HDR type -->
 							<include>FlagImage</include>
 							<texture>$INFO[ListItem.HDRType,flags/hdr/,.png]</texture>
-							<visible>!String.IsEmpty(ListItem.HDRType)</visible>
+							<visible>!String.IsEmpty(ListItem.HDRType) + !ListItem.HasVideoVersions</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!String.IsEmpty(ListItem.HDRType)</visible>
+							<visible>!String.IsEmpty(ListItem.HDRType) + !ListItem.HasVideoVersions</visible>
 						</control>
 						<control type="image">
 							<!-- Audio Codec -->
 							<include>FlagImage</include>
 							<texture>$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</texture>
-							<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
+							<visible>!String.IsEmpty(ListItem.AudioCodec) + !ListItem.HasVideoVersions</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!String.IsEmpty(ListItem.AudioCodec)</visible>
+							<visible>!String.IsEmpty(ListItem.AudioCodec) + !ListItem.HasVideoVersions</visible>
 						</control>
 						<control type="image">
 							<!-- Channels -->
 							<include>FlagImage</include>
 							<texture>$INFO[ListItem.AudioChannels,flags/audiochannels/,ch.png]</texture>
-							<visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
+							<visible>!String.IsEmpty(ListItem.AudioChannels) + !ListItem.HasVideoVersions</visible>
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!String.IsEmpty(ListItem.AudioChannels)</visible>
+							<visible>!String.IsEmpty(ListItem.AudioChannels) + !ListItem.HasVideoVersions</visible>
 						</control>
 						<control type="group">
 							<!-- Drive Externo -->
@@ -345,12 +346,12 @@
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!String.IsEmpty(ListItem.Trailer) + ListItem.IsResumable</visible>
+							<visible>!String.IsEmpty(ListItem.Trailer) + ListItem.IsResumable + !ListItem.HasVideoVersions</visible>
 						</control>
 						<control type="group">
 							<!-- % Played -->
 							<width>188</width>
-							<visible>ListItem.IsResumable</visible>
+							<visible>ListItem.IsResumable + !ListItem.HasVideoVersions</visible>
 							<control type="image">
 								<include>FlagImage</include>
 								<texture>flags/percentplayed.png</texture>
@@ -476,7 +477,7 @@
 						<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + ![String.IsEqual(ListItem.Label,..) | Skin.HasSetting(notvshowstagline)]</visible>
 					</control>
 				</control>
-				<control type="group">	<!-- position when no audio language flag -->
+				<control type="group">	<!-- title position when no audio language flag -->
 					<visible>String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
 					<control type="label">
 						<!-- Title -->
@@ -597,7 +598,7 @@
 				<animation effect="slide" end="-675,0" time="0" condition="Control.IsVisible(57)">Conditional</animation>
 				<animation effect="slide" end="-1170,0" time="0" condition="Control.IsVisible(59)">Conditional</animation>
 				<animation effect="slide" end="0,-30" time="500" tween="sine" easing="out" condition="![Skin.HasSetting(videoinfobar) | Skin.HasSetting(videodate)]">Conditional</animation>
-				<visible>![Control.IsVisible(70) | Skin.HasSetting(nolanguageflags) | String.IsEqual(ListItem.Label,..) | String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) | Control.IsVisible(51) | Control.HasFocus(9920) | Control.HasFocus(9940) | Control.IsVisible(9922) | Window.IsActive(movieinformation) | Window.IsVisible(1110)]</visible>
+				<visible>![ListItem.HasVideoVersions | Control.IsVisible(70) | Skin.HasSetting(nolanguageflags) | String.IsEqual(ListItem.Label,..) | String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1)) | Control.IsVisible(51) | Control.HasFocus(9920) | Control.HasFocus(9940) | Control.IsVisible(9922) | Window.IsActive(movieinformation) | Window.IsVisible(1110)]</visible>
 				<left>1215</left>
 				<top>52</top>
 				<include>AudioandSub</include>

@@ -6,6 +6,7 @@
 <!-- Leia 10.2.4/10.2.5/10.3.0/10.4.0/10.5.0/10.5.2/10.6.1/10.6.2/10.6.3 -->
 <!-- Matrix 11.0.2/11.1.1 -->
 <!-- Nexus 12.3.0 -->
+<!-- Omega 13.7.0 -->
 <includes>
 	<!--##################################################################################   VISTA WIDE - 51   ##################################################################################-->
 	<include name="listcolor">
@@ -172,34 +173,11 @@
 							<font>Font_22A</font>
 							<aligny>center</aligny>
 							<include>listcolor</include>
-							<label>$INFO[ListItem.Label]</label>
-							<visible>!String.IsEmpty(ListItem.DBType) + ![String.Contains(ListItem.DBType, genre) | String.Contains(ListItem.DBType, musicvideo)] | Container.Content(images)</visible>
-						</control>
-						<control type="label">
-							<left>68</left>
-							<top>1</top>
-							<width>660</width>
-							<height>60</height>
-							<font>Font_22A</font>
-							<aligny>center</aligny>
-							<include>listcolor</include>
-							<label>$INFO[ListItem.Title]</label>
-							<visible>String.Contains(ListItem.DBType, musicvideo)</visible>
-						</control>
-						<control type="label">
-							<left>68</left>
-							<top>1</top>
-							<width>660</width>
-							<height>60</height>
-							<font>Font_22</font>
-							<aligny>center</aligny>
-							<include>listcolor</include>
-							<label>$INFO[ListItem.Label]</label>
-							<visible>String.IsEmpty(ListItem.DBType) + !Container.Content(images) | String.Contains(ListItem.DBType, genre)</visible>
+							<label>$VAR[Wide_Label]</label>
 						</control>
 						<control type="label">
 							<left>772</left>
-							<top>-26</top>
+							<top>-23</top>
 							<width>128</width>
 							<height>60</height>
 							<font>Font_18A</font>
@@ -207,7 +185,7 @@
 							<aligny>center</aligny>
 							<include>detailcolor</include>
 							<label>$INFO[ListItem.Year]</label>
-							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(episodes) | Container.Content(seasons) | Container.Content(albums) | Container.Content(years) | Container.Content(songs) | Container.Content(mixed) | Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows)  | Container.Content(videos) | String.Contains(ListItem.DBType,musicvideo)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(episodes) | Container.Content(seasons) | Container.Content(albums) | Container.Content(years) | Container.Content(songs) | Container.Content(mixed) | Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows)  | Container.Content(videos) | String.Contains(ListItem.DBType,musicvideo) | Container.Content(files)">Conditional</animation>
 							<visible>!Container.Content(images)</visible>
 						</control>
 						<control type="label">
@@ -345,30 +323,7 @@
 							<font>Font_24A</font>
 							<aligny>center</aligny>
 							<include>listcolorfocus</include>
-							<label>$INFO[ListItem.Label]</label>
-							<visible>!String.IsEmpty(ListItem.DBType) + !String.Contains(ListItem.DBType,musicvideo) + !String.Contains(ListItem.DBType, genre) | Container.Content(images)</visible>
-						</control>
-						<control type="label">
-							<left>68</left>
-							<top>3</top>
-							<width>660</width>
-							<height>62</height>
-							<font>Font_24A</font>
-							<aligny>center</aligny>
-							<include>listcolorfocus</include>
-							<label>$INFO[ListItem.Title]</label>
-							<visible>String.Contains(ListItem.DBType,musicvideo)</visible>
-						</control>
-						<control type="label">
-							<left>68</left>
-							<top>1</top>
-							<width>660</width>
-							<height>60</height>
-							<font>Font_24</font>
-							<aligny>center</aligny>
-							<include>listcolorfocus</include>
-							<label>$INFO[ListItem.Label]</label>
-							<visible>String.IsEmpty(ListItem.DBType) + !Container.Content(images) | String.Contains(ListItem.DBType, genre)</visible>
+							<label>$VAR[Wide_Label]</label>
 						</control>
 						<control type="label">
 							<left>772</left>
@@ -380,7 +335,7 @@
 							<aligny>center</aligny>
 							<include>detailcolorfocus</include>
 							<label>$INFO[ListItem.Year]</label>
-							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(episodes) | Container.Content(seasons) | Container.Content(albums) | Container.Content(years) | Container.Content(songs) | Container.Content(mixed) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(videos)  | String.Contains(ListItem.DBType,musicvideo)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(episodes) | Container.Content(seasons) | Container.Content(albums) | Container.Content(years) | Container.Content(songs) | Container.Content(mixed) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(musicvideos) | Container.Content(videos) | Container.Content(files) | String.Contains(ListItem.DBType,musicvideo)">Conditional</animation>
 							<visible>!String.IsEqual(Skin.Font,Massive) + ![Container.Content(images) | Container.Content(sets)]</visible>
 						</control>
 						<control type="label">
@@ -980,7 +935,7 @@
 							<bordertexture border="-2">black.png</bordertexture>
 						</control>
 					</control>
-					<control type="group">  <!-- Music / muysicvideo album with case -->
+					<control type="group">  <!-- Music / musicvideo album with case -->
 						<include>Animation_Fade</include>
 						<visible>[[Window.IsActive(musicplaylist) | Window.IsActive(music)] + ![Skin.HasSetting(nowideaudiocase) | Container.Content(genres) | Container.Content(roles)]] | [Window.IsVisible(videos) + Container.Content(albums) + !Skin.HasSetting(nowideaudiocase)]</visible>						
 						<control type="image">

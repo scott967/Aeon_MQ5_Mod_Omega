@@ -6,6 +6,7 @@
 <!-- Leia 10.2.5/10.3.0/10.4.0/10.5.2/10.6.0/10.6.1/10.6.2 -->
 <!-- Matrix 11.0.1/11.0.3/11.0.4/11.1.1/11.2.0 -->
 <!-- Nexus 12.3.0/12.5.0 -->
+<!-- Omega 13.7.0 versions -->
 <window>
 	<onload>Control.SetFocus(50,0,absolute)</onload>
 	<onload>Control.SetFocus(149)</onload>
@@ -270,6 +271,20 @@
 					<font>Font_24</font>
 					<label>$INFO[ListItem.Year]</label>
 					<textcolor>FFFFFAF0</textcolor>
+					<visible>!ListItem.HasVideoVersions</visible>
+				</control>
+				<control type="label">
+					<!-- Year - default version -->
+					<left>330</left>
+					<top>120</top>
+					<height>60</height>
+					<width>500</width>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>Font_24</font>
+					<label>$INFO[ListItem.Year]  ($INFO[ListItem.VideoVersionName])</label>
+					<textcolor>FFFFFAF0</textcolor>
+					<visible>ListItem.HasVideoVersions</visible>
 				</control>
 				<control type="label">
 					<!-- Genre -->
@@ -1044,7 +1059,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<!-- Nome do Elenco -->
+				<!-- Cast Name -->
 				<left>0</left>
 				<top>1028</top>
 				<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">WindowOpen</animation>
@@ -1317,6 +1332,13 @@
 							<!-- Movie Versions -->
 							<label>40000</label>
 							<onclick>SendClick(movieinformation,14)</onclick>
+							<!-- <visible>Container.Content(Movies) + !Skin.HasSetting(trailers) + System.AddonIsEnabled(script.cinema.experience) + !System.AddonIsEnabled(script.cinemavision)</visible> -->
+							<visible>String.IsEqual(ListItem.DBType,movie)</visible>
+						</item>
+						<item id="26">
+							<!-- Movie Extras -->
+							<label>40211</label>
+							<onclick>SendClick(movieinformation,15)</onclick>
 							<!-- <visible>Container.Content(Movies) + !Skin.HasSetting(trailers) + System.AddonIsEnabled(script.cinema.experience) + !System.AddonIsEnabled(script.cinemavision)</visible> -->
 							<visible>String.IsEqual(ListItem.DBType,movie)</visible>
 						</item>

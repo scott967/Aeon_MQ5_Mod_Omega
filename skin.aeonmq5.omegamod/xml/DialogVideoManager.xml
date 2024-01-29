@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Omega 13.7.0 Versions -->
-<includes>
-	<include name="DialogVideoVersionLayout">
+<!-- Omega 13.7.0 New Dialog for video versions/extras -->
+<window>
+	<defaultcontrol always="true">50</defaultcontrol>
+	<onload>Control.SetFocus(50)</onload>
+	<controls>
+		<control type="image">
+			<include>WindowBG</include>
+			<texture fallback="special://skin/backgrounds/settings.jpg" background="true">$INFO[skin.string(settings.bg)]</texture>
+			<visible>![Player.HasVideo | Player.HasGame]</visible>
+		</control>
+		<animation effect="slide" start="-1200,0" end="0,0" time="700" tween="cubic" easing="out">WindowOpen</animation>
+            <animation effect="slide" start="0,0" end="-1200,0" time="700" tween="cubic" easing="out">WindowClose</animation>
+            <animation effect="slide" start="-1200,0" end="0,0" time="700" tween="cubic" easing="out">Visible</animation>
+            <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+        <include>Animation_DialogPopup</include>
 		<control type="group">	<!-- right group -->
             <left>75</left>
             <animation effect="slide" start="900,0" end="0,0" time="1000" tween="cubic" easing="out">WindowOpen</animation>
@@ -67,7 +79,7 @@
             <control type="image">
                 <left>0</left>
                 <top>69</top>
-                <width>1282</width>
+                <width>1550</width>
                 <height>45</height>
                 <texture>shadow_h.png</texture>
                 <colordiffuse>C3FFFFFF</colordiffuse>
@@ -76,7 +88,7 @@
                 <left>1282</left>
                 <top>112</top>
                 <width>45</width>
-                <height>968</height>
+                <height>722</height>
                 <texture>shadow.png</texture>
                 <colordiffuse>C3FFFFFF</colordiffuse>
             </control>
@@ -84,7 +96,7 @@
                 <left>0</left>
                 <top>112</top>
                 <width>1282</width>
-                <height>968</height>
+                <height>722</height>
                 <texture>black.png</texture>
                 <colordiffuse>90FFFFFF</colordiffuse>
             </control>
@@ -105,14 +117,14 @@
                 <font>Font_23</font>
                 <textcolor>80FFFAF0</textcolor>
             </control>
-            <control type="group">	<!-- left group movie versions -->
+            <control type="group">	<!-- left group  -->
                 <control type="list" id="50">
-                    <!-- version List -->
+                    <!-- version/extra List -->
                     <viewtype label="31801">list</viewtype>
                     <left>0</left>
                     <top>237</top>
                     <width>1282</width>
-                    <height>705</height>
+                    <height>600</height>
                     <pagecontrol>61</pagecontrol>
                     <onleft>9000</onleft>
                     <onright>61</onright>
@@ -184,13 +196,13 @@
                     <onright>9000</onright>
                     <ondown>61</ondown>
                     <onup>61</onup>
-                    <visible allowhiddenfocus="true">Control.HasFocus(61) | Control.HasFocus(50)</visible>
+                    <visible allowhiddenfocus="false">Control.HasFocus(61) | Control.HasFocus(50)</visible>
                 </control>
             </control>
         </control>
 		<control type="image">
 			<!-- Options -->
-			<left>1282</left>
+			<left>1252</left>
 			<top>110</top>
 			<width>45</width>
 			<height>722</height>
@@ -198,7 +210,7 @@
 			<colordiffuse>C3FFFFFF</colordiffuse>
 		</control>
 		<control type="image">
-			<left>1571</left>
+			<left>1541</left>
 			<top>110</top>
 			<width>45</width>
 			<height>722</height>
@@ -206,7 +218,7 @@
 			<colordiffuse>C3FFFFFF</colordiffuse>
 		</control>
 		<control type="image">
-			<left>1327</left>
+			<left>1297</left>
 			<top>110</top>
 			<width>244</width>
 			<height>722</height>
@@ -214,7 +226,7 @@
 			<colordiffuse>90FFFFFF</colordiffuse>
 		</control>
 		<control type="grouplist" id="9000"> <!--  right side button group-->
-			<left>1327</left>
+			<left>1297</left>
 			<top>368</top>
 			<onleft>50</onleft>
 			<onright>50</onright>
@@ -224,137 +236,40 @@
 				<!-- Play -->
 				<include>SettingsDialogButton</include>
 				<label>$LOCALIZE[208]</label>
-				<onleft>50</onleft>
 			</control>
 			<control type="button" id="22">
 				<!-- Add version -->
 				<include>SettingsDialogButton</include>
-				<label>Add version</label>
-				<onleft>50</onleft>
-				<visible>Window.IsActive(videoversion)</visible>
+				<label>$LOCALIZE[40014]</label>
+				<visible>Window.IsVisible(managevideoversions)</visible>
 			</control>
 			<control type="button" id="23">
 				<!-- Add extras -->
 				<include>SettingsDialogButton</include>
-				<label>Add extras</label>
-				<onleft>50</onleft>
-				<visible>Window.IsActive(videoextra)</visible>
+				<label>$LOCALIZE[40015]</label>
+				<visible>Window.IsVisible(managevideoextras)</visible>
 			</control>
 			<control type="button" id="27">
 				<!-- Choose art -->
 				<include>SettingsDialogButton</include>
 				<label>$LOCALIZE[13511]</label>
-				<onleft>50</onleft>
 			</control>
 			<control type="button" id="24">
 				<!-- Rename -->
 				<include>SettingsDialogButton</include>
 				<label>$LOCALIZE[118]</label>
-				<onleft>50</onleft>
 			</control>
 			<control type="button" id="26">
 				<!-- Remove -->
 				<include>SettingsDialogButton</include>
 				<label>$LOCALIZE[15015]</label>
-				<onleft>50</onleft>
 			</control>
 			<control type="button" id="25">
 				<!-- Set default -->
 				<include>SettingsDialogButton</include>
-				<label>$LOCALIZE[13278]</label>
-				<onleft>50</onleft>
+				<label>$LOCALIZE[40023]</label>
+                <visible>Window.IsVisible(managevideoversions)</visible>
 			</control>
 		</control>
-			
-	</include>
-	<include name="DialogVideoExtraLayout">
-		<control type="group">  <!-- window parent gruop -->
-			<control type="image">
-				<left>165</left>
-				<top>0</top>
-				<width>45</width>
-				<height>1080</height>
-				<texture flipx="true">shadow.png</texture>
-				<colordiffuse>C3FFFFFF</colordiffuse>
-			</control>
-			<control type="image">
-				<left>1710</left>
-				<top>0</top>
-				<width>45</width>
-				<height>1080</height>
-				<texture>shadow.png</texture>
-				<colordiffuse>C3FFFFFF</colordiffuse>
-			</control>
-			<control type="image">
-				<left>210</left>
-				<top>0</top>
-				<width>1500</width>
-				<height>1080</height>
-				<texture>darkgrey.png</texture>
-				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
-				<animation effect="fade" end="85" condition="true">Conditional</animation>
-			</control>
-			<control type="image">
-				<left>210</left>
-				<top>0</top>
-				<width>1500</width>
-				<height>120</height>
-				<texture>black.png</texture>
-				<colordiffuse>90FFFFFF</colordiffuse>
-			</control>
-			<control type="label" id="2">
-				<left>322</left>
-				<top>34</top>
-				<width>1278</width>
-				<height>45</height>
-				<label></label>
-				<font>Font_32</font>
-				<textcolor>FFFFFAF0</textcolor>
-				<align>center</align>
-				<aligny>center</aligny>
-				<include>Animation_Fade</include>
-			</control>
-			<control type="grouplist" id="101">	<!-- right side buttons-->
-				<left>1000</left>
-				<top>90</top>
-				<width>300</width>
-				<height>565</height>
-				<onleft condition="ControlGroup(200).HasFocus(201) | Integer.IsGreater(Container(51).NumItems,0)">100</onleft>
-				<onleft condition="ControlGroup(200).HasFocus(202) + Integer.IsEqual(Container(51).NumItems,0)">200</onleft>
-				<align>top</align>
-				<scrolltime tween="quadratic">200</scrolltime>
-				<include content="DefaultDialogButton">
-					<param name="id" value="21" />
-					<param name="label" value="$LOCALIZE[208]" />
-				</include>
-				<include content="DefaultDialogButton">
-					<param name="id" value="22" />
-					<param name="label" value="$LOCALIZE[31612]" />
-					<param name="visible">ControlGroup(200).HasFocus(201)</param>
-				</include>
-				<include content="DefaultDialogButton">
-					<param name="id" value="23" />
-					<param name="label" value="$LOCALIZE[31613]" />
-					<param name="visible">ControlGroup(200).HasFocus(202)</param>
-				</include>
-				<include content="DefaultDialogButton">
-					<param name="id" value="27" />
-					<param name="label" value="$LOCALIZE[13511]" />
-				</include>
-				<include content="DefaultDialogButton">
-					<param name="id" value="24" />
-					<param name="label" value="$LOCALIZE[118]" />
-				</include>
-				<include content="DefaultDialogButton">
-					<param name="id" value="26" />
-					<param name="label" value="$LOCALIZE[15015]" />
-				</include>
-				<include content="DefaultDialogButton">
-					<param name="id" value="25" />
-					<param name="label" value="$LOCALIZE[31614]" />
-					<param name="visible">ControlGroup(200).HasFocus(201)</param>
-				</include>
-			</control>
-		</control>
-	</include>
-</includes>
+	</controls>
+</window>

@@ -2,6 +2,7 @@
 <!-- Aeon MQ 5 Leia 10.5.2/10.6.0/10.6.1/10.6.2 -->
 <!-- Matrix 11.0.4/11.1.1/11/2.0 -->
 <!-- Nexus 12.3.0 -->
+<!-- Omega 13.7.0 -->
 
 <includes>
 <!--##################################################################################   VIEW MULTILIST - 71   ##################################################################################-->
@@ -1901,8 +1902,8 @@
 							<top>704</top>
 							<width>206</width>
 							<height>291</height>
-							<texture>$VAR[value_videocase715]</texture>
-							<colordiffuse>DEFFFFFF</colordiffuse>
+							<texture>thumb_box.png</texture>
+							<colordiffuse>$VAR[value_videocase715]</colordiffuse>
 							<visible>Control.IsVisible(715)</visible>
 						</control>	
 						<control type="image">	<!-- video case 71 -->
@@ -2177,7 +2178,7 @@
 					<orientation>vertical</orientation>
 					<pagecontrol>81</pagecontrol>
 					<scrolltime>450</scrolltime>
-					<visible>![Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos)] + !ListItem.IsParentFolder + !Control.HasFocus(562)</visible>  <!-- list 71 content with no children -->
+					<visible>!Control.HasFocus(562) + [[![Container.Content(movies) | Container.Content(episodes) | Container.Content(musicvideos)] + !ListItem.IsParentFolder] | [Container.Content(movies) + Container(71).ListItem(0).HasVideoVersions]]</visible>  <!-- list 71 content with no children -->
 					<viewtype label="$LOCALIZE[535]">list</viewtype>
 					<focusposition>3</focusposition>
 					<movement>4</movement>
