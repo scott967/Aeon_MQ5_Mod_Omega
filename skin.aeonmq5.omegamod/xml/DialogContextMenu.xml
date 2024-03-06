@@ -81,7 +81,6 @@
 				<label>31671</label>
 				<visible>System.AddonIsEnabled(script.libraryeditor) + [Container.Content(Movies) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 			</control>
-
 			<control type="button" id="1031">
 				<include>DialogContext_Button</include>
 				<onleft>Dialog.Close(contextmenu)</onleft>
