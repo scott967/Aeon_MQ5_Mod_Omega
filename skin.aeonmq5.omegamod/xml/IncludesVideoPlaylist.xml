@@ -331,7 +331,7 @@
 						</control>
 						<control type="image">
 							<include>FlagSeparator</include>
-							<visible>!String.IsEmptyVideoPlayer.HDRType)</visible>
+							<visible>!String.IsEmpty(VideoPlayer.HDRType)</visible>
 						</control>
 						<control type="image">
 							<!-- Audio Codec -->
