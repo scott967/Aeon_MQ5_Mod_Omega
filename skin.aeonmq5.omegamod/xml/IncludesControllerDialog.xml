@@ -400,14 +400,15 @@
                 <width>963</width>
 				<left>40</left>
 				<control type="group">
-					<description>Area of the dialog for ports</description>
-					<height>96</height>
+					<description>Area of the dialog for ports B3 L4</description>
+					<height>75</height>
 					<control type="button" id="3">
 						<description>Ports button</description>
 						<top>-20</top>
 						<left>20</left>
                         <width>200</width>
-						<ondown>5</ondown>
+						<ondown>7</ondown>
+						<onright>9000</onright>
 						<label>$LOCALIZE[35110]</label>
 						<font>Font_18</font>
 						<textoffsetx>20</textoffsetx>
@@ -442,8 +443,8 @@
 				</control>
 				<control type="group">
 					<description>Area of the dialog for players</description>
-					<top>136</top>
-					<height>576</height>
+					<top>145</top>
+					<height>526</height>
 					<!-- <control type="image">
 						<description>Player list background</description>
 						<top>-20</top>
@@ -452,16 +453,16 @@
 						<right>-20</right>
 						<texture border="40">buttons/dialogbutton-nofo.png</texture>
 					</control> -->
-					<control type="list" id="5">
+					<control type="list" id="7">
 						<description>CONTROL_AGENT_LIST Player list</description>
-						<onup>5</onup>
-						<ondown>5</ondown>
+						<onup>3</onup>
+						<ondown>9000</ondown>
 						<onleft>3</onleft>
-						<onright>9000</onright>
+						<onright>62</onright>
 						<pagecontrol>62</pagecontrol>
 						<scrolltime tween="sine">200</scrolltime>
 						<orientation>vertical</orientation>
-						<itemlayout width="1740" height="96">
+						<itemlayout width="1740" height="60">
 							<control type="label">
 								<description>Player name</description>
 								<top>0</top>
@@ -494,23 +495,36 @@
 								</focusedlayout>
 							</control>
 						</itemlayout>
-						<focusedlayout width="1740" height="96">
+						<focusedlayout width="1740" height="60">
 							<control type="image">
-								<top>-20</top>
-								<bottom>-20</bottom>
-								<left>-20</left>
+								<top>0</top>
+								<height>60</height>>
+								<left>0</left>
 								<right>-20</right>
-								<texture border="40">button-fo.png</texture>
-								<visible>Control.HasFocus(5)</visible>
+								<texture border="5">settings_button_focus.png</texture>
+								<visible>Control.HasFocus(7)</visible>
 							</control>
 							<control type="label">
 								<description>Player name</description>
 								<top>0</top>
 								<left>20</left>
 								<label>$INFO[ListItem.Label]</label>
+								<textcolor>E4101010</textcolor>
 								<font>Font_18A</font>
                                 <aligny>center</aligny>
 								<align>left</align>
+								<visible>Control.HasFocus(7)</visible>
+							</control>
+							<control type="label">
+								<description>Player name</description>
+								<top>0</top>
+								<left>20</left>
+								<label>$INFO[ListItem.Label]</label>
+								<textcolor>FFFFFAF0</textcolor>
+								<font>Font_18A</font>
+                                <aligny>center</aligny>
+								<align>left</align>
+								<visible>!Control.HasFocus(7)</visible>
 							</control>
 							<control type="gamecontrollerlist">
 								<description>Player's game controller list. Length should fit 13 listitems (12 players and one "input disabled" indicator).</description>
@@ -533,16 +547,58 @@
 								</focusedlayout>
 							</control>
 						</focusedlayout>
+						<!-- <content>
+							<item>
+								<label>Player 1</label>
+							</item>
+							<item>
+								<label>Player 2</label>
+							</item>
+							<item>
+								<label>Player 3</label>
+							</item>
+							<item>
+								<label>Player 4</label>
+							</item>
+							<item>
+								<label>Player 5</label>
+							</item>
+							<item>
+								<label>Player 6</label>
+							</item>
+							<item>
+								<label>Player 7</label>
+							</item>
+							<item>
+								<label>Player 8</label>
+							</item>
+							<item>
+								<label>Player 9</label>
+							</item>
+							<item>
+								<label>Player 10</label>
+							</item>
+							<item>
+								<label>Player 11</label>
+							</item>
+							<item>
+								<label>Player 12</label>
+							</item>
+						</content> -->
 					</control>
 				</control>
 				<control type="scrollbar" id="62">
-					<left>1430</left>
-					<width>12</width>
-					<onleft>4</onleft>
+					<include>ScrollBar_Vertical</include>
+					<left>950</left>
+					<!-- <top>136</top> -->
+					<height>526</height>
+					<onleft>7</onleft>
 					<onright>9000</onright>
 					<onup>62</onup>
 					<ondown>62</ondown>
-					<orientation>vertical</orientation>
+					<animation effect="fade" time="200">Visible</animation>
+					<animation effect="fade" time="50">Hidden</animation>
+					<visible allowhiddenfocus="false">Control.IsVisible(7)</visible>
 				</control>
 			</control>
 			<control type="grouplist" id="9000">
