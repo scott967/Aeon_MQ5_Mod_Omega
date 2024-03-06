@@ -2270,11 +2270,11 @@
 		<colordiffuse>F9FFFFFF</colordiffuse>
 	</include>
 	<include name="DialogTextBox">
-		<left>230</left>
+		<left>555</left>
 		<top>-10</top>
 		<width>1290</width>
 		<height>49</height>
-		<align>justify</align>
+		<align>right</align>
 		<font>Font_17A</font>
 		<textcolor>FFFFFAF0</textcolor>
 		<scroll>true</scroll>
