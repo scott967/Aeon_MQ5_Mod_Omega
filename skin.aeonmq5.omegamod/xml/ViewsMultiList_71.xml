@@ -2217,6 +2217,24 @@
 							<top>2</top>
 							<width>45</width>
 							<height>45</height>
+							<texture>OverlayVersions.png</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png) + ListItem.HasVideoVersions</visible>
+						</control>
+						<control type="image">
+							<left>897</left>
+							<top>2</top>
+							<width>45</width>
+							<height>45</height>
+							<texture>OverlayExtras.png</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png) + ListItem.HasVideoExtras</visible>
+						</control>
+						<control type="image">
+							<left>897</left>
+							<top>2</top>
+							<width>45</width>
+							<height>45</height>
 							<texture>$VAR[value_watchedstyle]</texture>
 							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable</visible>
@@ -2270,6 +2288,24 @@
 							<include>listcolorfocus</include>
 							<label>$INFO[ListItem.Duration]</label>
 							<animation effect="slide" start="0,0" end="0,12" time="0" condition="Container.Content(albums) | Container.Content(mixed) | String.Contains(ListItem.DBType,musicvideo)">Conditional</animation>
+						</control>
+						<control type="image">
+							<left>897</left>
+							<top>2</top>
+							<width>45</width>
+							<height>45</height>
+							<texture>OverlayVersions</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png) + ListItem.HasVideoVersions</visible>
+						</control>
+						<control type="image">
+							<left>897</left>
+							<top>2</top>
+							<width>45</width>
+							<height>45</height>
+							<texture>OverlayExtras.png</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png) + ListItem.HasVideoExtras</visible>
 						</control>
 						<control type="image">
 							<left>897</left>

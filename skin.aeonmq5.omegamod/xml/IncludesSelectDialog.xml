@@ -1,5 +1,326 @@
 <!-- Omega 13.7.0 New includes for DialogSelect to support games -->
 <includes>
+    <include name="VideoSelectLayout">
+        <control type="group">	<!-- right group -->
+            <left>75</left>
+            <animation effect="slide" start="900,0" end="0,0" time="1000" tween="cubic" easing="out">WindowOpen</animation>
+            <animation effect="slide" start="0,0" end="900,0" time="1000" tween="cubic" easing="out">WindowClose</animation>
+            <animation effect="slide" start="1200,0" end="0,0" time="1000" tween="cubic" easing="out">Visible</animation>
+            <animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+            <visible>![Player.HasVideo | Player.HasGame | Window.IsActive(gamesaves) | Window.IsActive(gamestretchmode) | Window.IsActive(gamevideofilter) | Window.IsActive(gamevideorotation) | Window.IsActive(ingamesaves)]</visible>
+            <control type="image">
+                <left>1208</left>
+                <top>69</top>
+                <width>638</width>
+                <height>45</height>
+                <texture>shadow_h.png</texture>
+                <colordiffuse>C3FFFFFF</colordiffuse>
+            </control>
+            <control type="image">
+                <left>1208</left>
+                <top>112</top>
+                <width>638</width>
+                <height>968</height>
+                <texture>black.png</texture>
+                <colordiffuse>C3FFFFFF</colordiffuse>
+            </control>
+            <control type="image">
+                <left>1208</left>
+                <top>680</top>
+                <width>638</width>
+                <height>402</height>
+                <texture>black.png</texture>
+                <colordiffuse>90FFFFFF</colordiffuse>
+            </control>
+            <control type="image">
+                <left>1260</left>
+                <top>142</top>
+                <width>540</width>
+                <height>540</height>
+                <fadetime>FanartCrossFadeTime</fadetime>
+                <texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_dialogselect_icon]</texture>
+                <aspectratio aligny="bottom">keep</aspectratio>
+                <bordertexture border="-2">black.png</bordertexture>
+            </control>
+            <control type="image">
+                <left>1260</left>
+                <top>690</top>
+                <width>540</width>
+                <height>540</height>
+                <fadetime>FanartCrossFadeTime</fadetime>
+                <texture flipy="true" diffuse="thumb_reflect.png" fallback="DefaultVideoPoster.png" background="true">$VAR[value_dialogselect_icon]</texture>
+                <aspectratio aligny="top">keep</aspectratio>
+                <bordertexture flipy="true" border="-2" diffuse="thumb_reflect.png">black.png</bordertexture>
+            </control>
+            <control type="textbox">
+                <left>1278</left>
+                <top>694</top>
+                <width>506</width>
+                <height>262</height>
+                <font>Font_18A</font>
+                <label>$INFO[Container(6).ListItem.AddonDescription]</label>
+                <autoscroll delay="8000" time="2000" repeat="8000">!Skin.HasSetting(noallowscroll)</autoscroll>
+            </control>
+        </control>
+        <control type="group">	<!-- left group all windows -->
+            <animation effect="slide" start="-1200,0" end="0,0" time="700" tween="cubic" easing="out">WindowOpen</animation>
+            <animation effect="slide" start="0,0" end="-1200,0" time="700" tween="cubic" easing="out">WindowClose</animation>
+            <animation effect="slide" start="-1200,0" end="0,0" time="700" tween="cubic" easing="out">Visible</animation>
+            <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+            <control type="image">
+                <left>0</left>
+                <top>69</top>
+                <width>1282</width>
+                <height>45</height>
+                <texture>shadow_h.png</texture>
+                <colordiffuse>C3FFFFFF</colordiffuse>
+            </control>
+            <control type="image">
+                <left>1282</left>
+                <top>112</top>
+                <width>45</width>
+                <height>968</height>
+                <texture>shadow.png</texture>
+                <colordiffuse>C3FFFFFF</colordiffuse>
+            </control>
+            <control type="image">
+                <left>0</left>
+                <top>112</top>
+                <width>1282</width>
+                <height>968</height>
+                <texture>black.png</texture>
+                <colordiffuse>90FFFFFF</colordiffuse>
+            </control>
+            <control type="image">
+                <left>0</left>
+                <top>112</top>
+                <width>1282</width>
+                <height>90</height>
+                <texture>black.png</texture>
+                <colordiffuse>70FFFFFF</colordiffuse>
+            </control>
+            <control type="label" id="1">
+                <!-- header label -->
+                <left>68</left>
+                <top>136</top>
+                <width>1156</width>
+                <height>34</height>
+                <font>Font_23</font>
+                <textcolor>80FFFAF0</textcolor>
+            </control>
+            <control type="group">	<!-- left group -->
+                <control type="list" id="3">
+                </control>
+                <control type="list" id="6">    <!-- Version/extras List -->
+                    <viewtype label="31801">list</viewtype>
+                    <left>0</left>
+                    <top>237</top>
+                    <width>1282</width>
+                    <height>705</height>
+                    <pagecontrol>61</pagecontrol>
+                    <onleft>5</onleft>
+                    <onright>61</onright>
+                    <onup>6</onup>
+                    <ondown>6</ondown>
+                    <orientation>vertical</orientation>
+                    <scrolltime>450</scrolltime>
+                    <preloaditems>2</preloaditems>
+                    <animation effect="fade" start="100" end="50" time="200" condition="!Control.HasFocus(6)">Conditional</animation>
+                    <itemlayout height="98">
+                        <control type="image">
+                            <left>15</left>
+                            <top>96</top>
+                            <width>1252</width>
+                            <height>1</height>
+                            <texture>line.png</texture>
+                        </control>
+                        <control type="label">
+                            <left>68</left>
+                            <top>0</top>
+                            <width>1140</width>
+                            <height>54</height>
+                            <font>Font_23</font>
+                            <aligny>center</aligny>
+                            <include>listcolor</include>
+                            <label>$VAR[MediaInfoListLabelVar]</label>
+                        </control>
+                        <control type="label">
+                            <left>68</left>
+                            <top>57</top>
+                            <height>44</height>
+                            <width>1140</width>
+                            <font>Font_18A</font>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <include>subcolor</include>
+                            <label>$INFO[ListItem.Label2]</label>
+                            <visible>String.IsEmpty(ListItem.AddonCreator)+ String.IsEmpty(ListItem.Property(extension))</visible>
+                        </control>
+                        <control type="label">
+                            <left>68</left>
+                            <top>57</top>
+                            <height>44</height>
+                            <width>1140</width>
+                            <font>Font_18A</font>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <include>subcolor</include>
+                            <label>[COLOR=$VAR[value_headercolor]]$LOCALIZE[24051][/COLOR] $INFO[ListItem.AddonVersion] - [COLOR=$VAR[value_headercolor]]$LOCALIZE[21863]:[/COLOR] $INFO[ListItem.AddonCreator] - [COLOR=$VAR[value_headercolor]]$LOCALIZE[20037]:[/COLOR] $INFO[ListItem.Label2]</label>
+                            <visible>!String.IsEmpty(ListItem.AddonCreator) + String.IsEmpty(ListItem.Property(extension))</visible>
+                        </control>
+                        <control type="label">
+                            <left>68</left>
+                            <top>57</top>
+                            <height>44</height>
+                            <width>1140</width>
+                            <font>Font_18A</font>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <include>subcolor</include>
+                            <label>[COLOR=$VAR[value_headercolor]]$LOCALIZE[21863]:[/COLOR] $INFO[ListItem.AddonCreator] - [COLOR=$VAR[value_headercolor]]$LOCALIZE[560]:[/COLOR] $INFO[ListItem.label2]</label>
+                            <visible>!String.IsEmpty(ListItem.Property(extension)) + !String.IsEmpty(ListItem.Label2)</visible>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout height="98">
+                        <control type="image">
+                            <left>0</left>
+                            <top>0</top>
+                            <width>1282</width>
+                            <height>98</height>
+                            <texture>settings_button_focus.png</texture>
+                            <animation effect="fade" start="100" end="50" time="0" condition="!Control.Hasfocus(6)">conditional</animation>
+                        </control>
+                        <control type="label">
+                            <left>68</left>
+                            <top>0</top>
+                            <width>1140</width>
+                            <height>54</height>
+                            <font>Font_23</font>
+                            <aligny>center</aligny>
+                            <include>listcolorfocus</include>
+                            <label>$VAR[MediaInfoListLabelVar]</label>
+                        </control>
+                        <control type="label">
+                            <left>68</left>
+                            <top>57</top>
+                            <width>1140</width>
+                            <height>44</height>
+                            <font>Font_18A</font>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <include>subcolorfocus</include>
+                            <label>$INFO[ListItem.Label2]</label>
+                            <visible>String.IsEmpty(ListItem.AddonCreator)+ String.IsEmpty(ListItem.Property(extension))</visible>
+                        </control>
+                        <control type="label">
+                            <left>68</left>
+                            <top>57</top>
+                            <width>1140</width>
+                            <height>44</height>
+                            <font>Font_18A</font>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <include>subcolorfocus</include>
+                            <label>[COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[24051][/COLOR] $INFO[ListItem.AddonVersion] - [COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[21863]:[/COLOR] $INFO[ListItem.AddonCreator] - [COLOR=$VAR[value_headercolorfocus]]$LOCALIZE[20037]:[/COLOR] $INFO[ListItem.Label2]</label>
+                            <visible>!String.IsEmpty(ListItem.AddonCreator) + String.IsEmpty(ListItem.Property(extension))</visible>
+                        </control>
+                        <control type="label">
+                            <left>68</left>
+                            <top>57</top>
+                            <height>44</height>
+                            <width>1140</width>
+                            <font>Font_18A</font>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <include>subcolor</include>
+                            <label>[COLOR=$VAR[value_headercolor]]$LOCALIZE[21863]:[/COLOR] $INFO[ListItem.AddonCreator] - [COLOR=$VAR[value_headercolor]]$LOCALIZE[560]:[/COLOR] $INFO[ListItem.label2]</label>
+                            <visible>!String.IsEmpty(ListItem.Property(extension)) + !String.IsEmpty(ListItem.Label2)</visible>
+                        </control>
+                    </focusedlayout>
+                </control>
+                <!-- ScrollBar -->
+                <control type="scrollbar" id="61">
+                    <include>ScrollBar_Vertical</include>
+                    <left>1252</left>
+                    <top>237</top>
+                    <height>705</height>
+                    <onleft>6</onleft>
+                    <onright>5</onright>
+                    <ondown>61</ondown>
+                    <onup>61</onup>
+                    <visible allowhiddenfocus="true">Control.HasFocus(61) | Control.HasFocus(6)</visible>
+                </control>
+            </control>
+        </control>
+        <control type="group">	<!-- close / OK / extra buttons -->
+            <control type="button" id="5">
+                <description>OK button</description>
+                <left>585</left>
+                <top>945</top>
+                <width>315</width>
+                <height>52</height>
+                <!-- <label>186</label> -->
+                <label></label>
+                <texturenofocus></texturenofocus>
+                <texturefocus></texturefocus>
+                <textcolor>FF505050</textcolor>
+                <focusedcolor>FFFFFFFF</focusedcolor>
+                <font>Font_18</font>
+                <align>right</align>
+                <aligny>center</aligny>
+                <onleft condition="Control.IsVisible(8)">8</onleft>
+                <onleft condition="!Control.IsVisible(8)">7</onleft>
+                <onright>7</onright>
+                <!-- <onup condition="Control.IsVisible(11)">11</onup> -->
+                <onup>6</onup>
+                <!-- <ondown condition="Control.IsVisible(11)">11</ondown -->>
+                <ondown>6</ondown>
+            </control>
+            <control type="button" id="7">
+                <description>Cancel Button</description>
+                <left>-45</left>
+                <top>945</top>
+                <width>315</width>
+                <height>52</height>
+                <label>222</label>
+                <texturenofocus></texturenofocus>
+                <texturefocus></texturefocus>
+                <textcolor>FF505050</textcolor>
+                <focusedcolor>FFFFFFFF</focusedcolor>
+                <font>Font_18</font>
+                <align>right</align>
+                <aligny>center</aligny>
+                <onleft>5</onleft>
+                <onright condition="Control.IsEnabled(8)">8</onright>
+                <onright condition="!Control.IsEnabled(8)">5</onright>
+                <onup>6</onup>
+                <!-- <onup condition="Control.IsVisible(11)">11</onup> -->
+                <ondown>6</ondown>
+                <!-- <ondown condition="Control.IsVisible(11)">11</ondown> -->
+            </control>
+            <control type="button" id="8">
+                <description>3rd button</description>
+                <left>270</left>
+                <top>945</top>
+                <width>315</width>
+                <height>52</height>
+                <label></label>
+                <texturenofocus></texturenofocus>
+                <texturefocus></texturefocus>
+                <textcolor>FF505050</textcolor>
+                <focusedcolor>FFFFFFFF</focusedcolor>
+                <font>Font_18</font>
+                <align>right</align>
+                <aligny>center</aligny>
+                <onleft>7</onleft>
+                <onright>5</onright>
+                <!-- <onup condition="Control.IsVisible(11)">11</onup> -->
+                <onup>6</onup>
+                <!-- <ondown condition="Control.IsVisible(11)">11</ondown> -->
+                <ondown>6</ondown>
+            </control>
+        </control>
+    </include>
     <include name="DefaultDialogSelectLayout">
         <control type="group">	<!-- right group -->
             <left>75</left>
@@ -108,7 +429,7 @@
                 <font>Font_23</font>
                 <textcolor>80FFFAF0</textcolor>
             </control>
-            <control type="group">	<!-- left group Not for games -->
+            <control type="group">	<!-- left group Not for games or versions/extras -->
                 <control type="list" id="3">
                     <!-- Common List -->
                     <viewtype label="31801">list</viewtype>
@@ -200,7 +521,7 @@
                         </control>
                         <control type="label">
                             <left>68</left>
-                            <top>5</top>
+                            <top>57</top>
                             <height>44</height>
                             <width>1140</width>
                             <font>Font_18A</font>

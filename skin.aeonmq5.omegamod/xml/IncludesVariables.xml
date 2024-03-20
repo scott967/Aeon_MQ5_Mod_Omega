@@ -10,7 +10,7 @@
 <includes>
 	<!-- ################################################ Value/General ################################################ -->
 	<variable name="SkinVersion">
-		<value>13.7.0 Omegamod[COLOR=80FFFFFF] | [/COLOR]01/31/2024</value>
+		<value>13.7.0 Omegamod[COLOR=80FFFFFF] | [/COLOR]03/31/2024</value>
 	</variable>
 	<variable name="Sub_GoTo">
 		<value condition="String.IsEqual(Container(9000).ListItem.Property(subid),movies)">6001</value>
@@ -5488,6 +5488,10 @@
 		<value condition="Window.IsVisible(videoplaylist) + ListItem.HasVideoVersions">$INFO[ListItem.Label] - $INFO[ListItem.VideoVersionName]</value>
 		<value condition="!String.IsEmpty(ListItem.DBType) + ![String.Contains(ListItem.DBType, genre) | String.Contains(ListItem.DBType, musicvideo)] | Container.Content(images)">$INFO[ListItem.Label]</value>
 		<value condition="String.IsEmpty(ListItem.DBType) + !Container.Content(images) | String.Contains(ListItem.DBType, genre)">$INFO[ListItem.Label]</value>
+	</variable>
+	<variable name="MediaInfoListLabelVar">
+		<value condition="Window.IsVisible(selectvideoversion)">$INFO[ListItem.Label] - $INFO[ListItem.VideoVersionName]</value>
+		<value>$INFO[ListItem.Label]</value>
 	</variable>
 	<expression name="SeekBarTime">
 		[Player.HasPerformedSeek(1) + Skin.HasSetting(seek_time_1)] |

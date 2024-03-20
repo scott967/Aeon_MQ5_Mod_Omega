@@ -53,6 +53,29 @@
 		<aligny>center</aligny>
 		<aspectratio>keep</aspectratio>
 	</include>
+	
+	<include name="VersionsCoverFlow">
+		<left>339</left>
+		<top>105</top>
+		<width>82</width>
+		<height>82</height>
+		<aspectratio>keep</aspectratio>
+		<texture>OverlayVersions.png</texture>
+		<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+		<animation effect="slide" start="0,0" end="6,-28" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons)">Conditional</animation>
+		<visible>!Skin.HasSetting(nooverlays)</visible>
+	</include>
+	<include name="ExtrasCoverFlow">
+		<left>339</left>
+		<top>105</top>
+		<width>82</width>
+		<height>82</height>
+		<aspectratio>keep</aspectratio>
+		<texture>OverlayExtras.png</texture>
+		<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+		<animation effect="slide" start="0,0" end="6,-28" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons)">Conditional</animation>
+		<visible>!Skin.HasSetting(nooverlays)</visible>
+	</include>
 	<include name="WatchedCoverFlow">
 		<left>339</left>
 		<top>105</top>
@@ -162,6 +185,14 @@
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
+						<include>VersionsCoverFlow</include>
+						<visible>ListItem(-4).HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<include>ExtrasCoverFlow</include>
+						<visible>ListItem(-4).HasVideoExtras</visible>
+					</control>
+					<control type="image">
 						<include>WatchedCoverFlow</include>
 						<visible>String.IsEqual(ListItem(-4).Overlay,OverlayWatched.png)</visible>
 					</control>
@@ -216,6 +247,14 @@
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
+						<include>VersionsCoverFlow</include>
+						<visible>ListItem(-3).HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<include>ExtrasCoverFlow</include>
+						<visible>ListItem(-3).HasVideoExtras</visible>
+					</control>
+					<control type="image">
 						<include>WatchedCoverFlow</include>
 						<visible>String.IsEqual(ListItem(-3).Overlay,OverlayWatched.png)</visible>
 					</control>
@@ -268,6 +307,14 @@
 						<include>CoverFlowCodec</include>
 						<texture>$VAR[value_videocodec-2]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+					</control>
+					<control type="image">
+						<include>VersionsCoverFlow</include>
+						<visible>ListItem(-2).HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<include>ExtrasCoverFlow</include>
+						<visible>ListItem(-2).HasVideoExtras</visible>
 					</control>
 					<control type="image">
 						<include>WatchedCoverFlow</include>
@@ -340,6 +387,14 @@
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
+						<include>VersionsCoverFlow</include>
+						<visible>ListItem(3).HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<include>ExtrasCoverFlow</include>
+						<visible>ListItem(3).HasVideoExtras</visible>
+					</control>
+					<control type="image">
 						<include>WatchedCoverFlow</include>
 						<visible>String.IsEqual(ListItem(3).Overlay,OverlayWatched.png)</visible>
 					</control>
@@ -394,6 +449,14 @@
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
+						<include>VersionsCoverFlow</include>
+						<visible>ListItem(2).HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<include>ExtrasCoverFlow</include>
+						<visible>ListItem(2).HasVideoExtras</visible>
+					</control>
+					<control type="image">
 						<include>WatchedCoverFlow</include>
 						<visible>String.IsEqual(ListItem(2).Overlay,OverlayWatched.png)</visible>
 					</control>
@@ -446,6 +509,14 @@
 						<include>CoverFlowCodec</include>
 						<texture>$VAR[value_videocodec1]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+					</control>
+					<control type="image">
+						<include>VersionsCoverFlow</include>
+						<visible>ListItem(1).HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<include>ExtrasCoverFlow</include>
+						<visible>ListItem(1).HasVideoExtras</visible>
 					</control>
 					<control type="image">
 						<include>WatchedCoverFlow</include>
@@ -507,6 +578,14 @@
 							<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 						</control>
 						<control type="image">
+							<include>VersionsCoverFlow</include>
+							<visible>ListItem.HasVideoVersions</visible>
+						</control>
+						<control type="image">
+							<include>ExtrasCoverFlow</include>
+							<visible>ListItem.HasVideoExtras</visible>
+						</control>
+						<control type="image">
 							<include>WatchedCoverFlow</include>
 							<visible>String.IsEqual(ListItem(0).Overlay,OverlayWatched.png)</visible>
 						</control>
@@ -560,6 +639,14 @@
 							<include>CoverFlowCodec</include>
 							<texture>$VAR[value_videocodec-1]</texture>
 							<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+						</control>
+						<control type="image">
+							<include>VersionsCoverFlow</include>
+							<visible>ListItem(-1).HasVideoVersions</visible>
+						</control>
+						<control type="image">
+							<include>ExtrasCoverFlow</include>
+							<visible>ListItem(-1).HasVideoExtras</visible>
 						</control>
 						<control type="image">
 							<include>WatchedCoverFlow</include>
@@ -625,6 +712,14 @@
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
+						<include>VersionsCoverFlow</include>
+						<visible>ListItem(4).HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<include>ExtrasCoverFlow</include>
+						<visible>ListItem(4).HasVideoExtras</visible>
+					</control>
+					<control type="image">
 						<include>WatchedCoverFlow</include>
 						<visible>String.IsEqual(ListItem(4).Overlay,OverlayWatched.png)</visible>
 					</control>
@@ -679,6 +774,14 @@
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
+						<include>VersionsCoverFlow</include>
+						<visible>ListItem(3).HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<include>ExtrasCoverFlow</include>
+						<visible>ListItem(3).HasVideoExtras</visible>
+					</control>
+					<control type="image">
 						<include>WatchedCoverFlow</include>
 						<visible>String.IsEqual(ListItem(3).Overlay,OverlayWatched.png)</visible>
 					</control>
@@ -731,6 +834,14 @@
 						<include>CoverFlowCodec</include>
 						<texture>$VAR[value_videocodec2]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+					</control>
+					<control type="image">
+						<include>VersionsCoverFlow</include>
+						<visible>ListItem(2).HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<include>ExtrasCoverFlow</include>
+						<visible>ListItem(2).HasVideoExtras</visible>
 					</control>
 					<control type="image">
 						<include>WatchedCoverFlow</include>
@@ -803,6 +914,14 @@
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
+						<include>VersionsCoverFlow</include>
+						<visible>ListItem(-3).HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<include>ExtrasCoverFlow</include>
+						<visible>ListItem(-3).HasVideoExtras</visible>
+					</control>
+					<control type="image">
 						<include>WatchedCoverFlow</include>
 						<visible>String.IsEqual(ListItem(-3).Overlay,OverlayWatched.png)</visible>
 					</control>
@@ -857,6 +976,14 @@
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
+						<include>VersionsCoverFlow</include>
+						<visible>ListItem(-2).HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<include>ExtrasCoverFlow</include>
+						<visible>ListItem(-2).HasVideoExtras</visible>
+					</control>
+					<control type="image">
 						<include>WatchedCoverFlow</include>
 						<visible>String.IsEqual(ListItem(-2).Overlay,OverlayWatched.png)</visible>
 					</control>
@@ -909,6 +1036,14 @@
 						<include>CoverFlowCodec</include>
 						<texture>$VAR[value_videocodec-1]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+					</control>
+					<control type="image">
+						<include>VersionsCoverFlow</include>
+						<visible>ListItem(-1).HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<include>ExtrasCoverFlow</include>
+						<visible>ListItem(-1).HasVideoExtras</visible>
 					</control>
 					<control type="image">
 						<include>WatchedCoverFlow</include>
@@ -970,6 +1105,14 @@
 							<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 						</control>
 						<control type="image">
+							<include>VersionsCoverFlow</include>
+							<visible>ListItem.HasVideoVersions</visible>
+						</control>
+						<control type="image">
+							<include>ExtrasCoverFlow</include>
+							<visible>ListItem.HasVideoExtras</visible>
+						</control>
+						<control type="image">
 							<include>WatchedCoverFlow</include>
 							<visible>String.IsEqual(ListItem(0).Overlay,OverlayWatched.png)</visible>
 						</control>
@@ -1023,6 +1166,14 @@
 							<include>CoverFlowCodec</include>
 							<texture>$VAR[value_videocodec1]</texture>
 							<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] </visible>
+						</control>
+						<control type="image">
+							<include>VersionsCoverFlow</include>
+							<visible>ListItem(1).HasVideoVersions</visible>
+						</control>
+						<control type="image">
+							<include>ExtrasCoverFlow</include>
+							<visible>ListItem(1).HasVideoExtras</visible>
 						</control>
 						<control type="image">
 							<include>WatchedCoverFlow</include>
@@ -1085,6 +1236,14 @@
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
+						<include>VersionsCoverFlow</include>
+						<visible>ListItem(-3).HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<include>ExtrasCoverFlow</include>
+						<visible>ListItem(-3).HasVideoExtras</visible>
+					</control>
+					<control type="image">
 						<include>WatchedCoverFlow</include>
 						<visible>String.IsEqual(ListItem(-3).Overlay,OverlayWatched.png)</visible>
 					</control>
@@ -1137,6 +1296,14 @@
 						<include>CoverFlowCodec</include>
 						<texture>$VAR[value_videocodec-2]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+					</control>
+					<control type="image">
+						<include>VersionsCoverFlow</include>
+						<visible>ListItem(-2).HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<include>ExtrasCoverFlow</include>
+						<visible>ListItem(-2).HasVideoExtras</visible>
 					</control>
 					<control type="image">
 						<include>WatchedCoverFlow</include>
@@ -1193,6 +1360,14 @@
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
+						<include>VersionsCoverFlow</include>
+						<visible>ListItem(-1).HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<include>ExtrasCoverFlow</include>
+						<visible>ListItem(-1).HasVideoExtras</visible>
+					</control>
+					<control type="image">
 						<include>WatchedCoverFlow</include>
 						<visible>String.IsEqual(ListItem(-1).Overlay,OverlayWatched.png)</visible>
 					</control>
@@ -1247,6 +1422,15 @@
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
+						<include>VersionsCoverFlow</include>
+						<visible>ListItem(3).HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<include>ExtrasCoverFlow</include>
+						<visible>ListItem(3).HasVideoExtras</visible>
+					</control>
+					
+					<control type="image">
 						<include>WatchedCoverFlow</include>
 						<visible>String.IsEqual(ListItem(3).Overlay,OverlayWatched.png)</visible>
 					</control>
@@ -1299,6 +1483,14 @@
 						<include>CoverFlowCodec</include>
 						<texture>$VAR[value_videocodec2]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+					</control>
+					<control type="image">
+						<include>VersionsCoverFlow</include>
+						<visible>ListItem(2).HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<include>ExtrasCoverFlow</include>
+						<visible>ListItem(2).HasVideoExtras</visible>
 					</control>
 					<control type="image">
 						<include>WatchedCoverFlow</include>
@@ -1355,6 +1547,14 @@
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
 					</control>
 					<control type="image">
+						<include>VersionsCoverFlow</include>
+						<visible>ListItem(1).HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<include>ExtrasCoverFlow</include>
+						<visible>ListItem(1).HasVideoExtras</visible>
+					</control>
+					<control type="image">
 						<include>WatchedCoverFlow</include>
 						<visible>String.IsEqual(ListItem(1).Overlay,OverlayWatched.png)</visible>
 					</control>
@@ -1407,6 +1607,14 @@
 						<include>CoverFlowCodec</include>
 						<texture>$VAR[value_videocodec0]</texture>
 						<visible>!Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)]</visible>
+					</control>
+					<control type="image">
+						<include>VersionsCoverFlow</include>
+						<visible>ListItem.HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<include>ExtrasCoverFlow</include>
+						<visible>ListItem.HasVideoExtras</visible>
 					</control>
 					<control type="image">
 						<include>WatchedCoverFlow</include>

@@ -655,6 +655,36 @@
 					<top>261</top>
 					<width>75</width>
 					<height>75</height>
+					<texture>OverlayVersions.png</texture>
+					<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+					<animation type="WindowOpen">
+						<effect type="fade" start="0" end="100" time="500" delay="2000" />
+					</animation>
+					<animation type="Visible">
+						<effect type="fade" start="0" end="100" time="500" delay="100" />
+					</animation>
+					<visible>!Skin.HasSetting(nooverlays) + LikstItem.HasVideoVersions</visible>
+				</control>
+				<control type="image">
+					<left>916</left>
+					<top>261</top>
+					<width>75</width>
+					<height>75</height>
+					<texture>OverlayExtras.png</texture>
+					<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+					<animation type="WindowOpen">
+						<effect type="fade" start="0" end="100" time="500" delay="2000" />
+					</animation>
+					<animation type="Visible">
+						<effect type="fade" start="0" end="100" time="500" delay="100" />
+					</animation>
+					<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
+				</control>
+				<control type="image">
+					<left>916</left>
+					<top>261</top>
+					<width>75</width>
+					<height>75</height>
 					<texture>$VAR[value_watchedstyle]</texture>
 					<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 					<animation type="WindowOpen">

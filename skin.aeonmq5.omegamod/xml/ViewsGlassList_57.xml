@@ -736,6 +736,24 @@
 						<top>3</top>
 						<width>45</width>
 						<height>45</height>
+						<texture>OverlayVersions.png</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<visible>!$EXP[IsPVRRecordings] + !Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<left>382</left>
+						<top>3</top>
+						<width>45</width>
+						<height>45</height>
+						<texture>OverlayExtras.png</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<visible>!$EXP[IsPVRRecordings] + !Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
+					</control>
+					<control type="image">
+						<left>382</left>
+						<top>3</top>
+						<width>45</width>
+						<height>45</height>
 						<texture>$VAR[value_watchedstyle]</texture>
 						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 						<visible>!$EXP[IsPVRRecordings] + !Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
@@ -772,6 +790,24 @@
 						<textcolor>FFFFFAF0</textcolor>
 						<selectedcolor>$VAR[value_headercolor]</selectedcolor>
 						<animation effect="fade" start="100" end="90" time="0" condition="!Control.Hasfocus(57)">conditional</animation>
+					</control>
+					<control type="image">
+						<left>382</left>
+						<top>3</top>
+						<width>45</width>
+						<height>45</height>
+						<texture>OverlayVersions.png</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<visible>!$EXP[IsPVRRecordings] + !Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<left>382</left>
+						<top>3</top>
+						<width>45</width>
+						<height>45</height>
+						<texture>OverlayExtras.png</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<visible>!$EXP[IsPVRRecordings] + !Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
 					</control>
 					<control type="image">
 						<left>382</left>
@@ -827,6 +863,24 @@
 						<textcolor>FFFFFAF0</textcolor>
 						<selectedcolor>FFFFFAF0</selectedcolor>
 						<visible>!String.IsEqual(ListItem.Label,..)</visible>
+					</control>
+					<control type="image">
+						<left>382</left>
+						<top>3</top>
+						<width>45</width>
+						<height>45</height>
+						<texture>OverlayVersions.png</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<visible>!$EXP[IsPVRRecordings] +!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<left>382</left>
+						<top>3</top>
+						<width>45</width>
+						<height>45</height>
+						<texture>OverlayExtras.png</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<visible>!$EXP[IsPVRRecordings] +!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
 					</control>
 					<control type="image">
 						<left>382</left>
