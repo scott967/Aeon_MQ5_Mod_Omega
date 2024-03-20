@@ -31,10 +31,11 @@
 		</control>
 		<control type="label">
 			<left>120</left>
-			<top>-63</top>
+			<top>-76</top>
 			<width>450</width>
 			<height>60</height>
 			<align>center</align>
+			<aligny>center</aligny>
 			<label>31178</label>
 			<font>Font_20</font>
 			<textcolor>$VAR[value_headercolor]</textcolor>

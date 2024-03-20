@@ -107,7 +107,7 @@
 				<description>controller profiles CONTROL_CONTROLLER_LIST</description>
 				<left>0</left>
 				<top>124</top>
-				<width>225</width>
+				<width>400</width>
 				<height>653</height>
 				<itemgap>0</itemgap>
 				<onup>3</onup>
@@ -130,7 +130,7 @@
 			</control>
 			<control type="button" id="10">
                 <description>CONTROL_CONTROLLER_BUTTON_TEMPLATE</description>
-				<width>225</width>
+				<width>400</width>
                 <textoffsetx>0</textoffsetx>
                 <align>center</align>
                 <font>Font_18</font>
@@ -166,7 +166,7 @@
 				<!-- Heading label Controller profiles-->
 				<left>0</left>
 				<top>60</top>
-				<width>225</width>
+				<width>400</width>
 				<height>48</height>
 				<align>center</align>
 				<aligny>center</aligny>
@@ -269,6 +269,7 @@
 				<bottom>30</bottom>
 				<left>30</left>
 				<right>30</right>
+				<visible>!Window.IsVisible(selectdialog)</visible>
 				<control type="group">
 					<description>Port list</description>
 					<width>1430</width>
@@ -361,6 +362,7 @@
 				<top>63</top>
 				<width>330</width>
 				<onleft>3</onleft>
+				<visible>!Window.IsVisible(selectdialog)</visible>
 				<control type="button" id="18">
 					<description>CONTROL_CLOSE_BUTTON</description>
 					<include>SettingsDialogButton</include>
