@@ -3751,9 +3751,9 @@
 		<value condition="Control.IsVisible(65) + Control.HasFocus(5801)">$INFO[Container(5801).ListItem.Label]</value>
 	</variable>
 	<variable name="value_videoosdtitle">
-		<value condition="Skin.HasSetting(originaltitle) + !String.IsEmpty(VideoPlayer.OriginalTitle) + !String.Contains(VideoPlayer.VideoVersionName,$LOCALIZE[40400])">$INFO[VideoPlayer.OriginalTitle] - $INFO[VideoPlayer.VideoVersionName]</value>
+		<value condition="Skin.HasSetting(originaltitle) + !String.IsEmpty(VideoPlayer.OriginalTitle) + VideoPlayer.Content(movies) + !String.Contains(VideoPlayer.VideoVersionName,$LOCALIZE[40400])">$INFO[VideoPlayer.OriginalTitle] - $INFO[VideoPlayer.VideoVersionName]</value>
 		<value condition="Skin.HasSetting(originaltitle) + !String.IsEmpty(VideoPlayer.OriginalTitle)">$INFO[VideoPlayer.OriginalTitle]</value>
-		<value condition="[!Skin.HasSetting(originaltitle) | String.IsEmpty(VideoPlayer.OriginalTitle)] + !String.Contains(VideoPlayer.VideoVersionName,$LOCALIZE[40400])">$INFO[VideoPlayer.Title] - $INFO[VideoPlayer.VideoVersionName]</value>
+		<value condition="[!Skin.HasSetting(originaltitle) | String.IsEmpty(VideoPlayer.OriginalTitle)] + VideoPlayer.Content(movies) + !String.Contains(VideoPlayer.VideoVersionName,$LOCALIZE[40400])">$INFO[VideoPlayer.Title] - $INFO[VideoPlayer.VideoVersionName]</value>
 		<value condition="[!Skin.HasSetting(originaltitle) | String.IsEmpty(VideoPlayer.OriginalTitle)]">$INFO[VideoPlayer.Title]</value>
 	
 	</variable>
