@@ -2235,6 +2235,24 @@
 							<top>2</top>
 							<width>45</width>
 							<height>45</height>
+							<texture>OverlayVersions.png</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions + !ListItem.IsResumable</visible>
+						</control>
+						<control type="image">
+							<left>897</left>
+							<top>2</top>
+							<width>45</width>
+							<height>45</height>
+							<texture>OverlayExtras.png</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + LisItem.HasVideoExtras + !ListItem.IsResumable</visible>
+						</control>
+						<control type="image">
+							<left>897</left>
+							<top>2</top>
+							<width>45</width>
+							<height>45</height>
 							<texture>$VAR[value_watchedstyle]</texture>
 							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable</visible>

@@ -88,7 +88,7 @@
 							<height>60</height>
 							<texture>OverlayExtras.png</texture>
 							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-							<visible>!Skin.HasSetting(nooverlays) + ListItems.HasVideoExtras</visible>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
 						</control>
 						<control type="image">
 							<left>819</left>

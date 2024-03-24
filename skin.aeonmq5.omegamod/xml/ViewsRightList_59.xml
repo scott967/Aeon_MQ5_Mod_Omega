@@ -244,7 +244,7 @@
 							<label>$VAR[artist_label]</label>
 						</control>
 					</itemlayout>
-					<itemlayout condition="Window.IsActive(videos) | Window.IsActive(videoplaylist) | Window.IsActive(musicplaylist) | Window.IsActive(music)" height="45">
+					<itemlayout condition="!$EXP[IsPVRRecordings] + [Window.IsActive(videos) | Window.IsActive(videoplaylist) | Window.IsActive(musicplaylist) | Window.IsActive(music)]" height="45">
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
@@ -281,21 +281,30 @@
 							<top>4</top>
 							<width>36</width>
 							<height>36</height>
+							<texture>OverlayVersions.png</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions</visible>
+						</control>
+						<control type="image">
+							<left>772</left>
+							<top>4</top>
+							<width>36</width>
+							<height>36</height>
+							<texture>OverlayExtras.png</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
+						</control>
+						<control type="image">
+							<left>772</left>
+							<top>4</top>
+							<width>36</width>
+							<height>36</height>
 							<texture>$VAR[value_watchedstyle]</texture>
 							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
 						</control>
-						<control type="image">
-								<left>907</left>
-								<top>8</top>
-								<width>45</width>
-								<height>45</height>
-								<texture>$VAR[pvr_overlay]</texture>
-								<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
-								<visible>!Skin.HasSetting(nooverlays) </visible>
-							</control>
 					</itemlayout>
-					<itemlayout condition="Window.IsVisible(tvrecordings) | Window.IsVisible(radiorecordings)" height="45">
+					<itemlayout condition="$EXP[IsPVRRecordings]" height="45">
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
@@ -380,7 +389,7 @@
 							<visible>!String.IsEqual(ListItem.Label,..)</visible>
 						</control>
 					</focusedlayout>
-					<focusedlayout condition="Window.IsVisible(tvrecordings) | Window.IsVisible(radiorecordings)" height="45">
+					<focusedlayout condition="$EXP[IsPVRRecordings]" height="45">
 						<control type="image">
 							<left>30</left>
 							<top>0</top>
@@ -477,6 +486,24 @@
 							<top>0</top>
 							<width>45</width>
 							<height>45</height>
+							<texture>OverlayVersions.png</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions</visible>
+						</control>
+						<control type="image">
+							<left>765</left>
+							<top>0</top>
+							<width>45</width>
+							<height>45</height>
+							<texture>OverlayExtras.png</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
+						</control>
+						<control type="image">
+							<left>765</left>
+							<top>0</top>
+							<width>45</width>
+							<height>45</height>
 							<texture>$VAR[value_watchedstyle]</texture>
 							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
@@ -557,6 +584,24 @@
 							<label>$VAR[value_listinfofocus]</label>
 							<scrollspeed>20</scrollspeed>
 							<visible>!String.IsEqual(ListItem.Label,..) + !ListItem.IsPlaying</visible>
+						</control>
+						<control type="image">
+							<left>765</left>
+							<top>15</top>
+							<width>45</width>
+							<height>45</height>
+							<texture>OverlayVersions.png</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions</visible>
+						</control>
+						<control type="image">
+							<left>765</left>
+							<top>15</top>
+							<width>45</width>
+							<height>45</height>
+							<texture>OverlayExtras.png</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
 						</control>
 						<control type="image">
 							<left>765</left>

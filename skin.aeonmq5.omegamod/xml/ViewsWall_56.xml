@@ -84,6 +84,24 @@
 							<top>1</top>
 							<width>38</width>
 							<height>38</height>
+							<texture>OverlayVersions.png</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions</visible>
+						</control>
+						<control type="image">
+							<left>110</left>
+							<top>1</top>
+							<width>38</width>
+							<height>38</height>
+							<texture>OverlayExtras.png</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
+						</control>
+						<control type="image">
+							<left>110</left>
+							<top>1</top>
+							<width>38</width>
+							<height>38</height>
 							<texture>$VAR[value_watchedstyle]</texture>
 							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
@@ -108,6 +126,24 @@
 							<top>-2</top>
 							<width>38</width>
 							<height>38</height>
+							<texture>OverlayVersions.png</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions</visible>
+						</control>
+						<control type="image">
+							<left>156</left>
+							<top>-2</top>
+							<width>38</width>
+							<height>38</height>
+							<texture>OverlayExtras.png</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
+						</control>
+						<control type="image">
+							<left>156</left>
+							<top>-2</top>
+							<width>38</width>
+							<height>38</height>
 							<texture>$VAR[value_watchedstyle]</texture>
 							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
@@ -126,6 +162,24 @@
 							<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster]</texture>
 							<bordertexture border="-2">black.png</bordertexture>
 							<aspectratio align="center">stretch</aspectratio>
+						</control>
+						<control type="image">
+							<left>270</left>
+							<top>-2</top>
+							<width>52</width>
+							<height>52</height>
+							<texture>OverlayVersions.png</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions</visible>
+						</control>
+						<control type="image">
+							<left>270</left>
+							<top>-2</top>
+							<width>52</width>
+							<height>52</height>
+							<texture>OverlayExtras.png</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
 						</control>
 						<control type="image">
 							<left>270</left>
@@ -176,6 +230,24 @@
 							<top>30</top>
 							<width>38</width>
 							<height>38</height>
+							<texture>OverlayVersions.png</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions</visible>
+						</control>
+						<control type="image">
+							<left>134</left>
+							<top>30</top>
+							<width>38</width>
+							<height>38</height>
+							<texture>OverlayExtras.png</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
+						</control>
+						<control type="image">
+							<left>134</left>
+							<top>30</top>
+							<width>38</width>
+							<height>38</height>
 							<texture>$VAR[value_watchedstyle]</texture>
 							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
@@ -220,6 +292,24 @@
 							<top>26</top>
 							<width>38</width>
 							<height>38</height>
+							<texture>OverlayVersions.png</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions</visible>
+						</control>
+						<control type="image">
+							<left>152</left>
+							<top>26</top>
+							<width>38</width>
+							<height>38</height>
+							<texture>OverlayExtras.png</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
+						</control>
+						<control type="image">
+							<left>152</left>
+							<top>26</top>
+							<width>38</width>
+							<height>38</height>
 							<texture>$VAR[value_watchedstyle]</texture>
 							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 							<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
@@ -258,6 +348,24 @@
 							<aligny>center</aligny>
 							<aspectratio>keep</aspectratio>
 							<texture>$VAR[value_videocodec0]</texture>
+						</control>
+						<control type="image">
+							<left>244</left>
+							<top>36</top>
+							<width>52</width>
+							<height>52</height>
+							<texture>OverlayVersions.png</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions</visible>
+						</control>
+						<control type="image">
+							<left>244</left>
+							<top>36</top>
+							<width>52</width>
+							<height>52</height>
+							<texture>OverlayExtras.png</texture>
+							<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+							<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
 						</control>
 						<control type="image">
 							<left>244</left>
@@ -312,6 +420,32 @@
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
 							<effect type="fade" start="80" end="100" time="400" />
 						</animation>
+					</control>
+					<control type="image">
+						<left>110</left>
+						<top>1</top>
+						<width>38</width>
+						<height>38</height>
+						<texture>OverlayVersions.png</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="90,90" start="80" end="100" time="400" tween="back" easing="out" />
+							<effect type="fade" start="80" end="100" time="400" />
+						</animation>
+						<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<left>110</left>
+						<top>1</top>
+						<width>38</width>
+						<height>38</height>
+						<texture>OverlayExtras.png</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="90,90" start="80" end="100" time="400" tween="back" easing="out" />
+							<effect type="fade" start="80" end="100" time="400" />
+						</animation>
+						<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
 					</control>
 					<control type="image">
 						<left>110</left>
@@ -375,6 +509,32 @@
 						<top>-3</top>
 						<width>38</width>
 						<height>38</height>
+						<texture>OverlayVersions.png</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="90,90" start="80" end="100" time="400" tween="back" easing="out" />
+							<effect type="fade" start="80" end="100" time="400" />
+						</animation>
+						<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<left>158</left>
+						<top>-3</top>
+						<width>38</width>
+						<height>38</height>
+						<texture>OverlayExtras.png</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="90,90" start="80" end="100" time="400" tween="back" easing="out" />
+							<effect type="fade" start="80" end="100" time="400" />
+						</animation>
+						<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
+					</control>
+					<control type="image">
+						<left>158</left>
+						<top>-3</top>
+						<width>38</width>
+						<height>38</height>
 						<texture>$VAR[value_watchedstyle]</texture>
 						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 						<animation type="Focus" reversible="false">
@@ -426,6 +586,32 @@
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
 							<effect type="fade" start="80" end="100" time="400" />
 						</animation>
+					</control>
+					<control type="image">
+						<left>270</left>
+						<top>-2</top>
+						<width>52</width>
+						<height>52</height>
+						<texture>OverlayVersions.png</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="90,90" start="80" end="100" time="400" tween="back" easing="out" />
+							<effect type="fade" start="80" end="100" time="400" />
+						</animation>
+						<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<left>270</left>
+						<top>-2</top>
+						<width>52</width>
+						<height>52</height>
+						<texture>OverlayExtras.png</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="90,90" start="80" end="100" time="400" tween="back" easing="out" />
+							<effect type="fade" start="80" end="100" time="400" />
+						</animation>
+						<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
 					</control>
 					<control type="image">
 						<left>270</left>
@@ -530,6 +716,32 @@
 						<top>30</top>
 						<width>38</width>
 						<height>38</height>
+						<texture>OverlayVersions.png</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="105,105" start="80" end="100" time="400" tween="back" easing="out" />
+							<effect type="fade" start="80" end="100" time="400" />
+						</animation>
+						<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<left>134</left>
+						<top>30</top>
+						<width>38</width>
+						<height>38</height>
+						<texture>OverlayExtras.png</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="105,105" start="80" end="100" time="400" tween="back" easing="out" />
+							<effect type="fade" start="80" end="100" time="400" />
+						</animation>
+						<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
+					</control>
+					<control type="image">
+						<left>134</left>
+						<top>30</top>
+						<width>38</width>
+						<height>38</height>
 						<texture>$VAR[value_watchedstyle]</texture>
 						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 						<animation type="Focus" reversible="false">
@@ -615,6 +827,32 @@
 						<top>26</top>
 						<width>38</width>
 						<height>38</height>
+						<texture>OverlayVersions.png</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="105,105" start="80" end="100" time="400" tween="back" easing="out" />
+							<effect type="fade" start="80" end="100" time="400" />
+						</animation>
+						<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<left>152</left>
+						<top>26</top>
+						<width>38</width>
+						<height>38</height>
+						<texture>OverlayExtras.png</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="105,105" start="80" end="100" time="400" tween="back" easing="out" />
+							<effect type="fade" start="80" end="100" time="400" />
+						</animation>
+						<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
+					</control>
+					<control type="image">
+						<left>152</left>
+						<top>26</top>
+						<width>38</width>
+						<height>38</height>
 						<texture>$VAR[value_watchedstyle]</texture>
 						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 						<animation type="Focus" reversible="false">
@@ -694,6 +932,32 @@
 							<effect type="zoom" center="90,165" start="80" end="100" time="400" tween="back" easing="out" />
 							<effect type="fade" start="80" end="100" time="400" />
 						</animation>
+					</control>
+					<control type="image">
+						<left>244</left>
+						<top>36</top>
+						<width>52</width>
+						<height>52</height>
+						<texture>OverlayVersions.png</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="105,105" start="80" end="100" time="400" tween="back" easing="out" />
+							<effect type="fade" start="80" end="100" time="400" />
+						</animation>
+						<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<left>244</left>
+						<top>36</top>
+						<width>52</width>
+						<height>52</height>
+						<texture>OverlayExtras.png</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="105,105" start="80" end="100" time="400" tween="back" easing="out" />
+							<effect type="fade" start="80" end="100" time="400" />
+						</animation>
+						<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
 					</control>
 					<control type="image">
 						<left>244</left>

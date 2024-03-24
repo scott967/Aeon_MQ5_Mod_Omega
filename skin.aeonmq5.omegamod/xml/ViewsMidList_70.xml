@@ -1109,6 +1109,26 @@
 						<visible>$EXP[HasUserRating]</visible>
 					</control>
 					<control type="image">
+						<description>LIST ITEM "VERSIONS" INDICATOR</description>
+						<left>825</left>
+						<top>4</top>
+						<width>38</width>
+						<height>38</height>
+						<texture>OverlayVersions.png</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<description>LIST ITEM "EXTRAS" INDICATOR</description>
+						<left>825</left>
+						<top>4</top>
+						<width>38</width>
+						<height>38</height>
+						<texture>OverlayExtras.png</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
+					</control>
+					<control type="image">
 						<description>LIST ITEM "WATCHED" INDICATOR</description>
 						<left>825</left>
 						<top>4</top>
@@ -1148,6 +1168,26 @@
 						<texture>$VAR[User_Rating_Stars]</texture>
 						<colordiffuse>$VAR[value_headercolor]</colordiffuse>
 						<visible>$EXP[HasUserRating]</visible>
+					</control>
+					<control type="image">
+						<description>LIST ITEM "VERSIONS" INDICATOR</description>
+						<left>825</left>
+						<top>4</top>
+						<width>42</width>
+						<height>42</height>
+						<texture>OverlayVersions.png</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<description>LIST ITEM "EXTRAS" INDICATOR</description>
+						<left>825</left>
+						<top>4</top>
+						<width>42</width>
+						<height>42</height>
+						<texture>OverlayExtras.png</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
 					</control>
 					<control type="image">
 						<description>LIST ITEM "WATCHED" INDICATOR</description>
@@ -1248,6 +1288,26 @@
 						<visible>$EXP[HasUserRating]</visible>
 					</control>
 					<control type="image">
+						<description>LIST ITEM "VERSIONS" INDICATOR</description>
+						<left>825</left>
+						<top>0</top>
+						<width>45</width>
+						<height>45</height>
+						<texture>OverlayVersions.png</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<description>LIST ITEM "EXTRAS" INDICATOR</description>
+						<left>825</left>
+						<top>0</top>
+						<width>45</width>
+						<height>45</height>
+						<texture>OverlayExtras.png</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
+					</control>
+					<control type="image">
 						<description>LIST ITEM "WATCHED" INDICATOR</description>
 						<left>825</left>
 						<top>0</top>
@@ -1300,6 +1360,26 @@
 						<texture>$VAR[User_Rating_Stars]</texture>
 						<colordiffuse>$VAR[value_headercolor]</colordiffuse>
 						<visible>$EXP[HasUserRating]</visible>
+					</control>
+					<control type="image">
+						<description>LIST ITEM "VERSIONS" INDICATOR</description>
+						<left>825</left>
+						<top>15</top>
+						<width>45</width>
+						<height>45</height>
+						<texture>OverlayVersions.png</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<description>LIST ITEM "EXTRAS" INDICATOR</description>
+						<left>825</left>
+						<top>15</top>
+						<width>45</width>
+						<height>45</height>
+						<texture>OverlayExtras.png</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
 					</control>
 					<control type="image">
 						<description>LIST ITEM "WATCHED" INDICATOR</description>

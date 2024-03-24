@@ -98,6 +98,24 @@
 								<top>230</top>
 								<width>60</width>
 								<height>60</height>
+								<texture>OverlayVersions.png</texture>
+								<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+								<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions</visible>
+							</control>
+							<control type="image">
+								<left>-48</left>
+								<top>230</top>
+								<width>60</width>
+								<height>60</height>
+								<texture>OverlayExtras.png</texture>
+								<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+								<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
+							</control>
+							<control type="image">
+								<left>-48</left>
+								<top>230</top>
+								<width>60</width>
+								<height>60</height>
 								<texture>$VAR[value_watchedstyle]</texture>
 								<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 								<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
@@ -178,6 +196,30 @@
 								</animation>
 							</control>
 							<!-- MikeBZH44 End -->
+							<control type="image">
+								<left>3</left>
+								<top>176</top>
+								<width>75</width>
+								<height>75</height>
+								<texture>OverlayVersions.png</texture>
+								<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+								<animation type="Focus" reversible="false">
+									<effect type="zoom" center="90,357" start="80" end="100" time="600" tween="cubic" easing="out" />
+								</animation>
+								<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions</visible>
+							</control>
+							<control type="image">
+								<left>3</left>
+								<top>176</top>
+								<width>75</width>
+								<height>75</height>
+								<texture>OverlayExtras.png</texture>
+								<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+								<animation type="Focus" reversible="false">
+									<effect type="zoom" center="90,357" start="80" end="100" time="600" tween="cubic" easing="out" />
+								</animation>
+								<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
+							</control>
 							<control type="image">
 								<left>3</left>
 								<top>176</top>

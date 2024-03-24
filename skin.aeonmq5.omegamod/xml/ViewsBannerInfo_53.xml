@@ -134,6 +134,24 @@
 						<top>4</top>
 						<width>40</width>
 						<height>40</height>
+						<texture>OverlayVersions.png</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<left>492</left>
+						<top>4</top>
+						<width>40</width>
+						<height>40</height>
+						<texture>OverlayExtras.png</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
+					</control>
+					<control type="image">
+						<left>492</left>
+						<top>4</top>
+						<width>40</width>
+						<height>40</height>
 						<texture>$VAR[value_watchedstyle]</texture>
 						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 						<visible>!Skin.HasSetting(nooverlays) + String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
@@ -174,6 +192,26 @@
 						<texture background="true">$VAR[value_banner]</texture>
 						<aspectratio>keep</aspectratio>
 						<animation effect="zoom" center="auto" start="90" end="110" time="600" tween="back" easing="out" reversible="false" condition="Skin.HasSetting(bannerinfozoom)">Focus</animation>
+					</control>
+					<control type="image">
+						<left>492</left>
+						<top>4</top>
+						<width>40</width>
+						<height>40</height>
+						<texture>OverlayVersions.png</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<animation effect="zoom" center="267,60" start="90" end="110" time="600" tween="back" easing="out" reversible="false" condition="Skin.HasSetting(bannerinfozoom)">Focus</animation>
+						<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions</visible>
+					</control>
+					<control type="image">
+						<left>492</left>
+						<top>4</top>
+						<width>40</width>
+						<height>40</height>
+						<texture>OverlayExtras.png</texture>
+						<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+						<animation effect="zoom" center="267,60" start="90" end="110" time="600" tween="back" easing="out" reversible="false" condition="Skin.HasSetting(bannerinfozoom)">Focus</animation>
+						<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
 					</control>
 					<control type="image">
 						<left>492</left>

@@ -82,6 +82,28 @@
 		<width>82</width>
 		<height>82</height>
 		<aspectratio>keep</aspectratio>
+		<texture>OverlayVersions.png</texture>
+		<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+		<animation effect="slide" start="0,0" end="6,-28" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons)">Conditional</animation>
+		<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions</visible>
+	</include>
+	<include name="WatchedCoverFlow">
+		<left>339</left>
+		<top>105</top>
+		<width>82</width>
+		<height>82</height>
+		<aspectratio>keep</aspectratio>
+		<texture>OverlayExtras.png</texture>
+		<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
+		<animation effect="slide" start="0,0" end="6,-28" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons)">Conditional</animation>
+		<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoExtras</visible>
+	</include>
+	<include name="WatchedCoverFlow">
+		<left>339</left>
+		<top>105</top>
+		<width>82</width>
+		<height>82</height>
+		<aspectratio>keep</aspectratio>
 		<texture>$VAR[value_watchedstyle]</texture>
 		<colordiffuse>$VAR[value_watchedcolor]</colordiffuse>
 		<animation effect="slide" start="0,0" end="6,-28" time="400" tween="cubic" easing="inout" condition="Skin.HasSetting(nocoverflowvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Container.Content(tvshows) | Container.Content(seasons)">Conditional</animation>
