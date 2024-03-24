@@ -663,7 +663,7 @@
 					<animation type="Visible">
 						<effect type="fade" start="0" end="100" time="500" delay="100" />
 					</animation>
-					<visible>!Skin.HasSetting(nooverlays) + LikstItem.HasVideoVersions</visible>
+					<visible>!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions</visible>
 				</control>
 				<control type="image">
 					<left>916</left>

@@ -1092,11 +1092,11 @@
 			</control>
 			<control type="image">
 				<include>VersionsShowCaseCase</include>
-				<visible>SListItem(1).HasVideoVersions</visible>
+				<visible>ListItem(1).HasVideoVersions</visible>
 			</control>
 			<control type="image">
 				<include>ExtrasShowCaseCase</include>
-				<visible>SListItem(1).HasVideoExtras</visible>
+				<visible>ListItem(1).HasVideoExtras</visible>
 			</control>
 			<control type="image">
 				<include>WatchedShowCaseCase</include>
@@ -1233,7 +1233,7 @@
 				<texture fallback="DefaultVideoPoster.png" background="true">$VAR[value_poster3]</texture>
 			</control>
 			<control type="image">
-				<include>VerionsShowCaseCase</include>
+				<include>VersionsShowCaseCase</include>
 				<visible>ListItem(3).HasVideoVersions</visible>
 			</control>
 			<control type="image">
