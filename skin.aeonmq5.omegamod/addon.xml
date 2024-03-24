@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.aeonmq5.omegamod" name="Aeon MQ 5 Omegamod" provider-name="MarcosQui / scott967" version="13.7.0">
+<addon id="skin.aeonmq5.omegamod" name="Aeon MQ 5 Omegamod" provider-name="MarcosQui / scott967" version="13.8.0">
 	<requires>
 		<import addon="xbmc.gui" version="5.17.0" />
 		<import addon="script.artistslideshow" version="3.3.0" />
@@ -48,7 +48,7 @@
 		<description lang="en_GB">The traditional Aeon MQ reaches its fifth edition.[CR]Reformulated, very simple to use, with a new code that provides a lightweight and powerful skin.[CR]The Aeon MQ 5 Omegamod incorporates new features such as REPLACE which takes the main menu's level of customization to something never seen before.[CR]Aeon MQ 5 Omegamod, you've never seen a skin like this.</description>
 		<description lang="pt_br">A tradicional Aeon MQ chega a sua quinta edição.[CR]Reformulada, muito simples de usar, com um código novo que proporciona uma skin leve e poderosa.[CR]A Aeon MQ 5 Omegamod incorpora novos recursos como o SUBSTITUIR que leva o nível de customização do menu principal a algo nunca antes visto.[CR]Aeon MQ 5 Omegamod, você nunca viu uma skin assim.</description>
 		<description lang="pt_PT">A tradicional Aeon MQ chega a sua quinta edição.[CR]Reformulada, muito simples de usar, com um código novo que proporciona uma skin leve e poderosa.[CR]A Aeon MQ 5 Omegamod incorpora novos recursos como o SUBSTITUIR que leva o nível de customização do menu principal a algo nunca antes visto.[CR]Aeon MQ 5 Omegamod, você nunca viu uma skin assim.</description>
-		<description lang="el_GR">Το κλασικό Aeon MQ έφτασε στην πέμπτη έκδοσή του.[CR]Γραμμένο ξανά από τη βάση, πολύ απλό στη χρήση, με έναν νέο κώδικα που προσφέρει ένα ελαφρύ και ισχυρό κέλυφος.[CR]Το Aeon MQ 5 Omegamod ενσωματώνει νέες λειτουργίες όπως η ΑΝΤΙΚΑΤΑΣΤΑΣΗ, και ανυψώνει την προσαρμοστικότητα του κεντρικού μενού σε νέα επίπεδα.[CR]Aeon MQ 5 Omegamod, δεν έχετε ξαναδεί τέτοιο κέλυφος.</description>
+		<description lang="el_GR">κλασικό Aeon MQ έφτασε στην πέμπτη έκδοσή του.[CR]Γραμμένο ξανά από τη βάση, πολύ απλό στη χρήση, με έναν νέο κώδικα που προσφέρει ένα ελαφρύ και ισχυρό κέλυφος.[CR]Το Aeon MQ 5 Omegamod ενσωματώνει νέες λειτουργίες όπως η ΑΝΤΙΚΑΤΑΣΤΑΣΗ, και ανυψώνει την προσαρμοστικότητα του κεντρικού μενού σε νέα επίπεδα.[CR]Aeon MQ 5 Omegamod, δεν έχετε ξαναδεί τέτοιο κέλυφος.</description>
 		<description lang="en_GB">The traditional Aeon MQ reaches its fifth edition.[CR]Reformulated, very simple to use, with a new code that provides a lightweight and powerful skin.[CR]The Aeon MQ 5 Omegamod incorporates new features such as REPLACE which takes the main menu's level of customization to something never seen before.[CR]Aeon MQ 5 Omegamod, you've never seen a skin like this.</description>
 		<description lang="es_ES">El tradicional Aeon MQ llega a su quinta edición.[CR]reformulada, muy sencillo de usar, con un nuevo código que proporciona un skin más ligero y potente.[CR]El Aeon MQ 5 Omegamod incorpora nuevas funciones como REPLACE que permite  personalizar el menú principal a un nivel nunca visto antes.[CR]Aeon MQ 5 Omegamod,  nunca has visto un skin tan bueno.</description>
 		<description lang="es_AR">El tradicional Aeon MQ llega a su quinta edición.[CR]reformulada, muy sencillo de usar, con un nuevo código que proporciona un skin más ligero y potente.[CR]El Aeon MQ 5 Omegamod incorpora nuevas funciones como REPLACE que permite  personalizar el menú principal a un nivel nunca visto antes.[CR]Aeon MQ 5 Omegamod,  nunca has visto un skin tan bueno.</description>
@@ -67,8 +67,8 @@
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
 		</assets>
-		<news>[B][COLOR=FFFF8C00]BUILD 13.7.0- RELEASE DATE 2023-10-31 for Kodi OMEGA 22.0 Beta 2 nightlies[/COLOR][/B]
-This is a MOD of Aeon MQ5 by user scott967.  Compatible with Kodi Omega release 21.0 Beta 2 plus 
+		<news>[B][COLOR=FFFF8C00]BUILD 13.8.0 - RELEASE DATE 2024-03-31 for Kodi OMEGA 21.0 release[/COLOR][/B]
+This is a MOD of Aeon MQ5 by user scott967.  Compatible with Kodi Omega release 21.0 RC1 and later. 
 		</news>
 	</extension>
 

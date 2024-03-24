@@ -1,3 +1,8 @@
+[B][COLOR=FFFF8C00]BUILD 13.8.0 - RELEASE DATE 03/31/2024[/COLOR][/B]
+Improved:  Full implementation of vinal game controller windows
+Improved:  Full implementation of movie versions and Extras
+Improved:  Compatible with all Kodi Omega skin changes
+
 [B][COLOR=FFFF8C00]BUILD 13.7.0 - RELEASE DATE 12/15/2023[/COLOR][/B]
 New:  Support for retrogames controller features
 New:  Movie versions
