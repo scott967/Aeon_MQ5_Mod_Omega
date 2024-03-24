@@ -45,7 +45,7 @@
 								<width>276</width>
 								<height>392</height>
 								<colordiffuse>$VAR[value_videocase0]</colordiffuse>
-								<texture flipy="true" diffuse="thumb_shelf_reflect_case.png">thumb_box.png</texture>
+								<texture flipy="true" diffuse="thumb_shelf_reflect_case.png">box/thumb_box.png</texture>
 								<fadetime>200</fadetime>
 								<aspectratio>stretch</aspectratio>
 							</control>
@@ -78,7 +78,7 @@
 								<width>276</width>
 								<height>392</height>
 								<colordiffuse>$VAR[value_videocase0]</colordiffuse>
-								<texture>thumb_box.png</texture>
+								<texture>box/thumb_box.png</texture>
 								<fadetime>200</fadetime>
 								<aspectratio align="center" aligny="bottom">stretch</aspectratio>
 							</control>
@@ -133,7 +133,7 @@
 								<width>366</width>
 								<height>492</height>
 								<colordiffuse>$VAR[value_videocase0]</colordiffuse>
-								<texture flipy="true" diffuse="thumb_shelf_reflect_case.png">thumb_box.png</texture>
+								<texture flipy="true" diffuse="thumb_shelf_reflect_case.png">box/thumb_box.png</texture>
 								<fadetime>200</fadetime>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 								<animation type="Focus" reversible="false">
@@ -175,7 +175,7 @@
 								<width>366</width>
 								<height>492</height>
 								<colordiffuse>$VAR[value_videocase0]</colordiffuse>
-								<texture>thumb_box.png</texture>
+								<texture>box/thumb_box.png</texture>
 								<fadetime>200</fadetime>
 								<aspectratio align="center" aligny="bottom">stretch</aspectratio>
 								<animation type="Focus" reversible="false">

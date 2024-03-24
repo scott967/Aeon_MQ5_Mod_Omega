@@ -250,7 +250,7 @@
 							<height>267</height>
 							<fadetime>FanartCrossFadeTime</fadetime>
 							<colordiffuse>$VAR[value_videocase0]</colordiffuse>
-							<texture>thumb_box.png</texture>
+							<texture>box/thumb_box.png</texture>
 							<aspectratio align="center" aligny="bottom">stretch</aspectratio>
 						</control>
 						<control type="image">
@@ -667,7 +667,7 @@
 							<height>267</height>
 							<fadetime>FanartCrossFadeTime</fadetime>
 							<colordiffuse>$VAR[value_videocase0]</colordiffuse>
-							<texture>thumb_box.png</texture>
+							<texture>box/thumb_box.png</texture>
 							<aspectratio align="center" aligny="bottom">stretch</aspectratio>
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />

@@ -1751,7 +1751,7 @@
 						<height>652</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<colordiffuse>$VAR[value_videocase0]</colordiffuse>
-						<texture flipy="true" diffuse="thumb_box_reflect.png">thumb_box.png</texture>
+						<texture flipy="true" diffuse="box/thumb_box_reflect.png">box/thumb_box.png</texture>
 						<aspectratio>stretch</aspectratio>
 					</control>
 					<control type="image">
@@ -1771,7 +1771,7 @@
 						<height>682</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<colordiffuse>$VAR[value_videocase0]</colordiffuse>
-						<texture>thumb_box.png</texture>
+						<texture>box/thumb_box.png</texture>
 					</control>
 					<control type="image">
 						<description>MOVIE CODEC</description>
@@ -1825,7 +1825,7 @@
 						<height>345</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<texture flipy="true" diffuse="thumb_box_diffuse_reflect.png" background="true">$INFO[ListItem.Icon]</texture>
+						<texture flipy="true" diffuse="box/thumb_box_diffuse_reflect.png" background="true">$INFO[ListItem.Icon]</texture>
 					</control>
 					<control type="image">
 						<!-- Estojo reflexo -->
@@ -1833,7 +1833,7 @@
 						<top>627</top>
 						<width>417</width>
 						<height>364</height>
-						<texture flipy="true" diffuse="thumb_box_reflect.png">thumb_box_cd.png</texture>
+						<texture flipy="true" diffuse="box/thumb_box_reflect.png">box/thumb_box_cd.png</texture>
 					</control>
 					<control type="image">
 						<!-- Musica -->
@@ -1843,7 +1843,7 @@
 						<height>345</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$INFO[ListItem.Icon]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$INFO[ListItem.Icon]</texture>
 						<visible>![String.IsEmpty(ListItem.DBType) + Container.Content(songs) + String.Contains(ListItem.Path,musicvideos)]</visible>
 					</control>
 					<control type="image">
@@ -1854,7 +1854,7 @@
 						<height>345</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<texture diffuse="thumb_box_diffuse.png" background="true">DefaultMusicVideos.png</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" background="true">DefaultMusicVideos.png</texture>
 						<visible>[String.IsEmpty(ListItem.DBType) + Container.Content(songs) + String.Contains(ListItem.Path,musicvideos)]</visible>
 					</control>
 					<control type="image">
@@ -1863,7 +1863,7 @@
 						<top>285</top>
 						<width>417</width>
 						<height>364</height>
-						<texture>thumb_box_cd.png</texture>
+						<texture>box/thumb_box_cd.png</texture>
 						<colordiffuse>DEFFFFFF</colordiffuse>
 					</control>
 				</control>

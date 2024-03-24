@@ -63,8 +63,8 @@
 						<height>225</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio align="center" aligny="top">keep</aspectratio>
-						<texture flipy="true" diffuse="thumb_box_reflect.png" fallback="DefaultUser.png" background="true">$INFO[ListItem.Icon]</texture>
-						<bordertexture flipy="true" diffuse="thumb_box_reflect.png" border="-2">black.png</bordertexture>
+						<texture flipy="true" diffuse="box/thumb_box_reflect.png" fallback="DefaultUser.png" background="true">$INFO[ListItem.Icon]</texture>
+						<bordertexture flipy="true" diffuse="box/thumb_box_reflect.png" border="-2">black.png</bordertexture>
 					</control>
 					<control type="image">
 						<left>3</left>
@@ -85,8 +85,8 @@
 						<height>225</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<aspectratio align="center" aligny="top">keep</aspectratio>
-						<texture flipy="true" diffuse="thumb_box_reflect.png" fallback="DefaultUser.png" background="true">$INFO[ListItem.Icon]</texture>
-						<bordertexture flipy="true" diffuse="thumb_box_reflect.png" border="-1">grey.png</bordertexture>
+						<texture flipy="true" diffuse="box/thumb_box_reflect.png" fallback="DefaultUser.png" background="true">$INFO[ListItem.Icon]</texture>
+						<bordertexture flipy="true" diffuse="box/thumb_box_reflect.png" border="-1">grey.png</bordertexture>
 						<animation effect="zoom" start="100" end="145" center="112,368" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 					</control>
 					<control type="image">

@@ -212,7 +212,7 @@
 						<height>566</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<colordiffuse>$VAR[value_videocase0]</colordiffuse>
-						<texture>thumb_box.png</texture>
+						<texture>box/thumb_box.png</texture>
 					</control>
 					<control type="image">
 						<!-- Codec -->

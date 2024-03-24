@@ -211,7 +211,7 @@
 							<width>202</width>
 							<height>296</height>
 							<colordiffuse>$VAR[value_videocase0]</colordiffuse>
-							<texture>thumb_box.png</texture>
+							<texture>box/thumb_box.png</texture>
 							<aspectratio align="center" aligny="bottom">stretch</aspectratio>
 						</control>
 						<control type="image">
@@ -273,7 +273,7 @@
 							<width>225</width>
 							<height>308</height>
 							<colordiffuse>$VAR[value_videocase0]</colordiffuse>
-							<texture>thumb_box.png</texture>
+							<texture>box/thumb_box.png</texture>
 							<aspectratio align="center" aligny="bottom">stretch</aspectratio>
 						</control>
 						<control type="image">
@@ -335,7 +335,7 @@
 							<width>322</width>
 							<height>462</height>
 							<colordiffuse>$VAR[value_videocase0]</colordiffuse>
-							<texture>thumb_box.png</texture>
+							<texture>box/thumb_box.png</texture>
 							<aspectratio align="center" aligny="bottom">stretch</aspectratio>
 						</control>
 						<control type="image">
@@ -689,7 +689,7 @@
 						<width>202</width>
 						<height>296</height>
 						<colordiffuse>$VAR[value_videocase0]</colordiffuse>
-						<texture>thumb_box.png</texture>
+						<texture>box/thumb_box.png</texture>
 						<aspectratio align="center" aligny="bottom">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
@@ -800,7 +800,7 @@
 						<width>225</width>
 						<height>308</height>
 						<colordiffuse>$VAR[value_videocase0]</colordiffuse>
-						<texture>thumb_box.png</texture>
+						<texture>box/thumb_box.png</texture>
 						<aspectratio align="center" aligny="bottom">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
@@ -911,7 +911,7 @@
 						<width>322</width>
 						<height>462</height>
 						<colordiffuse>$VAR[value_videocase0]</colordiffuse>
-						<texture>thumb_box.png</texture>
+						<texture>box/thumb_box.png</texture>
 						<aspectratio align="center" aligny="bottom">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
@@ -1653,7 +1653,7 @@
 						<top>3</top>
 						<width>154</width>
 						<height>154</height>
-						<texture>thumb_box_cd.png</texture>
+						<texture>box/thumb_box_cd.png</texture>
 						<aspectratio align="center">stretch</aspectratio>
 					</control>
 					<control type="image">
@@ -1661,7 +1661,7 @@
 						<top>8</top>
 						<width>126</width>
 						<height>142</height>
-						<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 						<aspectratio align="center">stretch</aspectratio>
 					</control>
 				</itemlayout>
@@ -1708,7 +1708,7 @@
 						<top>3</top>
 						<width>258</width>
 						<height>258</height>
-						<texture>thumb_box_cd.png</texture>
+						<texture>box/thumb_box_cd.png</texture>
 						<aspectratio align="center">stretch</aspectratio>
 					</control>
 					<control type="image">
@@ -1716,7 +1716,7 @@
 						<top>8</top>
 						<width>212</width>
 						<height>240</height>
-						<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 						<aspectratio align="center">stretch</aspectratio>
 					</control>
 				</itemlayout>
@@ -1763,7 +1763,7 @@
 						<top>3</top>
 						<width>400</width>
 						<height>400</height>
-						<texture>thumb_box_cd.png</texture>
+						<texture>box/thumb_box_cd.png</texture>
 						<aspectratio align="center">stretch</aspectratio>
 					</control>
 					<control type="image">
@@ -1771,7 +1771,7 @@
 						<top>12</top>
 						<width>326</width>
 						<height>372</height>
-						<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 						<aspectratio align="center">stretch</aspectratio>
 					</control>
 				</itemlayout>
@@ -1902,7 +1902,7 @@
 						<top>3</top>
 						<width>154</width>
 						<height>154</height>
-						<texture>thumb_box_cd.png</texture>
+						<texture>box/thumb_box_cd.png</texture>
 						<aspectratio align="center">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
@@ -1914,7 +1914,7 @@
 						<top>8</top>
 						<width>126</width>
 						<height>142</height>
-						<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 						<aspectratio align="center">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
@@ -2049,7 +2049,7 @@
 						<top>3</top>
 						<width>262</width>
 						<height>262</height>
-						<texture>thumb_box_cd.png</texture>
+						<texture>box/thumb_box_cd.png</texture>
 						<aspectratio align="center">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
@@ -2061,7 +2061,7 @@
 						<top>9</top>
 						<width>216</width>
 						<height>244</height>
-						<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 						<aspectratio align="center">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
@@ -2196,7 +2196,7 @@
 						<top>3</top>
 						<width>408</width>
 						<height>408</height>
-						<texture>thumb_box_cd.png</texture>
+						<texture>box/thumb_box_cd.png</texture>
 						<aspectratio align="center">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />
@@ -2208,7 +2208,7 @@
 						<top>12</top>
 						<width>334</width>
 						<height>380</height>
-						<texture diffuse="thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
+						<texture diffuse="box/thumb_box_diffuse.png" fallback="DefaultAudioCover.png" background="true">$VAR[value_poster]</texture>
 						<aspectratio align="center">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="auto" start="80" end="100" time="400" tween="back" easing="out" />

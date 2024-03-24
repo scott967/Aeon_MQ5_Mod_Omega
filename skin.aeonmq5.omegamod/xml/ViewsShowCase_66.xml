@@ -264,7 +264,7 @@
 					<!-- Poster + Estojo Reflexo -->
 					<include>ShowCaseThumbCaseReflectFlat</include>
 					<colordiffuse>$VAR[value_videocase0]</colordiffuse>
-					<texture flipy="true" diffuse="thumb_box_reflect.png" fallback="DefaultVideoPoster.png" background="true">thumb_box.png</texture>
+					<texture flipy="true" diffuse="box/thumb_box_reflect.png" fallback="DefaultVideoPoster.png" background="true">box/thumb_box.png</texture>
 					<visible>[Skin.HasSetting(flattenshowcase) + [Window.IsActive(videos) | Window.IsActive(programs)] | Skin.HasSetting(flattenshowcasemusic) + [Window.IsActive(musicplaylist) | Window.IsActive(music)]] + !Control.IsVisible(6000)</visible>
 				</control>
 				<control type="image">
@@ -289,7 +289,7 @@
 					<!-- Estojo -->
 					<include>ShowCaseThumbCaseFlat</include>
 					<colordiffuse>$VAR[value_videocase0]</colordiffuse>
-					<texture>thumb_box.png</texture>
+					<texture>box/thumb_box.png</texture>
 					<visible>[Skin.HasSetting(flattenshowcase) + [Window.IsActive(videos) | Window.IsActive(programs)] | Skin.HasSetting(flattenshowcasemusic) + [Window.IsActive(musicplaylist) | Window.IsActive(music)]] + !Control.IsVisible(6000)</visible>
 				</control>
 				<control type="image">
@@ -343,7 +343,7 @@
 						<!-- Poster + Estojo Reflexo -->
 						<include>ShowCaseThumbCaseReflectFlat</include>
 						<colordiffuse>$VAR[value_videocase0]</colordiffuse>
-						<texture flipy="true" diffuse="thumb_box_reflect.png" fallback="DefaultVideoPoster.png" background="true">thumb_box.png</texture>
+						<texture flipy="true" diffuse="box/thumb_box_reflect.png" fallback="DefaultVideoPoster.png" background="true">box/thumb_box.png</texture>
 						<visible>[Skin.HasSetting(flattenshowcase) + [Window.IsActive(videos) | Window.IsActive(programs)] | Skin.HasSetting(flattenshowcasemusic) + [Window.IsActive(musicplaylist) | Window.IsActive(music)]] + !Control.IsVisible(6000)</visible>
 					</control>
 					<control type="image">
@@ -368,7 +368,7 @@
 						<!-- Estojo -->
 						<include>ShowCaseThumbCaseFlat</include>
 						<colordiffuse>$VAR[value_videocase0]</colordiffuse>
-						<texture>thumb_box.png</texture>
+						<texture>box/thumb_box.png</texture>
 						<visible>[Skin.HasSetting(flattenshowcase) + [Window.IsActive(videos) | Window.IsActive(programs)] | Skin.HasSetting(flattenshowcasemusic) + [Window.IsActive(musicplaylist) | Window.IsActive(music)]] + !Control.IsVisible(6000)</visible>
 					</control>
 					<control type="image">
@@ -1012,7 +1012,7 @@
 				<!-- Poster + Estojo Reflexo -->
 				<include>ShowCaseThumbCaseReflect</include>
 				<colordiffuse>$VAR[value_videocase0]</colordiffuse>
-				<texture flipy="true" diffuse="thumb_box_reflect.png" background="true">thumb_box.png</texture>
+				<texture flipy="true" diffuse="box/thumb_box_reflect.png" background="true">box/thumb_box.png</texture>
 			</control>
 			<control type="image">
 				<!-- Poster + Estojo -->
@@ -1035,7 +1035,7 @@
 				<!-- Estojo -->
 				<include>ShowCaseThumbCase</include>
 				<colordiffuse>$VAR[value_videocase0]</colordiffuse>
-				<texture>thumb_box.png</texture>
+				<texture>box/thumb_box.png</texture>
 			</control>
 			<control type="image">
 				<!-- Codec -->
@@ -1083,7 +1083,7 @@
 				<!-- Poster + Estojo Reflexo -->
 				<include>ShowCaseThumbCaseReflect</include>
 				<colordiffuse>$VAR[value_videocase1]</colordiffuse>
-				<texture flipy="true" diffuse="thumb_box_reflect.png" background="true">thumb_box.png</texture>
+				<texture flipy="true" diffuse="box/thumb_box_reflect.png" background="true">box/thumb_box.png</texture>
 			</control>
 			<control type="image">
 				<!-- Poster + Estojo -->
@@ -1106,7 +1106,7 @@
 				<!-- Estojo -->
 				<include>ShowCaseThumbCase</include>
 				<colordiffuse>$VAR[value_videocase1]</colordiffuse>
-				<texture>thumb_box.png</texture>
+				<texture>box/thumb_box.png</texture>
 			</control>
 			<control type="image">
 				<!-- Codec -->
@@ -1154,7 +1154,7 @@
 				<!-- Poster + Estojo Reflexo -->
 				<include>ShowCaseThumbCaseReflect</include>
 				<colordiffuse>$VAR[value_videocase2]</colordiffuse>
-				<texture flipy="true" diffuse="thumb_box_reflect.png" background="true">thumb_box.png</texture>
+				<texture flipy="true" diffuse="box/thumb_box_reflect.png" background="true">box/thumb_box.png</texture>
 			</control>
 			<control type="image">
 				<!-- Poster + Estojo -->
@@ -1177,7 +1177,7 @@
 				<!-- Estojo -->
 				<include>ShowCaseThumbCase</include>
 				<colordiffuse>$VAR[value_videocase2]</colordiffuse>
-				<texture>thumb_box.png</texture>
+				<texture>box/thumb_box.png</texture>
 			</control>
 			<control type="image">
 				<!-- Codec -->
@@ -1225,7 +1225,7 @@
 				<!-- Poster + Estojo Reflexo -->
 				<include>ShowCaseThumbCaseReflect</include>
 				<colordiffuse>$VAR[value_videocase3]</colordiffuse>
-				<texture flipy="true" diffuse="thumb_box_reflect.png" background="true">thumb_box.png</texture>
+				<texture flipy="true" diffuse="box/thumb_box_reflect.png" background="true">box/thumb_box.png</texture>
 			</control>
 			<control type="image">
 				<!-- Poster + Estojo -->
@@ -1248,7 +1248,7 @@
 				<!-- Estojo -->
 				<include>ShowCaseThumbCase</include>
 				<colordiffuse>$VAR[value_videocase3]</colordiffuse>
-				<texture>thumb_box.png</texture>
+				<texture>box/thumb_box.png</texture>
 			</control>
 			<control type="image">
 				<!-- Codec -->
@@ -1296,7 +1296,7 @@
 				<!-- Poster + Estojo Reflexo -->
 				<include>ShowCaseThumbCaseReflect</include>
 				<colordiffuse>$VAR[value_videocase4]</colordiffuse>
-				<texture flipy="true" diffuse="thumb_box_reflect.png" background="true">thumb_box.png</texture>
+				<texture flipy="true" diffuse="box/thumb_box_reflect.png" background="true">box/thumb_box.png</texture>
 			</control>
 			<control type="image">
 				<!-- Poster + Estojo -->
@@ -1319,7 +1319,7 @@
 				<!-- Estojo -->
 				<include>ShowCaseThumbCase</include>
 				<colordiffuse>$VAR[value_videocase4]</colordiffuse>
-				<texture>thumb_box.png</texture>
+				<texture>box/thumb_box.png</texture>
 			</control>
 			<control type="image">
 				<!-- Codec -->
@@ -1367,7 +1367,7 @@
 				<!-- Poster + Estojo Reflexo -->
 				<include>ShowCaseThumbCaseReflect</include>
 				<colordiffuse>$VAR[value_videocase5]</colordiffuse>
-				<texture flipy="true" diffuse="thumb_box_reflect.png" background="true">thumb_box.png</texture>
+				<texture flipy="true" diffuse="box/thumb_box_reflect.png" background="true">box/thumb_box.png</texture>
 			</control>
 			<control type="image">
 				<!-- Poster + Estojo -->
@@ -1390,7 +1390,7 @@
 				<!-- Estojo -->
 				<include>ShowCaseThumbCase</include>
 				<colordiffuse>$VAR[value_videocase5]</colordiffuse>
-				<texture>thumb_box.png</texture>
+				<texture>box/thumb_box.png</texture>
 			</control>
 			<control type="image">
 				<!-- Codec -->
@@ -1438,7 +1438,7 @@
 				<!-- Poster + Estojo Reflexo -->
 				<include>ShowCaseThumbCaseReflect</include>
 				<colordiffuse>$VAR[value_videocase6]</colordiffuse>
-				<texture flipy="true" diffuse="thumb_box_reflect.png" background="true">thumb_box.png</texture>
+				<texture flipy="true" diffuse="box/thumb_box_reflect.png" background="true">box/thumb_box.png</texture>
 			</control>
 			<control type="image">
 				<!-- Poster + Estojo -->
@@ -1461,7 +1461,7 @@
 				<!-- Estojo -->
 				<include>ShowCaseThumbCase</include>
 				<colordiffuse>$VAR[value_videocase6]</colordiffuse>
-				<texture>thumb_box.png</texture>
+				<texture>box/thumb_box.png</texture>
 			</control>
 			<control type="image">
 				<!-- Codec -->
@@ -1509,7 +1509,7 @@
 				<!-- Poster + Estojo Reflexo -->
 				<include>ShowCaseThumbCaseReflect</include>
 				<colordiffuse>$VAR[value_videocase7]</colordiffuse>
-				<texture flipy="true" diffuse="thumb_box_reflect.png" background="true">thumb_box.png</texture>
+				<texture flipy="true" diffuse="box/thumb_box_reflect.png" background="true">box/thumb_box.png</texture>
 			</control>
 			<control type="image">
 				<!-- Poster + Estojo -->
@@ -1532,7 +1532,7 @@
 				<!-- Estojo -->
 				<include>ShowCaseThumbCase</include>
 				<colordiffuse>$VAR[value_videocase7]</colordiffuse>
-				<texture>thumb_box.png</texture>
+				<texture>box/thumb_box.png</texture>
 			</control>
 			<control type="image">
 				<!-- Codec -->
@@ -1580,7 +1580,7 @@
 				<!-- Poster + Estojo Reflexo -->
 				<include>ShowCaseThumbCaseReflect</include>
 				<colordiffuse>$VAR[value_videocase-1]</colordiffuse>
-				<texture flipy="true" diffuse="thumb_box_reflect.png" background="true">thumb_box.png</texture>
+				<texture flipy="true" diffuse="box/thumb_box_reflect.png" background="true">box/thumb_box.png</texture>
 			</control>
 			<control type="image">
 				<!-- Poster + Estojo -->
@@ -1603,7 +1603,7 @@
 				<!-- Estojo -->
 				<include>ShowCaseThumbCase</include>
 				<colordiffuse>$VAR[value_videocase-1]</colordiffuse>
-				<texture>thumb_box.png</texture>
+				<texture>box/thumb_box.png</texture>
 			</control>
 			<control type="image">
 				<!-- Codec -->
@@ -1651,7 +1651,7 @@
 				<!-- Poster + Estojo Reflexo -->
 				<include>ShowCaseThumbCaseReflect</include>
 				<colordiffuse>$VAR[value_videocase-2]</colordiffuse>
-				<texture flipy="true" diffuse="thumb_box_reflect.png" background="true">thumb_box.png</texture>
+				<texture flipy="true" diffuse="box/thumb_box_reflect.png" background="true">box/thumb_box.png</texture>
 			</control>
 			<control type="image">
 				<!-- Poster + Estojo -->
@@ -1674,7 +1674,7 @@
 				<!-- Estojo -->
 				<include>ShowCaseThumbCase</include>
 				<colordiffuse>$VAR[value_videocase-2]</colordiffuse>
-				<texture>thumb_box.png</texture>
+				<texture>box/thumb_box.png</texture>
 			</control>
 			<control type="image">
 				<!-- Codec -->
@@ -1722,7 +1722,7 @@
 				<!-- Poster + Estojo Reflexo -->
 				<include>ShowCaseThumbCaseReflect</include>
 				<colordiffuse>$VAR[value_videocase-3]</colordiffuse>
-				<texture flipy="true" diffuse="thumb_box_reflect.png" background="true">thumb_box.png</texture>
+				<texture flipy="true" diffuse="box/thumb_box_reflect.png" background="true">box/thumb_box.png</texture>
 			</control>
 			<control type="image">
 				<!-- Poster + Estojo -->
@@ -1745,7 +1745,7 @@
 				<!-- Estojo -->
 				<include>ShowCaseThumbCase</include>
 				<colordiffuse>$VAR[value_videocase-3]</colordiffuse>
-				<texture>thumb_box.png</texture>
+				<texture>box/thumb_box.png</texture>
 			</control>
 			<control type="image">
 				<!-- Codec -->
@@ -1793,7 +1793,7 @@
 				<!-- Poster + Estojo Reflexo -->
 				<include>ShowCaseThumbCaseReflect</include>
 				<colordiffuse>$VAR[value_videocase-4]</colordiffuse>
-				<texture flipy="true" diffuse="thumb_box_reflect.png" background="true">thumb_box.png</texture>
+				<texture flipy="true" diffuse="box/thumb_box_reflect.png" background="true">box/thumb_box.png</texture>
 			</control>
 			<control type="image">
 				<!-- Poster + Estojo -->
@@ -1816,7 +1816,7 @@
 				<!-- Estojo -->
 				<include>ShowCaseThumbCase</include>
 				<colordiffuse>$VAR[value_videocase-4]</colordiffuse>
-				<texture>thumb_box.png</texture>
+				<texture>box/thumb_box.png</texture>
 			</control>
 			<control type="image">
 				<!-- Codec -->
@@ -1864,7 +1864,7 @@
 				<!-- Poster + Estojo Reflexo -->
 				<include>ShowCaseThumbCaseReflect</include>
 				<colordiffuse>$VAR[value_videocase-5]</colordiffuse>
-				<texture flipy="true" diffuse="thumb_box_reflect.png" background="true">thumb_box.png</texture>
+				<texture flipy="true" diffuse="box/thumb_box_reflect.png" background="true">box/thumb_box.png</texture>
 			</control>
 			<control type="image">
 				<!-- Poster + Estojo -->
@@ -1887,7 +1887,7 @@
 				<!-- Estojo -->
 				<include>ShowCaseThumbCase</include>
 				<colordiffuse>$VAR[value_videocase-5]</colordiffuse>
-				<texture>thumb_box.png</texture>
+				<texture>box/thumb_box.png</texture>
 			</control>
 			<control type="image">
 				<!-- Codec -->
@@ -1935,7 +1935,7 @@
 				<!-- Poster + Estojo Reflexo -->
 				<include>ShowCaseThumbCaseReflect</include>
 				<colordiffuse>$VAR[value_videocase-6]</colordiffuse>
-				<texture flipy="true" diffuse="thumb_box_reflect.png" background="true">thumb_box.png</texture>
+				<texture flipy="true" diffuse="box/thumb_box_reflect.png" background="true">box/thumb_box.png</texture>
 			</control>
 			<control type="image">
 				<!-- Poster + Estojo -->
@@ -1958,7 +1958,7 @@
 				<!-- Estojo -->
 				<include>ShowCaseThumbCase</include>
 				<colordiffuse>$VAR[value_videocase-6]</colordiffuse>
-				<texture>thumb_box.png</texture>
+				<texture>box/thumb_box.png</texture>
 			</control>
 			<control type="image">
 				<!-- Codec -->
@@ -2006,7 +2006,7 @@
 				<!-- Poster + Estojo Reflexo -->
 				<include>ShowCaseThumbCaseReflect</include>
 				<colordiffuse>$VAR[value_videocase-7]</colordiffuse>
-				<texture flipy="true" diffuse="thumb_box_reflect.png" background="true">thumb_box.png</texture>
+				<texture flipy="true" diffuse="box/thumb_box_reflect.png" background="true">box/thumb_box.png</texture>
 			</control>
 			<control type="image">
 				<!-- Poster + Estojo -->
@@ -2029,7 +2029,7 @@
 				<!-- Estojo -->
 				<include>ShowCaseThumbCase</include>
 				<colordiffuse>$VAR[value_videocase-7]</colordiffuse>
-				<texture>thumb_box.png</texture>
+				<texture>box/thumb_box.png</texture>
 			</control>
 			<control type="image">
 				<!-- Codec -->

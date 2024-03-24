@@ -864,7 +864,7 @@
 							<width>234</width>
 							<height>330</height>
 							<aspectratio>stretch</aspectratio>
-							<texture flipy="true" diffuse="thumb_box_reflect.png">DefaultVideoPoster.png</texture>
+							<texture flipy="true" diffuse="box/thumb_box_reflect.png">DefaultVideoPoster.png</texture>
 						</control>
 						<control type="image">
 							<left>502</left>
@@ -879,143 +879,143 @@
 							<include>CaseSelectorReflect</include>
 							<!-- reflexo -->
 							<colordiffuse>$INFO[Skin.String(case_default)]</colordiffuse>
-							<texture flipy="true" diffuse="thumb_box_reflect.png" background="true">thumb_box.png</texture>
+							<texture flipy="true" diffuse="box/thumb_box_reflect.png" background="true">box/thumb_box.png</texture>
 							<visible>Container(403).HasFocus(1)</visible>
 						</control>
 						<control type="image">
 							<include>CaseSelector</include>
 							<colordiffuse>$INFO[Skin.String(case_default)]</colordiffuse>
-							<texture>thumb_box.png</texture>
+							<texture>box/thumb_box.png</texture>
 							<visible>Container(403).HasFocus(1)</visible>
 						</control>
 						<control type="image">
 							<include>CaseSelectorReflect</include>
 							<!-- reflexo -->
 							<colordiffuse>$INFO[Skin.String(case_bluray)]</colordiffuse>
-							<texture flipy="true" diffuse="thumb_box_reflect.png" background="true">thumb_box.png</texture>
+							<texture flipy="true" diffuse="box/thumb_box_reflect.png" background="true">box/thumb_box.png</texture>
 							<visible>Container(403).HasFocus(2)</visible>
 						</control>
 						<control type="image">
 							<include>CaseSelector</include>
 							<colordiffuse>$INFO[Skin.String(case_bluray)]</colordiffuse>
-							<texture>thumb_box.png</texture>
+							<texture>box/thumb_box.png</texture>
 							<visible>Container(403).HasFocus(2)</visible>
 						</control>
 						<control type="image">
 							<include>CaseSelectorReflect</include>
 							<!-- reflexo -->
 							<colordiffuse>$INFO[Skin.String(case_3dbd)]</colordiffuse>
-							<texture flipy="true" diffuse="thumb_box_reflect.png" background="true">thumb_box.png</texture>
+							<texture flipy="true" diffuse="box/thumb_box_reflect.png" background="true">box/thumb_box.png</texture>
 							<visible>Container(403).HasFocus(3)</visible>
 						</control>
 						<control type="image">
 							<include>CaseSelector</include>
 							<colordiffuse>$INFO[Skin.String(case_3dbd)]</colordiffuse>
-							<texture>thumb_box.png</texture>
+							<texture>box/thumb_box.png</texture>
 							<visible>Container(403).HasFocus(3)</visible>
 						</control>
 						<control type="image">
 							<include>CaseSelectorReflect</include>
 							<!-- reflexo -->
 							<colordiffuse>$INFO[Skin.String(case_webtv)]</colordiffuse>
-							<texture flipy="true" diffuse="thumb_box_reflect.png" background="true">thumb_box.png</texture>
+							<texture flipy="true" diffuse="box/thumb_box_reflect.png" background="true">box/thumb_box.png</texture>
 							<visible>Container(403).HasFocus(4)</visible>
 						</control>
 						<control type="image">
 							<include>CaseSelector</include>
 							<colordiffuse>$INFO[Skin.String(case_webtv)]</colordiffuse>
-							<texture>thumb_box.png</texture>
+							<texture>box/thumb_box.png</texture>
 							<visible>Container(403).HasFocus(4)</visible>
 						</control>
 						<control type="image">
 							<include>CaseSelectorReflect</include>
 							<colordiffuse>$INFO[Skin.String(case_hdtv)]</colordiffuse>
 							<!-- reflexo -->
-							<texture flipy="true" diffuse="thumb_box_reflect.png" background="true">thumb_box.png</texture>
+							<texture flipy="true" diffuse="box/thumb_box_reflect.png" background="true">box/thumb_box.png</texture>
 							<visible>Container(403).HasFocus(5)</visible>
 						</control>
 						<control type="image">
 							<include>CaseSelector</include>
 							<colordiffuse>$INFO[Skin.String(case_hdtv)]</colordiffuse>
-							<texture>thumb_box.png</texture>
+							<texture>box/thumb_box.png</texture>
 							<visible>Container(403).HasFocus(5)</visible>
 						</control>
 						<control type="image">
 							<include>CaseSelectorReflect</include>
 							<!-- reflexo -->
 							<colordiffuse>$INFO[Skin.String(case_dvd)]</colordiffuse>
-							<texture flipy="true" diffuse="thumb_box_reflect.png" background="true">thumb_box.png</texture>
+							<texture flipy="true" diffuse="box/thumb_box_reflect.png" background="true">box/thumb_box.png</texture>
 							<visible>Container(403).HasFocus(6)</visible>
 						</control>
 						<control type="image">
 							<include>CaseSelector</include>
 							<colordiffuse>$INFO[Skin.String(case_dvd)]</colordiffuse>
-							<texture>thumb_box.png</texture>
+							<texture>box/thumb_box.png</texture>
 							<visible>Container(403).HasFocus(6)</visible>
 						</control>
 						<control type="image">
 							<include>CaseSelectorReflect</include>
 							<!-- reflexo -->
 							<colordiffuse>$INFO[Skin.String(case_set)]</colordiffuse>
-							<texture flipy="true" diffuse="thumb_box_reflect.png" background="true">thumb_box.png</texture>
+							<texture flipy="true" diffuse="box/thumb_box_reflect.png" background="true">box/thumb_box.png</texture>
 							<visible>Container(403).HasFocus(7)</visible>
 						</control>
 						<control type="image">
 							<include>CaseSelector</include>
 							<colordiffuse>$INFO[Skin.String(case_set)]</colordiffuse>
-							<texture>thumb_box.png</texture>
+							<texture>box/thumb_box.png</texture>
 							<visible>Container(403).HasFocus(7)</visible>
 						</control>
 						<control type="image">
 							<include>CaseSelectorReflect</include>
 							<!-- reflexo -->
 							<colordiffuse>$INFO[Skin.String(case_4k)]</colordiffuse>
-							<texture flipy="true" diffuse="thumb_box_reflect.png" background="true">thumb_box.png</texture>
+							<texture flipy="true" diffuse="box/thumb_box_reflect.png" background="true">box/thumb_box.png</texture>
 							<visible>Container(403).HasFocus(8)</visible>
 						</control>
 						<control type="image">
 							<include>CaseSelector</include>
 							<colordiffuse>$INFO[Skin.String(case_4k)]</colordiffuse>
-							<texture>thumb_box.png</texture>
+							<texture>box/thumb_box.png</texture>
 							<visible>Container(403).HasFocus(8)</visible>
 						</control>
 						<control type="image">
 							<include>CaseSelectorReflect</include>
 							<!-- reflexo -->
 							<colordiffuse>$INFO[Skin.String(case_hdr)]</colordiffuse>
-							<texture flipy="true" diffuse="thumb_box_reflect.png" background="true">thumb_box.png</texture>
+							<texture flipy="true" diffuse="box/thumb_box_reflect.png" background="true">box/thumb_box.png</texture>
 							<visible>Container(403).HasFocus(9)</visible>
 						</control>
 						<control type="image">
 							<include>CaseSelector</include>
 							<colordiffuse>$INFO[Skin.String(case_hdr)]</colordiffuse>
-							<texture>thumb_box.png</texture>
+							<texture>box/thumb_box.png</texture>
 							<visible>Container(403).HasFocus(9)</visible>
 						</control>
 						<control type="image">
 							<include>CaseSelectorReflect</include>
 							<!-- reflexo -->
 							<colordiffuse>$INFO[Skin.String(case_uhd)]</colordiffuse>
-							<texture flipy="true" diffuse="thumb_box_reflect.png" background="true">thumb_box.png</texture>
+							<texture flipy="true" diffuse="box/thumb_box_reflect.png" background="true">box/thumb_box.png</texture>
 							<visible>Container(403).HasFocus(10)</visible>
 						</control>
 						<control type="image">
 							<include>CaseSelector</include>
 							<colordiffuse>$INFO[Skin.String(case_uhd)]</colordiffuse>
-							<texture>thumb_box.png</texture>
+							<texture>box/thumb_box.png</texture>
 							<visible>Container(403).HasFocus(10)</visible>
 						</control>
 						<control type="image">
 							<include>CaseSelectorReflect</include>
 							<!-- reflexo -->
 							<colordiffuse>$INFO[Skin.String(case_versions)]</colordiffuse>
-							<texture flipy="true" diffuse="thumb_box_reflect.png" background="true">thumb_box.png</texture>
+							<texture flipy="true" diffuse="box/thumb_box_reflect.png" background="true">box/thumb_box.png</texture>
 							<visible>Container(403).HasFocus(11)</visible>
 						</control>
 						<control type="image">
 							<include>CaseSelector</include>
 							<colordiffuse>$INFO[Skin.String(case_versions)]</colordiffuse>
-							<texture>thumb_box.png</texture>
+							<texture>box/thumb_box.png</texture>
 							<visible>Container(403).HasFocus(11)</visible>
 						</control>
 						<!-- codec icon displayed on case -->
@@ -1135,7 +1135,7 @@
 						<width>234</width>
 						<height>330</height>
 						<aspectratio>stretch</aspectratio>
-						<texture flipy="true" diffuse="thumb_box_reflect.png">DefaultVideoPoster.png</texture>
+						<texture flipy="true" diffuse="box/thumb_box_reflect.png">DefaultVideoPoster.png</texture>
 					</control>
 					<control type="image">
 						<left>22</left>
@@ -1152,7 +1152,7 @@
 						<width>285</width>
 						<height>405</height>
 						<aspectratio>stretch</aspectratio>
-						<texture flipy="true" diffuse="thumb_box_reflect.png">thumb_box_0.png</texture>
+						<texture flipy="true" diffuse="box/thumb_box_reflect.png">box/thumb_box_0.png</texture>
 						<colordiffuse>$VAR[value_casepreviewcolors]</colordiffuse>
 					</control>
 					<control type="image">
@@ -1161,7 +1161,7 @@
 						<width>285</width>
 						<height>405</height>
 						<aspectratio>stretch</aspectratio>
-						<texture>thumb_box_0.png</texture>
+						<texture>box/thumb_box_0.png</texture>
 						<colordiffuse>$VAR[value_casepreviewcolors]</colordiffuse>
 					</control>
 				</control>
