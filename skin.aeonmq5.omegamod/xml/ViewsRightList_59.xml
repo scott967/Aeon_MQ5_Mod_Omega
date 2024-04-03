@@ -6,6 +6,7 @@
 <!-- Leia 10.2.4/10.3.0/10.5.0/10.5.1/10.5.2/10.6.1/10.6.2 -->
 <!-- Matrix 11.0.4/11.1.1 -->
 <!-- Nexus 12.3.0 -->
+<!-- Omega 13.7.0 ->
 <includes>
 	<!--##################################################################################   VISTA RIGHT LIST - ID 59   ##################################################################################-->
 	<include name="RightListLabel">
@@ -637,7 +638,7 @@
 					<label>$VAR[value_listinfofocus]</label>
 				</control>
 			</control>
-			<control type="group">  <!-- posx 0 posy 45 -->
+			<control type="group">  <!-- left 0 top 45 -->
 				<!-- Default Group - Miniaturas -->
 				<left>45</left>
 				<top>300</top>  <!-- 345 -->

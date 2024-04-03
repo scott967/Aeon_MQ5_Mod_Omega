@@ -632,7 +632,7 @@
 				</control>
 <!-- List 51 Widelist ends here ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 				<control type="label" id="5101">
-					<!-- Check if listitem has info avail -->
+					<!-- Check if listitem has info avail for focuseditem -->
 					<include>InvisibleButton</include>
 					<label>$VAR[value_listinfofocus]</label>
 				</control>
