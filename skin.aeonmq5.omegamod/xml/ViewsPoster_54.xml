@@ -88,8 +88,8 @@
 				<visible>![Skin.HasSetting(nooverlays) | String.Contains(skin.string(stylewatched),2) | String.Contains(skin.string(stylewatched),3)] + ListItem.HasVideoVersions + Control.HasFocus(54)</visible>
 			</control>
 			<control type="image">
-				<left>315</left>
-				<top>472</top>
+				<left>300</left>
+				<top>467</top>
 				<width>60</width>
 				<height>60</height>
 				<texture>OverlayExtras.png</texture>
@@ -118,8 +118,8 @@
 				<visible>[!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions] + [String.Contains(skin.string(stylewatched),2) | String.Contains(skin.string(stylewatched),3)] + Control.HasFocus(54)</visible>
 			</control>
 			<control type="image">
-				<left>316</left>
-				<top>478</top>
+				<left>301</left>
+				<top>473</top>
 				<width>60</width>
 				<height>60</height>
 				<texture flipy="true">OverlayExtras.png</texture>
@@ -159,8 +159,8 @@
 				<visible>![Skin.HasSetting(nooverlays) | String.Contains(skin.string(stylewatched),2) | String.Contains(skin.string(stylewatched),3)] + ListItem.HasVideoVersions + Control.HasFocus(54)</visible>
 			</control>
 			<control type="image">
-				<left>315</left>
-				<top>472</top>
+				<left>300</left>
+				<top>467</top>
 				<width>60</width>
 				<height>60</height>
 				<texture>OverlayExtras.png</texture>
@@ -189,8 +189,8 @@
 				<visible>[!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions] + [String.Contains(skin.string(stylewatched),2) | String.Contains(skin.string(stylewatched),3)] + Control.HasFocus(54)</visible>
 			</control>
 			<control type="image">
-				<left>316</left>
-				<top>478</top>
+				<left>301</left>
+				<top>473</top>
 				<width>60</width>
 				<height>60</height>
 				<texture flipy="true">OverlayExtras.png</texture>
@@ -281,8 +281,8 @@
 				<visible>![Skin.HasSetting(nooverlays) | String.Contains(skin.string(stylewatched),2) | String.Contains(skin.string(stylewatched),3)] + ListItem.HasVideoVersions + Control.HasFocus(54)</visible>
 			</control>
 			<control type="image">
-				<left>315</left>
-				<top>472</top>
+				<left>300</left>
+				<top>467</top>
 				<width>60</width>
 				<height>60</height>
 				<texture>OverlayExtras.png</texture>
@@ -317,8 +317,8 @@
 				<visible>[!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions] + [String.Contains(skin.string(stylewatched),2) | String.Contains(skin.string(stylewatched),3)] + Control.HasFocus(54)</visible>
 			</control>
 			<control type="image">
-				<left>316</left>
-				<top>478</top>
+				<left>301</left>
+				<top>473</top>
 				<width>60</width>
 				<height>60</height>
 				<texture flipy="true">OverlayExtras.png</texture>
@@ -365,8 +365,8 @@
 				<visible>![Skin.HasSetting(nooverlays) | String.Contains(skin.string(stylewatched),2) | String.Contains(skin.string(stylewatched),3)] + ListItem.HasVideoVersions + Control.HasFocus(54)</visible>
 			</control>
 			<control type="image">
-				<left>315</left>
-				<top>472</top>
+				<left>300</left>
+				<top>467</top>
 				<width>60</width>
 				<height>60</height>
 				<texture>OverlayExtras.png</texture>
@@ -401,8 +401,8 @@
 				<visible>[!Skin.HasSetting(nooverlays) + ListItem.HasVideoVersions] + [String.Contains(skin.string(stylewatched),2) | String.Contains(skin.string(stylewatched),3)] + Control.HasFocus(54)</visible>
 			</control>
 			<control type="image">
-				<left>316</left>
-				<top>478</top>
+				<left>301</left>
+				<top>473</top>
 				<width>60</width>
 				<height>60</height>
 				<texture flipy="true">OverlayExtras.png</texture>
