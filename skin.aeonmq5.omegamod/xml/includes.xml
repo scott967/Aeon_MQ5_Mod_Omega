@@ -658,6 +658,7 @@
 				<onfocus>Skin.SetString(case_4k,chocolate)</onfocus>
 				<onfocus>Skin.SetString(case_hdr,dimgrey)</onfocus>
 				<onfocus>Skin.SetString(case_uhd,goldenrod)</onfocus>
+				<onfocus>Skin.SetString(case_versions,firebrick)</onfocus>
 				<onfocus>Skin.SetString(codec_default,default)</onfocus>
 				<onfocus>Skin.SetString(codec_bluray,bluray)</onfocus>
 				<onfocus>Skin.SetString(codec_3dbd,3dbd)</onfocus>
@@ -668,6 +669,7 @@
 				<onfocus>Skin.SetString(codec_4k,4k)</onfocus>
 				<onfocus>Skin.SetString(codec_hdr,hdr)</onfocus>
 				<onfocus>Skin.SetString(codec_uhd,uhd)</onfocus>
+				<onfocus>Skin.SetString(codec_versions,versions)</onfocus>
 				<!-- end video case colors and sticker icon  -->
 				<onfocus>Skin.SetString(panel_seconds,3)</onfocus>
 				<onfocus>Skin.SetString(gamevideo_seconds,2)</onfocus>
