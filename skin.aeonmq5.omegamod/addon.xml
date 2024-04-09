@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.aeonmq5.omegamod" name="Aeon MQ 5 Omegamod" provider-name="MarcosQui / scott967" version="13.8.0">
+<addon id="skin.aeonmq5.omegamod" name="Aeon MQ 5 Omegamod" provider-name="MarcosQui / scott967" version="13.8.1">
 	<requires>
 		<import addon="xbmc.gui" version="5.17.0" />
 		<import addon="script.artistslideshow" version="3.3.0" />
