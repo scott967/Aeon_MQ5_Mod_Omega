@@ -141,7 +141,7 @@
 							<textcolor>FFFAFAFA</textcolor>
 						</control>
 						<control type="label">
-							<left>-350</left>
+							<left>30</left>
 							<top>-25</top>
 							<width>380</width>
 							<height>5</height>
@@ -224,7 +224,7 @@
 							<textcolor>FFFAFAFA</textcolor>
 						</control>
 						<control type="label">
-							<left>-350</left>
+							<left>30</left>
 							<top>-25</top>
 							<width>380</width>
 							<height>5</height>
@@ -295,14 +295,14 @@
 				<control type="image">
 					<texture flipx="true">arrow_right.png</texture>
 					<left>10</left>
-					<top>1050</top>
+					<top>100</top>
 					<width>25</width>
 					<height>25</height>
 				</control>
 			</control>
 			<control type="label">
 				<left>50</left>
-				<top>1045</top>
+				<top>100</top>
 				<height>30</height>
 				<aligny>center</aligny>
 				<width>1920</width>
@@ -379,9 +379,9 @@
 			</control>
 			<control type="radiobutton" id="7000">
 				<left>0</left>
-				<top>135</top>
+				<top>120</top>
 				<width>438</width>
-				<height>100</height>
+				<height>80</height>
 				<align>left</align>
 				<aligny>center</aligny>
 				<ondown>9000</ondown>

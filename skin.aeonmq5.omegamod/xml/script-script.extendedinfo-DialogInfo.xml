@@ -2,6 +2,7 @@
 <!--  Initial use with Kodi Leia10.5.2 -->
 <!-- Matrix 11.0.4/11.1.1/11.3.0 -->
 <!-- Nexus 12.3.0/12.5.0 -->
+<!-- Omega 13.8.1 -->
 <window>
 	<defaultcontrol always="true">4000</defaultcontrol>
 	<controls>
@@ -292,19 +293,29 @@
 												<top>10</top>
 												<width>224</width>
 												<height>325</height>
-												<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Thumb]</texture>
+												<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 												<aspectratio aligny="center">scale</aspectratio>
 												<fadetime>0</fadetime>
+												<visible>String.IsEmpty(ListItem.DBID)</visible>
 											</control>
 											<control type="image">
-											<width>55</width>
-											<height>55</height>
-											<top>10</top>
-											<left>169</left>
-											<texture>flags/local.png</texture>
-											<visible>!String.IsEmpty(ListItem.DBID)</visible>
-										</control>
-										<control type="image">
+												<top>10</top>
+												<width>224</width>
+												<height>325</height>
+												<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(poster)]</texture>
+												<aspectratio aligny="center">scale</aspectratio>
+												<fadetime>0</fadetime>
+												<visible>!String.IsEmpty(ListItem.DBID)</visible>
+											</control>
+											<control type="image">
+												<width>55</width>
+												<height>55</height>
+												<top>10</top>
+												<left>169</left>
+												<texture>flags/local.png</texture>
+												<visible>!String.IsEmpty(ListItem.DBID)</visible>
+											</control>
+											<control type="image">
 												<top>310</top>
 												<width>84</width>
 												<height>25</height>
@@ -371,19 +382,29 @@
 												<top>10</top>
 												<width>224</width>
 												<height>325</height>
-												<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Thumb]</texture>
+												<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 												<aspectratio aligny="center">scale</aspectratio>
 												<fadetime>0</fadetime>
+												<visible>String.IsEmpty(ListItem.DBID)</visible>
 											</control>
 											<control type="image">
-											<width>55</width>
-											<height>55</height>
-											<top>10</top>
-											<left>169</left>
-											<texture>flags/local.png</texture>
-											<visible>!String.IsEmpty(ListItem.DBID)</visible>
-										</control>
-										<control type="image">
+												<top>10</top>
+												<width>224</width>
+												<height>325</height>
+												<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(poster]</texture>
+												<aspectratio aligny="center">scale</aspectratio>
+												<fadetime>0</fadetime>
+												<visible>!String.IsEmpty(ListItem.DBID)</visible>
+											</control>
+											<control type="image">
+												<width>55</width>
+												<height>55</height>
+												<top>10</top>
+												<left>169</left>
+												<texture>flags/local.png</texture>
+												<visible>!String.IsEmpty(ListItem.DBID)</visible>
+											</control>
+											<control type="image">
 												<top>310</top>
 												<width>84</width>
 												<height>25</height>
@@ -419,7 +440,7 @@
 								</focusedlayout>
 							</control>
 						</control>
-						<control type="group" id="2500">
+						<control type="group" id="2500">  <!-- tv show roles -->
 							<height>540</height>
 							<visible>Integer.IsGreater(Container(250).NumItems,0)</visible>
 							<control type="label">
@@ -479,19 +500,29 @@
 												<top>10</top>
 												<width>224</width>
 												<height>325</height>
-												<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Thumb]</texture>
+												<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 												<aspectratio aligny="center">scale</aspectratio>
 												<fadetime>0</fadetime>
+												<visible>String.IsEmpty(ListItem.DBID)</visible>
 											</control>
 											<control type="image">
-											<width>55</width>
-											<height>55</height>
-											<top>10</top>
-											<left>169</left>
-											<texture>flags/local.png</texture>
-											<visible>!String.IsEmpty(ListItem.DBID)</visible>
-										</control>
-										<control type="image">
+												<top>10</top>
+												<width>224</width>
+												<height>325</height>
+												<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(poster)]</texture>
+												<aspectratio aligny="center">scale</aspectratio>
+												<fadetime>0</fadetime>
+												<visible>!String.IsEmpty(ListItem.DBID)</visible>
+											</control>
+											<control type="image">
+												<width>55</width>
+												<height>55</height>
+												<top>10</top>
+												<left>169</left>
+												<texture>flags/local.png</texture>
+												<visible>!String.IsEmpty(ListItem.DBID)</visible>
+											</control>
+											<control type="image">
 												<top>310</top>
 												<width>84</width>
 												<height>25</height>
@@ -558,19 +589,29 @@
 												<top>10</top>
 												<width>224</width>
 												<height>325</height>
-												<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Thumb]</texture>
+												<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 												<aspectratio aligny="center">scale</aspectratio>
 												<fadetime>0</fadetime>
+												<visible>String.IsEmpty(ListItem.DBID)</visible>
 											</control>
 											<control type="image">
-											<width>55</width>
-											<height>55</height>
-											<top>10</top>
-											<left>169</left>
-											<texture>flags/local.png</texture>
-											<visible>!String.IsEmpty(ListItem.DBID)</visible>
-										</control>
-										<control type="image">
+												<top>10</top>
+												<width>224</width>
+												<height>325</height>
+												<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(poster)]</texture>
+												<aspectratio aligny="center">scale</aspectratio>
+												<fadetime>0</fadetime>
+												<visible>!String.IsEmpty(ListItem.DBID)</visible>
+											</control>
+											<control type="image">
+												<width>55</width>
+												<height>55</height>
+												<top>10</top>
+												<left>169</left>
+												<texture>flags/local.png</texture>
+												<visible>!String.IsEmpty(ListItem.DBID)</visible>
+											</control>
+											<control type="image">
 												<top>310</top>
 												<width>84</width>
 												<height>25</height>
@@ -665,19 +706,29 @@
 												<top>10</top>
 												<width>224</width>
 												<height>325</height>
-												<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Thumb]</texture>
+												<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 												<aspectratio aligny="center">scale</aspectratio>
 												<fadetime>0</fadetime>
+												<visible>String.IsEmpty(ListItem.DBID)</visible>
 											</control>
 											<control type="image">
-											<width>55</width>
-											<height>55</height>
-											<top>10</top>
-											<left>169</left>
-											<texture>flags/local.png</texture>
-											<visible>!String.IsEmpty(ListItem.DBID)</visible>
-										</control>
-										<control type="image">
+												<top>10</top>
+												<width>224</width>
+												<height>325</height>
+												<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(poster)]</texture>
+												<aspectratio aligny="center">scale</aspectratio>
+												<fadetime>0</fadetime>
+												<visible>!String.IsEmpty(ListItem.DBID)</visible>
+											</control>
+											<control type="image">
+												<width>55</width>
+												<height>55</height>
+												<top>10</top>
+												<left>169</left>
+												<texture>flags/local.png</texture>
+												<visible>!String.IsEmpty(ListItem.DBID)</visible>
+											</control>
+											<control type="image">
 												<top>310</top>
 												<width>84</width>
 												<height>25</height>
@@ -744,17 +795,27 @@
 												<top>10</top>
 												<width>224</width>
 												<height>325</height>
-												<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Thumb]</texture>
+												<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 												<aspectratio aligny="center">scale</aspectratio>
 												<fadetime>0</fadetime>
+												<visible>String.IsEmpty(ListItem.DBID)</visible>
 											</control>
 											<control type="image">
-											<width>55</width>
-											<height>55</height>
-											<top>10</top>
-											<left>169</left>
-											<texture>flags/local.png</texture>
-											<visible>!String.IsEmpty(ListItem.DBID)</visible>
+												<top>10</top>
+												<width>224</width>
+												<height>325</height>
+												<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(poster)]</texture>
+												<aspectratio aligny="center">scale</aspectratio>
+												<fadetime>0</fadetime>
+												<visible>!String.IsEmpty(ListItem.DBID)</visible>
+											</control>
+											<control type="image">
+												<width>55</width>
+												<height>55</height>
+												<top>10</top>
+												<left>169</left>
+												<texture>flags/local.png</texture>
+												<visible>!String.IsEmpty(ListItem.DBID)</visible>
 											</control>
 											<control type="image">
 												<top>310</top>
@@ -852,19 +913,29 @@
 												<top>10</top>
 												<width>224</width>
 												<height>325</height>
-												<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Thumb]</texture>
+												<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 												<aspectratio aligny="center">scale</aspectratio>
 												<fadetime>0</fadetime>
+												<visible>String.IsEmpty(ListItem.DBID)</visible>
 											</control>
 											<control type="image">
-											<width>55</width>
-											<height>55</height>
-											<top>10</top>
-											<left>169</left>
-											<texture>flags/local.png</texture>
-											<visible>!String.IsEmpty(ListItem.DBID)</visible>
-										</control>
-										<control type="image">
+												<top>10</top>
+												<width>224</width>
+												<height>325</height>
+												<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(poster)]</texture>
+												<aspectratio aligny="center">scale</aspectratio>
+												<fadetime>0</fadetime>
+												<visible>!String.IsEmpty(ListItem.DBID)</visible>
+											</control>
+											<control type="image">
+												<width>55</width>
+												<height>55</height>
+												<top>10</top>
+												<left>169</left>
+												<texture>flags/local.png</texture>
+												<visible>!String.IsEmpty(ListItem.DBID)</visible>
+											</control>
+											<control type="image">
 												<top>310</top>
 												<width>84</width>
 												<height>25</height>
@@ -931,17 +1002,27 @@
 												<top>10</top>
 												<width>224</width>
 												<height>325</height>
-												<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Thumb]</texture>
+												<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 												<aspectratio aligny="center">scale</aspectratio>
 												<fadetime>0</fadetime>
+												<visible>String.IsEmpty(ListItem.DBID)</visible>
 											</control>
 											<control type="image">
-											<width>55</width>
-											<height>55</height>
-											<top>10</top>
-											<left>169</left>
-											<texture>flags/local.png</texture>
-											<visible>!String.IsEmpty(ListItem.DBID)</visible>
+												<top>10</top>
+												<width>224</width>
+												<height>325</height>
+												<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(poster)]</texture>
+												<aspectratio aligny="center">scale</aspectratio>
+												<fadetime>0</fadetime>
+												<visible>!String.IsEmpty(ListItem.DBID)</visible>
+											</control>
+											<control type="image">
+												<width>55</width>
+												<height>55</height>
+												<top>10</top>
+												<left>169</left>
+												<texture>flags/local.png</texture>
+												<visible>!String.IsEmpty(ListItem.DBID)</visible>
 											</control>
 											<control type="image">
 												<top>310</top>
@@ -981,7 +1062,7 @@
 						</control>
 						<control type="group" id="3500">
 							<visible>Integer.IsGreater(Container(350).NumItems,0)</visible>
-							<height>440</height>
+							<height>540</height>
 							<control type="label">
 								<top>6</top>
 								<left>25</left>
@@ -1016,7 +1097,7 @@
 								<left>-45</left>
 								<top>40</top>
 								<width>1180</width>
-								<height>700</height>
+								<height>600</height>  <!-- 700 -->
 								<onleft>350</onleft>
 								<onright>350</onright>
 								<onup>650</onup>
@@ -1025,7 +1106,7 @@
 								<scrolltime>300</scrolltime>
 								<orientation>horizontal</orientation>
 								<preloaditems>2</preloaditems>
-								<itemlayout height="410" width="380">
+								<itemlayout height="400" width="380">
 									<control type="image">
 										<top>0</top>
 										<left>50</left>
@@ -1048,7 +1129,7 @@
 											<width>323</width>
 											<height>100</height>
 											<left>0</left>
-											<top>227</top>
+											<top>240</top>
 											<align>center</align>
 											<textcolor>FFFFFAF0</textcolor>
 											<font>Font_14A</font>
@@ -1056,7 +1137,7 @@
 										</control>
 									</control>
 								</itemlayout>
-								<focusedlayout height="410" width="380">
+								<focusedlayout height="400" width="380">
 									<control type="image">
 										<top>0</top>
 										<left>50</left>
@@ -1100,8 +1181,8 @@
 								</focusedlayout>
 							</control>
 						</control>
-						<control type="group" id="4500">
-							<height>450</height>
+						<control type="group" id="4500">  <!-- thumb images -->
+							<height>540</height>
 							<visible>Integer.IsGreater(Container(450).NumItems,0)</visible>
 							<control type="label">
 								<top>6</top>
@@ -1158,7 +1239,7 @@
 											<top>28</top>
 											<width>224</width>
 											<height>325</height>
-											<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Thumb]</texture>
+											<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 											<aspectratio aligny="center">scale</aspectratio>
 											<fadetime>0</fadetime>
 										</control>
@@ -1189,7 +1270,7 @@
 												<top>10</top>
 												<width>224</width>
 												<height>325</height>
-												<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Thumb]</texture>
+												<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 												<aspectratio aligny="center">scale</aspectratio>
 												<fadetime>0</fadetime>
 											</control>
@@ -1198,8 +1279,8 @@
 								</focusedlayout>
 							</control>
 						</control>
-						<control type="group" id="7500">
-							<height>550</height>
+						<control type="group" id="7500">  <!-- tagged images -->
+							<height>540</height>
 							<visible>Integer.IsGreater(Container(750).NumItems,0)</visible>
 							<control type="label">
 								<left>25</left>
@@ -1256,7 +1337,7 @@
 											<top>28</top>
 											<width>505</width>
 											<height>325</height>
-											<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Thumb]</texture>
+											<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 											<aspectratio aligny="center">scale</aspectratio>
 										</control>
 										<control type="label">
@@ -1296,7 +1377,7 @@
 											<top>28</top>
 											<width>505</width>
 											<height>325</height>
-											<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Thumb]</texture>
+											<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(thumb)]</texture>
 											<aspectratio aligny="center">scale</aspectratio>
 										</control>
 										<control type="label">
