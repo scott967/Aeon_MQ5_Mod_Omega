@@ -89,17 +89,17 @@
 					<effect type="slide" start="0,1000" end="0,0" delay="0" tween="sine" time="900" />
 					<effect type="fade" start="0" end="100" delay="0" tween="sine" time="1500" />
 				</animation>
-			<control type="image">
-				<texture>$INFO[ListItem.Art(fanart_small)]</texture>
-				<left>40</left>
-				<top>30</top>
-				<width>396</width>
-				<fadetime>200</fadetime>
-				<bordertexture border="4">black.png</bordertexture>
-				<bordersize>4</bordersize>
-				<height>222</height>
-				<aspectratio>keep</aspectratio>
-			</control>
+				<control type="image">
+					<texture>$INFO[ListItem.Art(fanart_small)]</texture>
+					<left>40</left>
+					<top>30</top>
+					<width>396</width>
+					<fadetime>200</fadetime>
+					<bordertexture border="4">black.png</bordertexture>
+					<bordersize>4</bordersize>
+					<height>222</height>
+					<aspectratio>keep</aspectratio>
+				</control>
 				<control type="textbox">
 					<top>275</top>
 					<left>40</left>

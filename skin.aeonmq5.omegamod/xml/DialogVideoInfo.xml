@@ -6,7 +6,7 @@
 <!-- Leia 10.2.5/10.3.0/10.4.0/10.5.2/10.6.0/10.6.1/10.6.2 -->
 <!-- Matrix 11.0.1/11.0.3/11.0.4/11.1.1/11.2.0 -->
 <!-- Nexus 12.3.0/12.5.0 -->
-<!-- Omega 13.7.0 versions -->
+<!-- Omega 13.7.0 versions/13.8.1 -->
 <window>
 	<onload>Control.SetFocus(50,0,absolute)</onload>
 	<onload>Control.SetFocus(149)</onload>
@@ -1384,13 +1384,13 @@
 							<visible>System.AddonIsEnabled(script.libraryeditor)</visible>
 						</item>
 						<item id="9">
-							<!-- actor bio -->
+							<!-- extended actor info -->
 							<label>31798</label>
 							<onclick>RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[Container(50).ListItem.Label])</onclick>
 							<visible>System.AddonIsEnabled(script.extendedinfo) + !Container.Content(sets) + !Container.Content(musicvideos)</visible>
 						</item>
 						<item id="991">
-							<!-- mv artist bio -->
+							<!-- extended mv artist info -->
 							<label>31798</label>
 							<onclick>RunScript(script.extendedinfo,info=artistdetails,artistname=$INFO[Container(50).ListItem.Label])</onclick>
 							<visible>System.AddonIsEnabled(script.extendedinfo) + Container.Content(musicvideos)</visible>
