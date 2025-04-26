@@ -165,7 +165,7 @@ Group 602: Widgets
 			<include>Animation_Window</include>
 			<include condition="system.getbool(lookandfeel.enablerssfeeds)">HomeRSS</include>
 			<control type="group" id="605">  <!-- disc art bottom left -->
-				<!-- Arte de disco -->
+				<!-- Disc art -->
 				<animation effect="slide" start="-750,0" end="0,0" time="1000" delay="3000" tween="cubic" easing="inout">WindowOpen</animation>
 				<animation effect="slide" start="-750,0" end="0,0" time="1000" delay="3000" tween="cubic" easing="inout">Visible</animation>
 				<animation effect="slide" start="0,0" end="-750,0" time="400" tween="cubic" easing="inout">WindowClose</animation>
@@ -761,7 +761,7 @@ Group 602: Widgets
 						<visible>!String.IsEmpty(Container(510).ListItem.Property(Thumbnail))</visible>
 					</control>
 				</control>
-				<control type="group">
+				<control type="group">  <!-- labels / stars / plot -->
 					<left>360</left>
 					<animation effect="slide" end="112,0" condition="String.IsEqual(Container(9000).ListItem.Property(id),music) | String.Contains(Container(9000).ListItem.Property(id),apl) | String.Contains(Container(9000).ListItem.Property(id),programs)">Conditional</animation>
 					<animation effect="slide" end="405,0" condition="!String.IsEmpty(Container(510).ListItem.Property(Thumbnail))">Conditional</animation>
@@ -1355,8 +1355,7 @@ Group 602: Widgets
 					<texture>$VAR[value_mainmenu_aux]</texture>
 					<colordiffuse>$VAR[value_mainmenu_styleglass]</colordiffuse>
 				</control>
-				<control type="multiimage">
-					<!-- Barra de estilos -->
+				<control type="multiimage">  <!-- main menu bar style -->
 					<left>0</left>
 					<top>818</top>
 					<width>1920</width>
@@ -1371,7 +1370,7 @@ Group 602: Widgets
 					<left>0</left>
 					<top>818</top>
 					<width>1920</width>
-					<height>1</height>
+					<height>2</height>
 					<texture>separator.png</texture>
 					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 					<include>Animation_HomeGlass</include>
@@ -1380,7 +1379,7 @@ Group 602: Widgets
 					<left>0</left>
 					<top>908</top>
 					<width>1920</width>
-					<height>1</height>
+					<height>2</height>
 					<texture>separator.png</texture>
 					<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 					<include>Animation_HomeGlass</include>
@@ -1497,7 +1496,7 @@ Group 602: Widgets
 					<texture>osd_glass.png</texture>
 					<visible>Skin.HasSetting(mainmenuglass)</visible>
 				</control>
-			</control>
+			</control>  <!-- main menu -->
 			<control type="button" id="5201">
 				<left>1830</left>
 				<top>990</top>

@@ -1600,7 +1600,7 @@
 					<width>1920</width>
 					<height>960</height>
 					<aspectratio>keep</aspectratio>
-					<texture diffuse="thumb_cdcover_mask.png" background="true">$INFO[Container(500).ListItem.Icon]</texture>
+					<texture diffuse="thumb_cdcover_mask.png" background="true">$INFO[Container(500).ListItem.Art(poster)]</texture>
 					<visible>Skin.HasSetting(coverzoom) + Control.IsVisible(500)</visible>
 				</control>
 				<control type="image">

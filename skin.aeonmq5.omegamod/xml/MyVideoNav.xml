@@ -125,8 +125,7 @@
 			<include>Animation_Fade</include>
 			<visible>Player.HasVideo + !Skin.HasSetting(fullscreentrailer)</visible>
 		</control>
-		<control type="group">
-			<!-- default group -->
+		<control type="group">	<!-- default group -->
 			<include>Animation_Window</include>
 			<!-- default group animation control buttons -->
 			<control type="button" id="9900">
@@ -387,7 +386,7 @@
 			<!-- end flags bar -->
 			<!-- title bar 0-270 -->
 			<!-- NOT for wide, lowlist, glasslist, rightlist, midlist, multilist -->
-			<control type="group"><!-- Title Subtitle -->
+			<control type="group">	<!-- Title Subtitle playing video -->
 				<top>-45</top>
 				<animation effect="slide" time="400" start="0,-375" end="0,0" easing="inout" tween="cubic">WindowOpen</animation>
 				<animation effect="slide" time="400" start="0,-375" end="0,0" easing="inout" tween="cubic">Visible</animation>
@@ -432,7 +431,7 @@
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<visible>Skin.HasSetting(clearlogotitle) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
 					</control>
-					<!--  edit for MV artist -->
+					<!--  edit for MV artist/set overview -->
 					<control type="label">
 						<left>45</left>
 						<top>160</top>
@@ -505,7 +504,7 @@
 						<fadetime>FanartCrossFadeTime</fadetime>
 						<visible>Skin.HasSetting(clearlogotitle) + !String.IsEmpty(ListItem.Art(clearlogo))</visible>
 					</control>
-					<!--  edit for MV artist -->
+					<!--  edit for MV artist/set overview -->
 					<control type="label">
 						<left>45</left>
 						<top>160</top>
