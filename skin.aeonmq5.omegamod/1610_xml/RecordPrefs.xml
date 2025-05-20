@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Aeon MQ 5 Helix 6.1.5/6.1.7-->
+<!-- Leia 10.4.0 -->
+<!-- Matrix 11.1.1 -->
+<window>
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<include>WindowBG</include>
+			<include>Animation_Fade</include>
+			<texture fallback="special://skin/backgrounds/livetv.jpg" background="true">$INFO[skin.string(livetv.bg)]</texture>
+		</control>
+		<control type="group">
+			<!-- Visualizacao de fundo -->
+			<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1920</width>
+				<height>1200</height>  <!-- 1200 -->
+				<texture>black.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+				<include>Animation_Fade</include>
+				<visible>Player.HasMedia</visible>
+			</control>
+			<control type="videowindow">
+				<left>0</left>
+				<top>0</top>
+				<width>1920</width>
+				<height>1200</height>  <!-- 1200 -->
+				<visible>Player.HasVideo</visible>
+				<animation effect="slide" start="0,0" end="-3000,0" time="0">WindowClose</animation>
+			</control>
+			<control type="visualisation">
+				<left>0</left>
+				<top>0</top>
+				<width>1920</width>
+				<height>1200</height>  <!-- 1200 -->
+				<visible>PVR.IsPlayingRadio + [String.Contains(Skin.String(vis_bgradio),vis) | String.Contains(Skin.String(vis_bgradio),fanartmix)]</visible>
+				<animation effect="slide" start="0,0" end="-3000,0" time="0">WindowClose</animation>
+			</control>
+		</control>
+		<control type="group">
+			<include>Animation_DialogPopup</include>
+			<control type="image">
+				<left>165</left>
+				<top>0</top>
+				<width>45</width>
+				<height>1200</height>  <!-- 1200 -->
+				<texture flipx="true">shadow.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<left>1710</left>
+				<top>0</top>
+				<width>45</width>
+				<height>1200</height>  <!-- 1200 -->
+				<texture>shadow.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<left>210</left>
+				<top>0</top>
+				<width>1500</width>
+				<height>1200</height>  <!-- 1200 -->
+				<texture>darkgrey.png</texture>
+				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+				<include>Animation_DefaultGlass</include>
+			</control>
+			<control type="image">
+				<left>210</left>
+				<top>0</top>
+				<width>1500</width>
+				<height>120</height>
+				<texture>black.png</texture>
+				<colordiffuse>90FFFFFF</colordiffuse>
+			</control>
+			<control type="label">
+				<!-- Heading label  pvr.wmc -->
+				<left>322</left>
+				<top>34</top>
+				<width>1278</width>
+				<height>45</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$ADDON[pvr.wmc 30100]</label>
+				<font>Font_32</font>
+				<textcolor>FFFFFAF0</textcolor>
+				<include>Animation_Fade</include>
+				<visible>System.HasAddon(pvr.wmc)</visible>
+			</control>
+			<control type="label">
+				<!-- Heading label pvr.npvr -->
+				<left>322</left>
+				<top>34</top>
+				<width>1278</width>
+				<height>45</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$ADDON[pvr.nextpvr 30100]</label>
+				<font>Font_32</font>
+				<textcolor>FFFFFAF0</textcolor>
+				<include>Animation_Fade</include>
+				<visible>System.HasAddon(pvr.nextpvr)</visible>
+			</control>
+			<control type="label" id="20">
+				<!-- Nome do programa -->
+				<left>322</left>
+				<top>135</top>
+				<width>1278</width>
+				<height>45</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label></label>
+				<font>Font_30A</font>
+				<textcolor>$VAR[value_headercolor]</textcolor>
+				<scroll>true</scroll>
+			</control>
+			<control type="grouplist">
+				<!-- pvr.wmc -->
+				<left>210</left>
+				<top>225</top>
+				<width>1500</width>
+				<height>900</height>
+				<itemgap>0</itemgap>
+				<onleft>1</onleft>
+				<onright>1</onright>
+				<onup>1</onup>
+				<ondown>1</ondown>
+				<visible>System.HasAddon(pvr.wmc)</visible>
+				<control type="radiobutton" id="10">
+					<!-- Gravacao do episodio -->
+					<label>$ADDON[pvr.wmc 30101]</label>
+					<radioposx>1341</radioposx>
+				</control>
+				<control type="radiobutton" id="11">
+					<!-- Gravacao da serie -->
+					<label>$ADDON[pvr.wmc 30102]</label>
+					<radioposx>1341</radioposx>
+				</control>
+				<control type="spincontrolex" id="12">
+					<!-- Tipo de serie -->
+					<label>$ADDON[pvr.wmc 30103]</label>
+					<spinposx>26</spinposx>
+				</control>
+				<control type="spincontrolex" id="13">
+					<!-- Escolher o canal -->
+					<label>$ADDON[pvr.wmc 30107]</label>
+					<spinposx>26</spinposx>
+				</control>
+				<control type="spincontrolex" id="14">
+					<!-- Escolher o horario -->
+					<label>$ADDON[pvr.wmc 30110]</label>
+					<spinposx>26</spinposx>
+				</control>
+			</control>
+			<control type="grouplist">
+				<!-- pvr.npvr -->
+				<left>210</left>
+				<top>225</top>
+				<width>1500</width>
+				<height>900</height>
+				<onleft>1</onleft>
+				<onright>1</onright>
+				<onup>1</onup>
+				<ondown>1</ondown>
+				<visible>System.HasAddon(pvr.nextpvr)</visible>
+				<control type="spincontrolex" id="21">
+					<description>recording type</description>
+					<spinposx>26</spinposx>
+					<label>$ADDON[pvr.nextpvr 30120]</label>
+				</control>
+				<control type="spincontrolex" id="25">
+					<description>pre padding</description>
+					<spinposx>26</spinposx>
+					<label>$ADDON[pvr.nextpvr 30132]</label>
+				</control>
+				<control type="spincontrolex" id="26">
+					<description>post padding</description>
+					<spinposx>26</spinposx>
+					<label>$ADDON[pvr.nextpvr 30133]</label>
+				</control>
+				<control type="spincontrolex" id="23">
+					<description>keep count</description>
+					<spinposx>26</spinposx>
+					<label>$ADDON[pvr.nextpvr 30130]</label>
+				</control>
+				<control type="spincontrolex" id="27">
+					<description>recording directory</description>
+					<spinposx>26</spinposx>
+					<label>$ADDON[pvr.nextpvr 30134]</label>
+				</control>
+			</control>
+			<control type="image">
+				<left>210</left>
+				<top>900</top>
+				<height>60</height>
+				<width>1500</width>
+				<texture>black.png</texture>
+				<colordiffuse>90FFFFFF</colordiffuse>
+			</control>
+			<control type="grouplist" id="9000">
+				<left>210</left>
+				<top>900</top>
+				<onup condition="System.HasAddon(pvr.wmc)">10</onup>
+				<onup condition="System.HasAddon(pvr.nextpvr)">21</onup>
+				<ondown condition="System.HasAddon(pvr.wmc)">10</ondown>
+				<ondown condition="System.HasAddon(pvr.nextpvr)">21</ondown>
+				<orientation>horizontal</orientation>
+				<itemgap>0</itemgap>
+				<control type="button" id="1">
+					<!-- OK -->
+					<width>750</width>
+					<include>SettingsBottomButton</include>
+					<label>186</label>
+				</control>
+				<control type="button" id="2">
+					<!-- Cancel -->
+					<width>750</width>
+					<include>SettingsBottomButton</include>
+					<label>222</label>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

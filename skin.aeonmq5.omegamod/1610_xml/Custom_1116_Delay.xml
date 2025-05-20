@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Aeon MQ 5 Helix 6.1.0/6.1.3 -->
+<!-- Jarvis 8.1.14 -->
+<!-- Leiamod 10.2.3/10.3.0 -->
+<!-- Matrix 11.1.1 window is was 638 -->
+<window id="1116" type="dialog">
+	<!-- safe id -->
+	<defaultcontrol></defaultcontrol>
+	<onload condition="String.Contains(skin.string(panel_seconds),1)">SetFocus(9061)</onload>
+	<onload condition="String.Contains(skin.string(panel_seconds),2)">SetFocus(9062)</onload>
+	<onload condition="String.Contains(skin.string(panel_seconds),3)">SetFocus(9063)</onload>
+	<onload condition="String.Contains(skin.string(panel_seconds),4)">SetFocus(9064)</onload>
+	<onload condition="String.Contains(skin.string(panel_seconds),5)">SetFocus(9065)</onload>
+	<coordinates>
+		<system>1</system>
+		<left>0</left>
+		<top>0</top>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>1200</height>  <!-- 1200 -->
+			<texture>black.png</texture>
+			<colordiffuse>C3FFFFFF</colordiffuse>
+			<include>Animation_Fade</include>
+		</control>
+		<control type="group">
+			<left>615</left>
+			<top>180</top>
+			<include>Animation_DialogPopup</include>
+			<control type="image">
+				<left>0</left>
+				<top>45</top>
+				<width>681</width>
+				<height>58</height>
+				<texture>gradient_focus.png</texture>
+				<colordiffuse>$VAR[value_headercolor]</colordiffuse>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>681</width>
+				<height>58</height>
+				<texture>dialogs_context_nofocus.png</texture>
+				<colordiffuse>F9FFFFFF</colordiffuse>
+			</control>
+			<control type="label">
+				<left>120</left>
+				<top>12</top>
+				<width>450</width>
+				<height>60</height>
+				<align>center</align>
+				<label>31621</label>
+				<font>Font_20</font>
+				<textcolor>$VAR[value_headercolor]</textcolor>
+			</control>
+			<control type="grouplist" id="9060">
+				<left>0</left>
+				<top>75</top>
+				<width>668</width>
+				<height max="1005">auto</height>
+				<itemgap>0</itemgap>
+				<onleft>Dialog.Close(1116)</onleft>
+				<onright>Dialog.Close(1116)</onright>
+				<control type="radiobutton" id="9061">
+					<!-- 1s -->
+					<include>DialogContext_Button</include>
+					<label>31465</label>
+					<onclick>Skin.SetString(panel_seconds,1)</onclick>
+					<onclick>Dialog.Close(1116)</onclick>
+				</control>
+				<control type="radiobutton" id="9062">
+					<!-- 2s -->
+					<include>DialogContext_Button</include>
+					<label>31466</label>
+					<onclick>Skin.SetString(panel_seconds,2)</onclick>
+					<onclick>Dialog.Close(1116)</onclick>
+				</control>
+				<control type="radiobutton" id="9063">
+					<!-- 3s -->
+					<include>DialogContext_Button</include>
+					<label>31467</label>
+					<onclick>Skin.SetString(panel_seconds,3)</onclick>
+					<onclick>Dialog.Close(1116)</onclick>
+				</control>
+				<control type="radiobutton" id="9064">
+					<!-- 4s -->
+					<include>DialogContext_Button</include>
+					<label>31468</label>
+					<onclick>Skin.SetString(panel_seconds,4)</onclick>
+					<onclick>Dialog.Close(1116)</onclick>
+				</control>
+				<control type="radiobutton" id="9065">
+					<!-- 5s -->
+					<include>DialogContext_Button</include>
+					<label>31469</label>
+					<onclick>Skin.SetString(panel_seconds,5)</onclick>
+					<onclick>Dialog.Close(1116)</onclick>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

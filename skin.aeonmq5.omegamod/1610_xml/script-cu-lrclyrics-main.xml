@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Aeon MQ 5 -->
+<!-- Jarvis 8.1.13 -->
+<!-- Krypton 9.1.19 -->
+<!-- Leia 10.3.0 -->
+<!-- Matrix 11.1.1 -->
+<!-- Nexus 12.6.0-->
+<window>
+	<coordinates>
+		<left>0</left>
+		<top>0</top>
+	</coordinates>
+	<!-- <onopen condition="Skin.HasSetting(nolyrics_on)">SetFocus(5001)</onopen>
+	<onopen condition="!Skin.HasSetting(nolyrics_on)">SetFocus(110)</onopen> -->
+	<controls>
+		<!-- invisible lyrics to close window
+		<control type="group">  
+			<visible>Skin.HasSetting(nolyrics_on) + !String.IsEqual(skin.string(vis_layout),karaoke)</visible>
+			<control type="button" id="5001">
+				<description>background close area</description>
+				<left>-1920</left>
+				<top>-1200</top>
+				<width>5760</width>
+				<height>3240</height>
+				<texturefocus></texturefocus>
+				<texturenofocus></texturenofocus>
+				<onclick>Action(close)</onclick>
+				<onfocus>Action(close)</onfocus>
+			</control>
+			<control type="list" id="110">
+				<left>-1920</left>
+				<top>-1200</top>
+				<width>5760</width>
+				<height>3240</height>
+				<onup>Action(close)</onup>
+				<ondown>Action(close)</ondown>
+				<onleft>Action(close)</onleft>
+				<onright>Action(close)</onright>
+				<onfocus>Action(close)</onfocus>
+				<itemlayout height="1620"></itemlayout>
+				<focusedlayout height="1620"></focusedlayout>
+			</control>
+			<control type="label" id="200">
+				<description>Scraper label</description>
+				<visible>false</visible>
+			</control>
+		</control> -->
+		<include condition="String.IsEqual(skin.string(vis_layout),default)">LyricsDefault</include>
+		<include condition="String.IsEqual(skin.string(vis_layout),karaoke)">LyricsKaraoke</include>
+	</controls>
+</window>

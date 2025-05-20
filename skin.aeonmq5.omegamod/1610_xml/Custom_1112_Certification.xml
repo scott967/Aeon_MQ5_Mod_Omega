@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Aeon MQ 5 Matrox 11.0.4 -->
+<!-- Nexus 12.3.0/12.4.0/12.5.0 -->
+<window id="1112" type="dialog" modality="modal">
+	<defaultcontrol always="true">11121</defaultcontrol>
+	<visible>Window.IsVisible(movieinformation) + Integer.IsEqual(Window(home).Property(hitclicked),1)</visible>
+	<controls>
+		<control type="button" id="11120">
+			<include>InvisibleButton</include>
+			<onclick>noop</onclick>
+			<onfocus>SetProperty(hitclicked, 0 , home)</onfocus>
+			<onfocus>Dialog.Close(1112)</onfocus>
+		</control>
+		<control type="group">
+			<include>Animation_DialogPopup</include>
+			<control type="image">
+				<left>245</left>
+				<top>120</top>
+				<width>45</width>
+				<!--<height>835</height>-->
+				<height>955</height>  <!-- 1200 -->
+				<texture flipx="true">shadow.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<left>1630</left>
+				<top>120</top>
+				<width>45</width>
+				<!--<height>835</height>-->
+				<height>955</height>  <!-- 1200 -->
+				<texture>shadow.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<left>290</left>
+				<top>120</top>
+				<width>1340</width>
+				<!--<height>835</height>-->
+				<height>955</height>  <!-- 1200 -->
+				<texture>darkgrey.png</texture>
+				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
+				<include>Animation_DefaultGlass</include>
+			</control>
+			<control type="image">
+				<left>290</left>
+				<top>120</top>
+				<width>1340</width>
+				<height>120</height>
+				<texture>black.png</texture>
+				<colordiffuse>B0FFFFFF</colordiffuse>
+			</control>
+			<control type="grouplist" id="11121">
+				<left>310</left>
+				<top>130</top>
+				<width>1300</width>
+				<!--<height>815</height>-->
+				<height>935</height>  <!-- 1200 -->
+				<itemgap>15</itemgap>
+				<pagecontrol></pagecontrol>
+				<onleft>11120</onleft>
+				<onright>11120</onright>
+				<onup>11121</onup>
+				<ondown>11121</ondown>
+				<!-- <onup>11120</onup>
+				<ondown>11120</ondown> -->
+				<orientation>vertical</orientation>
+				<control type="textbox" id="11122">
+					<width>1300</width>
+					<height>60</height>
+					<label>[COLOR=$VAR[value_headercolor]]$LOCALIZE[20074]:  [/COLOR]$INFO[ListItem.Mpaa]</label>
+					<textcolor>FFFFFAF0</textcolor>
+					<font>Font_18A</font>
+					<!-- <autoscroll delay="3000" time="2000" repeat="3000">!Skin.HasSetting(noallowscroll)</autoscroll> -->
+				</control>
+				<control type="textbox">
+					<width>1300</width>
+					<height>70</height>
+					<label>[COLOR=$VAR[value_headercolor]]$LOCALIZE[20459]:  [/COLOR]$INFO[ListItem.Tag]</label>
+					<textcolor>FFFFFAF0</textcolor>
+					<font>Font_18A</font>
+					<visible>!String.IsEmpty(ListItem.Tag)</visible>
+					<!-- <autoscroll delay="3000" time="2000" repeat="3000">!Skin.HasSetting(noallowscroll)</autoscroll> -->
+				</control>
+				<control type="textbox">
+					<width>1300</width>
+					<height>60</height>
+					<label>[COLOR=$VAR[value_headercolor]]$LOCALIZE[31233]:  [/COLOR]$INFO[ListItem.Premiered]</label>
+					<textcolor>FFFFFAF0</textcolor>
+					<font>Font_18A</font>
+					<visible>!String.IsEmpty(ListItem.Premiered)</visible>
+					<!-- <autoscroll delay="3000" time="2000" repeat="3000">!Skin.HasSetting(noallowscroll)</autoscroll> -->
+				</control>
+				<control type="textbox">
+					<width>1300</width>
+					<height>60</height>
+					<label>[COLOR=$VAR[value_headercolor]]$LOCALIZE[570]:  [/COLOR]$INFO[ListItem.DateAdded]</label>
+					<textcolor>FFFFFAF0</textcolor>
+					<font>Font_18A</font>
+					<visible>!String.IsEmpty(ListItem.DateAdded)</visible>
+					<!-- <autoscroll delay="3000" time="2000" repeat="3000">!Skin.HasSetting(noallowscroll)</autoscroll> -->
+				</control>
+				<control type="textbox">
+					<width>1300</width>
+					<!--<height>375</height>-->
+					<height>495</height>  <!-- 1200 -->
+					<pagecontrol></pagecontrol>
+					<label>[COLOR=$VAR[value_headercolor]]$LOCALIZE[207]:  [/COLOR]$INFO[ListItem.Plot]</label>
+					<textcolor>FFFFFAF0</textcolor>
+					<font>Font_18Atbox</font>
+					<autoscroll delay="3000" time="2000" repeat="3000">!Skin.HasSetting(noallowscroll)</autoscroll>
+				</control>
+				<control type="button" id="11124">
+					<width>1300</width>
+					<height>70</height>
+					<label>$LOCALIZE[20457]: $INFO[ListItem.Set]</label>
+					<textcolor>FFFFFAF0</textcolor>
+					<textoffsetx>20</textoffsetx>
+					<font>Font_18A</font>
+					<onclick>SetProperty(hitclicked, 0 , home)</onclick>
+					<onclick>Dialog.Close(all)</onclick>
+					<onclick>ActivateWindow(videos, videodb://movies/sets/$INFO[ListItem.SetID], return)</onclick>
+					<visible>!String.IsEmpty(ListItem.Set)</visible>
+				</control>
+				<control type="button" id="11123">
+					<width>870</width>
+					<!--<height>200</height>-->
+					<height>320</height>  <!-- 1200 -->
+					<colordiffuse>00000000</colordiffuse>
+					<onclick>SetProperty(hitclicked, 0 , home)</onclick>
+					<visible>String.IsEmpty(ListItem.Set)</visible>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>
