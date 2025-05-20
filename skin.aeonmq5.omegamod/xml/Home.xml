@@ -995,8 +995,7 @@ Group 602: Widgets
 					</control>
 				</control>
 			</control>
-			<control type="image" id="9931">
-				<!-- widgets modo auto -->
+			<control type="image" id="9931">  <!-- widgets mode auto -->
 				<include>InvisibleButton</include>
 				<animation effect="fade" start="0" end="100" time="150" delay="1000" condition="String.Contains(skin.string(widgets_seconds),1)">Visible</animation>
 				<animation effect="fade" start="0" end="100" time="150" delay="2000" condition="String.Contains(skin.string(widgets_seconds),2)">Visible</animation>
@@ -1065,7 +1064,6 @@ Group 602: Widgets
 				<include condition="![String.IsEmpty(skin.string(pvrwidget)) | Skin.HasSetting(nopvrwidget)]">mf_contentpvr_tv</include>
 			</control>
 			<control type="group">  <!-- Library status (skinsettings furniture B9017) -->
-				<!-- Status da biblioteca -->
 				<animation effect="slide" start="-750,0" end="0,0" time="500" delay="2000" tween="sine" easing="out" condition="Window.Previous(Startup)">WindowOpen</animation>
 				<animation effect="slide" start="-750,0" end="0,0" time="500" delay="1000" tween="sine" easing="out" condition="!Window.Previous(Startup)">WindowOpen</animation>
 				<animation effect="slide" start="-750,0" end="0,0" time="500" delay="500" tween="sine" easing="out">Visible</animation>

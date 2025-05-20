@@ -369,8 +369,7 @@
 						<textcolor>$VAR[value_headercolor]</textcolor>
 						<label>$LOCALIZE[31375]</label>
 					</control>
-					<control type="button" id="26">
-						<!-- add grp -->
+					<control type="button" id="26">  <!-- add group -->
 						<textoffsetx>50</textoffsetx>
 						<include>PVRSearchButtonSmall</include>
 						<left>0</left>
@@ -381,8 +380,7 @@
 						<onup>13</onup>
 						<ondown>25</ondown>
 					</control>
-					<control type="button" id="27">
-						<!-- rename grp -->
+					<control type="button" id="27">  <!-- rename group -->
 						<textoffsetx>50</textoffsetx>
 						<include>PVRSearchButtonSmall</include>
 						<left>334</left>
@@ -393,8 +391,7 @@
 						<onup>13</onup>
 						<ondown>28</ondown>
 					</control>
-					<control type="togglebutton" id="34">
-						<!-- toggle tv/radio  -->
+					<control type="togglebutton" id="34">  <!-- toggle tv/radio  -->
 						<textoffsetx>17</textoffsetx>
 						<width>360</width>
 						<include>PVRSearchButtonSmall</include>
@@ -408,8 +405,7 @@
 						<onup>13</onup>
 						<ondown>9000</ondown>
 					</control>
-					<control type="button" id="28">
-						<!-- delete grp -->
+					<control type="button" id="28">  <!-- delete group -->
 						<textoffsetx>50</textoffsetx>
 						<include>PVRSearchButtonSmall</include>
 						<left>334</left>
@@ -420,8 +416,7 @@
 						<onup>27</onup>
 						<ondown>9000</ondown>
 					</control>
-					<control type="radiobutton" id="25">
-						<!-- hide group -->
+					<control type="radiobutton" id="25">  <!-- hide group -->
 						<textoffsetx>50</textoffsetx>
 						<radioposx>195</radioposx>
 						<include>PVRSearchButtonSmall</include>
@@ -458,27 +453,24 @@
 				<texture>black.png</texture>
 				<colordiffuse>90FFFFFF</colordiffuse>
 			</control>
-			<control type="grouplist" id="9000">
+			<control type="grouplist" id="9000">  <!-- OK/Apply/Cancel -->
 				<left>210</left>
 				<top>900</top>
 				<onup>13</onup>
 				<ondown>13</ondown>
 				<orientation>horizontal</orientation>
 				<itemgap>0</itemgap>
-				<control type="button" id="29">
-					<!-- OK -->
+				<control type="button" id="29">  <!-- OK -->
 					<width>500</width>
 					<include>SettingsBottomButton</include>
 					<label>186</label>
 				</control>
-				<control type="button" id="5">
-					<!-- Aplicar -->
+				<control type="button" id="5">  <!-- Apply -->
 					<width>500</width>
 					<include>SettingsBottomButton</include>
 					<label>14070</label>
 				</control>
-				<control type="button" id="6">
-					<!-- Cancelar -->
+				<control type="button" id="6">  <!-- Cancel -->
 					<width>500</width>
 					<include>SettingsBottomButton</include>
 					<label>222</label>

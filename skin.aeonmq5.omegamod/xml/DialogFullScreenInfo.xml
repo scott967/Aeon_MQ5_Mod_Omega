@@ -75,7 +75,7 @@
 				<visible>!String.IsEmpty(VideoPlayer.UserRating) + !VideoPlayer.Content(LiveTV)</visible>
 			</control>
 			<control type="image">
-				<!-- Scraped Star -->
+				<!-- Scraped or video set Star -->
 				<left>1768</left>
 				<top>15</top>
 				<width>110</width>
