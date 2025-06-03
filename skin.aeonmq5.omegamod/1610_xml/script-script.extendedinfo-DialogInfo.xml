@@ -12,7 +12,7 @@
 				<left>0</left>
 				<top>0</top>
 				<width>1920</width>
-				<height>1200</height>  <!-- 1610 -->
+				<height>1200</height>
 				<texture>black.png</texture>
 				<colordiffuse>D0FFFFFF</colordiffuse>
 				<include>Animation_Fade</include>
@@ -394,7 +394,7 @@
 												<top>10</top>
 												<width>224</width>
 												<height>325</height>
-												<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(poster]</texture>
+												<texture background="true" fallback="DefaultVideo.png">$INFO[ListItem.Art(poster)]</texture>
 												<aspectratio aligny="center">scale</aspectratio>
 												<fadetime>0</fadetime>
 												<visible>!String.IsEmpty(ListItem.DBID)</visible>
