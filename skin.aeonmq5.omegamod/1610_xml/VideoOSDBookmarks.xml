@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Aeon MQ 5 Helix 6.1.8 -->
 <!-- Aeon MQ 5 Isengard 7.1.8 -->
-<!-- Omega2 13.7.0 -->
 <window>
 	<defaultcontrol always="true">2</defaultcontrol>
 	<coordinates>
@@ -16,7 +15,6 @@
 			<height>1200</height>
 			<texture flipx="true">shadow.png</texture>
 			<colordiffuse>C3FFFFFF</colordiffuse>
-			<visible>![Player.Playing + VideoPlayer.IsFullscreen]</visible>
 		</control>
 		<control type="image">
 			<left>1710</left>
@@ -25,7 +23,6 @@
 			<height>1200</height>
 			<texture>shadow.png</texture>
 			<colordiffuse>C3FFFFFF</colordiffuse>
-			<visible>![Player.Playing + VideoPlayer.IsFullscreen]</visible>
 		</control>
 		<control type="image">
 			<left>210</left>
@@ -35,7 +32,6 @@
 			<texture>darkgrey.png</texture>
 			<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 			<include>Animation_DefaultGlass</include>
-			<visible>![Player.Playing + VideoPlayer.IsFullscreen]</visible>
 		</control>
 		<control type="image">
 			<left>210</left>
@@ -44,7 +40,6 @@
 			<height>120</height>
 			<texture>black.png</texture>
 			<colordiffuse>90FFFFFF</colordiffuse>
-			<visible>![Player.Playing + VideoPlayer.IsFullscreen]</visible>
 		</control>
 		<control type="label">
 			<left>322</left>
@@ -57,7 +52,6 @@
 			<align>center</align>
 			<aligny>center</aligny>
 			<include>Animation_Fade</include>
-			<visible>![Player.Playing + VideoPlayer.IsFullscreen]</visible>
 		</control>
 		<control type="panel" id="11">
 			<viewtype label="536">icon</viewtype>
@@ -72,7 +66,7 @@
 			<scrolltime>200</scrolltime>
 			<pagecontrol>80</pagecontrol>
 			<orientation>vertical</orientation>
-			<itemlayout height="322" width="375" condition="![Player.Playing + VideoPlayer.IsFullscreen]">
+			<itemlayout height="322" width="375">
 				<control type="image">
 					<left>3</left>
 					<top>3</top>
@@ -101,36 +95,7 @@
 					<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, (,)]</label>
 				</control>
 			</itemlayout>
-			<itemlayout height="216" width="249" condition="[Player.Playing + VideoPlayer.IsFullscreen]">
-				<control type="image">
-					<left>3</left>
-					<top>3</top>
-					<width>243</width>
-					<height>210</height>
-					<texture border="2">black.png</texture>
-					<colordiffuse>C3FFFFFF</colordiffuse>
-				</control>
-				<control type="image">
-					<left>6</left>
-					<top>6</top>
-					<width>234</width>
-					<height>165</height>
-					<aspectratio>scale</aspectratio>
-					<info>ListItem.Icon</info>
-				</control>
-				<control type="label">
-					<left>0</left>
-					<top>186</top>
-					<width>225</width>
-					<height>15</height>
-					<font>Font_14</font>
-					<include>listcolor</include>
-					<align>center</align>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label]</label>
-				</control>
-			</itemlayout>
-			<focusedlayout height="322" width="375" condition="![Player.Playing + VideoPlayer.IsFullscreen]">
+			<focusedlayout height="322" width="375">
 				<control type="image">
 					<left>3</left>
 					<top>3</top>
@@ -159,35 +124,6 @@
 					<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, (,)]</label>
 				</control>
 			</focusedlayout>
-			<focusedlayout height="216" width="249" condition="[Player.Playing + VideoPlayer.IsFullscreen]">
-				<control type="image">
-					<left>3</left>
-					<right>3</right>
-					<width>243</width>
-					<height>210</height>
-					<texture border="2">grey.png</texture>
-					<colordiffuse>90FFFFFF</colordiffuse>
-				</control>
-				<control type="image">
-					<left>6</left>
-					<right>6</right>
-					<width>234</width>
-					<height>165</height>
-					<aspectratio>scale</aspectratio>
-					<info>ListItem.Icon</info>
-				</control>
-				<control type="label">
-					<left>0</left>
-					<right>186</right>
-					<width>225</width>
-					<height>15</height>
-					<font>Font_14</font>
-					<include>listcolorfocus</include>
-					<align>center</align>
-					<aligny>center</aligny>
-					<label>$INFO[ListItem.Label]</label>
-				</control>
-			</focusedlayout>
 		</control>
 		<control type="image">
 			<left>210</left>
@@ -196,16 +132,6 @@
 			<height>60</height>
 			<texture>black.png</texture>
 			<colordiffuse>90FFFFFF</colordiffuse>
-			<visible>![Player.Playing + VideoPlayer.IsFullscreen]</visible>
-		</control>
-		<control type="image">
-			<left>210</left>
-			<top>952</top>
-			<width>750</width>
-			<height>45</height>
-			<texture>black.png</texture>
-			<colordiffuse>90FFFFFF</colordiffuse>
-			<visible>[Player.Playing + VideoPlayer.IsFullscreen]</visible>
 		</control>
 		<control type="grouplist" id="9000">
 			<left>210</left>
@@ -218,62 +144,24 @@
 			<onright>9000</onright>
 			<onup>11</onup>
 			<ondown>11</ondown>
-			<visible>![Player.Playing + VideoPlayer.IsFullscreen]</visible>
-			<control type="button" id="2">
-				<!-- Create Bookmark -->
-				<align>center</align>
-				<!-- <label>294</label> -->
-				<label>Create</label>
-				<width>525</width>
-			</control>
-			<control type="button" id="3">
-				<!-- Clear Bookmark -->
-				<description>Clear Bookmark button</description>
-				<align>center</align>
-				<!-- <label>296</label> -->
-				<label>Clear</label>
-				<width>525</width>
-			</control>
-			<control type="button" id="4">
-				<align>center</align>
-				<label>20406</label>
-				<width>500</width>
-				<visible>VideoPlayer.Content(episodes)</visible>
-			</control>
-		</control>
-		<control type="grouplist" id="9000">
-			<left>210</left>
-			<top>952</top>
-			<width>750</width>
-			<height>45</height>
-			<itemgap>0</itemgap>
-			<orientation>horizontal</orientation>
-			<onleft>9000</onleft>
-			<onright>9000</onright>
-			<onup>11</onup>
-			<ondown>11</ondown>
-			<visible>[Player.Playing + VideoPlayer.IsFullscreen]</visible>
 			<control type="button" id="2">
 				<!-- Create Bookmark -->
 				<align>center</align>
 				<label>294</label>
-				<width>249</width>
-				<font>Font_14</font>
+				<width>500</width>
 			</control>
 			<control type="button" id="3">
 				<!-- Clear Bookmark -->
 				<description>Clear Bookmark button</description>
 				<align>center</align>
 				<label>296</label>
-				<width>249</width>
-				<font>Font_14</font>
+				<width>500</width>
 			</control>
 			<control type="button" id="4">
 				<!-- Create Episode Bookmark -->
 				<align>center</align>
 				<label>20406</label>
-				<width>249</width>
-				<font>Font_14</font>
+				<width>500</width>
 				<visible>VideoPlayer.Content(episodes)</visible>
 			</control>
 		</control>
@@ -288,7 +176,7 @@
 			<visible allowhiddenfocus="true">Control.HasFocus(80)</visible>
 		</control>
 		<control type="label">
-			<left>1688</left>
+			<left>1238</left>
 			<top>885</top>
 			<width>450</width>
 			<height>52</height>
@@ -298,7 +186,6 @@
 			<scroll>true</scroll>
 			<textcolor>$VAR[value_headercolor]</textcolor>
 			<label>$INFO[Container(11).NumItems] $LOCALIZE[31210] - $LOCALIZE[31215] $INFO[Container(11).CurrentPage]/$INFO[Container(11).NumPages]</label>
-			<visible>![Player.Playing + VideoPlayer.IsFullscreen]</visible>
 		</control>
 	</controls>
 </window>
