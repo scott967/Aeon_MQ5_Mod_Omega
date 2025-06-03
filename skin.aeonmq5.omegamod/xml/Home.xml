@@ -1511,7 +1511,7 @@ Group 602: Widgets
 				<visible>Skin.HasSetting(touchscreen) + !Skin.HasSetting(submode)</visible>
 			</control>
 			<include>BGBlack</include>
-			<include>TrailerWindow</include>
+			<include>TrailerWindow</include>  <!-- group 608 -->
 		</control>
 	</controls>
 </window>

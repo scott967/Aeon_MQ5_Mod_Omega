@@ -108,7 +108,7 @@
 					<scroll>true</scroll>
 				</control>
 			</control>
-			<control type="group">  <!-- current EPG for selected channel furniture 1200 -->
+			<control type="group">  <!-- current EPG for selected channel furniture -->
 				<visible>Control.IsVisible(51)</visible>
 				<animation effect="slide" time="400" start="0,0" end="0,600" easing="in" tween="cubic" condition="Player.HasMedia + System.IdleTime(8) | Control.HasFocus(9920)">Conditional</animation>
 				<control type="image">

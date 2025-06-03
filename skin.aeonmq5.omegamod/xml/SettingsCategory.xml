@@ -13,14 +13,11 @@
 			<include>WindowBG</include>
 			<imagepath background="true">$VAR[value_menutheme_settings]</imagepath>
 		</control>
-		<control type="group">
-			<!-- default group -->
+		<control type="group">  <!-- default group -->
 			<include>Animation_Window</include>
-			<include>SettingsBack</include>
-			<!-- Menu da direita -->
+			<include>SettingsBack</include>  <!-- Right Menu Background images -->
 			<visible>!Window.IsActive(PVRChannelManager)</visible>
-			<!-- Heading label supplied by window -->
-			<control type="label" id="2">
+			<control type="label" id="2">  <!-- Heading label supplied by core -->
 				<include>SettingsContentTitle</include>
 				<label></label>
 			</control>
@@ -33,16 +30,14 @@
 				<colordiffuse>$VAR[value_texturecolor]</colordiffuse>
 				<animation effect="fade" end="85" condition="true">Conditional</animation>
 			</control>
-			<control type="image">
-				<!-- Painel de info no rodape -->
+			<control type="image">  <!-- Info panel in the footer -->
 				<left>360</left>
 				<top>900</top>
 				<height>3</height>
 				<width>1560</width>
 				<texture>separator.png</texture>
 			</control>
-			<control type="textbox" id="6">
-			<!-- window template -->
+			<control type="textbox" id="6">  <!-- core template -->
 				<left>435</left>
 				<top>915</top>
 				<width>1410</width>
@@ -53,8 +48,7 @@
 				<textcolor>FFFFFAF0</textcolor>
 				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 			</control>
-			<control type="grouplist" id="5">
-			<!-- details of settings -->
+			<control type="grouplist" id="5">  <!-- settings details -->
 				<left>360</left>
 				<top>180</top>
 				<width>1560</width>
@@ -87,16 +81,13 @@
 				<animation effect="fade" time="200">Visible</animation>
 				<animation effect="fade" time="50">Hidden</animation>
 			</control>
-			<include>SettingsMenu</include>
-			<!-- Menu da esquerda -->
+			<include>SettingsMenu</include>  <!-- Left menu -->
 			<include>Date</include>
-			<control type="label">
-			<!-- OPTIONS -->
+			<control type="label">  <!-- OPTION labels -->
 				<include>SettingsSectionTitle</include>
 				<label>31202</label>
 			</control>
-			<control type="group">
-				<!-- Slide out menu settings level -->
+			<control type="group">  <!-- Slide out menu settings level -->
 				<left>-450</left>
 				<animation effect="slide" start="0,0" end="450,0" time="300" easing="out" tween="cubic" condition="ControlGroup(9900).HasFocus">Conditional</animation>
 				<control type="grouplist" id="9900">
@@ -111,15 +102,13 @@
 					<onup>9900</onup>
 					<ondown>9900</ondown>
 					<onback>3</onback>
-					<control type="button" id="20">
-						<!-- Setting level -->
+					<control type="button" id="20">  <!-- Setting level -->
 						<aligny>center</aligny>
 						<include>SettingsButton</include>
 						<label>10037</label>
 						<onclick>SettingsLevelChange</onclick>
 					</control>
-					<control type="button" id="21">
-						<!-- Reset level -->
+					<control type="button" id="21">  <!-- Reset level -->
 						<aligny>center</aligny>
 						<include>SettingsButton</include>
 						<label>10035</label>
@@ -127,8 +116,7 @@
 					</control>
 				</control>
 			</control>
-			<control type="grouplist" id="3">
-			<!-- options list -->
+			<control type="grouplist" id="3">  <!-- left options list -->
 				<left>0</left>
 				<top>180</top>
 				<width>360</width>
@@ -149,8 +137,7 @@
 				<texture>menu_glass.png</texture>
 				<colordiffuse>70FFFAF0</colordiffuse>
 			</control>
-			<control type="button" id="10">
-				<!-- Default category button-->
+			<control type="button" id="10">  <!-- Default category button-->
 				<include>SettingsButton2</include>
 				<onclick>SetFocus(800)</onclick>
 			</control>

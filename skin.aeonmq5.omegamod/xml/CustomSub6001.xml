@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Aeon MQ 5 -->
 <!-- Krypton 9.2.4 -->
-<window id="6001" type="dialog">
-	<!-- Filmes -->
+<window id="6001" type="dialog">  <!-- Movies -->
 	<defaultcontrol></defaultcontrol>
 	<include>SubMenuCommon</include>
 	<controls>
 		<control type="group">
 			<include condition="Window.IsVisible(6000)">MenuCustom</include>
-			<control type="group">
-				<!-- default group -->
+			<control type="group">	<!-- default group -->
 				<include>Animation_SubMenu</include>
 				<include condition="Window.IsVisible(6000)">SubmenuGoTo</include>
 				<include condition="Window.IsVisible(Home)">SubMenuDefault</include>

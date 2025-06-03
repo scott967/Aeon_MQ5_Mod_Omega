@@ -13,8 +13,7 @@
 <!--  Container FixedList 714 - musicdb artists for a genre or role -->
 
 	<include name="ViewMultiListAudio">
-		<control type="group">
-			<!-- default group -->
+		<control type="group">	<!-- default group -->
 			<animation effect="fade" time="400">VisibleChange</animation>
 			<visible>Control.IsVisible(71)</visible>
 			<control type="list" id="7100">  <!-- invisible list to get album art for musicvideos -->
