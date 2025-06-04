@@ -67,8 +67,9 @@
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
 		</assets>
-		<news>[B][COLOR=FFFF8C00]BUILD 13.8.2 - RELEASE DATE 2025-05-31 for Kodi OMEGA 21.0 release[/COLOR][/B]
-This is a MOD of Aeon MQ5 by user scott967.  Compatible with Kodi Omega release 21.0 RC1 and later. 
+		<news>[B][COLOR=FFFF8C00]BUILD 13.8.2 - RELEASE DATE 2025-05-31 for Kodi OMEGA 21.0+ release[/COLOR][/B]
+This is a MOD of Aeon MQ5 by user scott967.  Compatible with Kodi Omega release 21.0 and later.   
+Now providing layout for 16:10 aspect displays
 		</news>
 	</extension>
 
