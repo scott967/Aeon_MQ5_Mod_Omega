@@ -31,8 +31,7 @@
 		<include>Animation_ViewsCDart</include>
 	</include>
 	<include name="ViewRightList">  <!-- top of list is posy 45 -->
-		<control type="group">
-			<!-- default group -->
+		<control type="group">	<!-- default group -->
 			<animation effect="fade" time="400">VisibleChange</animation>
 			<visible>Control.IsVisible(59)</visible>
 			<control type="button" id="9915">
@@ -43,7 +42,7 @@
 				<onright>9920</onright>
 			</control>
 			<control type="group">  <!-- posx 0 posy 45 1200 -->
-				<top>120</top>  <!-- 1200 -->
+				<top>50</top> <!-- 1200 -->
 				<animation effect="slide" time="500" start="0,600" end="0,0" tween="cubic" easing="out">WindowOpen</animation>
 				<animation effect="slide" time="500" start="0,600" end="0,0" tween="cubic" easing="out">Visible</animation>
 				<animation effect="fade" time="200" start="100" end="0">Hidden</animation>
@@ -136,7 +135,7 @@
 				<control type="label">
 					<!-- Year/title (video) Now Playing Artist (music) -->
 					<left>480</left>
-					<top>816</top>
+					<top>776</top>
 					<width>570</width>
 					<height>20</height>
 					<font>Font_22A</font>
@@ -148,7 +147,7 @@
 				</control>
 				<control type="grouplist">	<!-- Info panel for focus listitem or nowplaying in playlist windows -->
 					<left>480</left>
-					<top>858</top>  <!-- 903 -->
+					<top>818</top>  <!-- 903 -->
 					<orientation>vertical</orientation>
 					<itemgap>6</itemgap>
 					<visible>$EXP[HasDetailInfo]</visible>
@@ -642,8 +641,7 @@
 					<label>$VAR[value_listinfofocus]</label>
 				</control>
 			</control>
-			<control type="group">  <!-- left 0 top 45 1200 -->
-				<!-- Default Group - Miniaturas -->
+			<control type="group">  <!--Default Group - Thumbnails  left 0 top 45 1200 -->
 				<left>45</left>
 				<!--<top>300</top>-->  <!-- 345 -->
 				<top>420</top>  <!-- 1200 -->
@@ -750,6 +748,7 @@
 					</control>
 				</control>
 				<control type="group">	<!-- VIDEO no case -->
+					<top>-120</top>
 					<include>Animation_Fade</include>
 					<visible>![!Skin.HasSetting(norightlistvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] | Window.IsActive(musicplaylist) | Window.IsActive(music)]</visible>
 					<control type="image">
@@ -800,6 +799,7 @@
 					</control>
 				</control>
 				<control type="group">	<!-- Video w case -->
+					<top>-120</top>
 					<include>Animation_Fade</include>
 					<visible>!Skin.HasSetting(norightlistvideocase) + [Container.Content(movies) | Container.Content(musicvideos) | Container.Content(sets)] + ![Window.IsActive(musicplaylist) | Window.IsActive(music)]</visible>
 					<control type="image">
@@ -872,7 +872,7 @@
 					<control type="image">
 						<!-- Musica -->
 						<left>-8</left>
-						<top>98</top>
+						<top>83</top>
 						<width>368</width>
 						<height>525</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
@@ -905,7 +905,7 @@
 					<control type="image">
 						<!-- Musica -->
 						<left>27</left>
-						<top>291</top>
+						<top>267</top>
 						<width>345</width>
 						<height>345</height>
 						<fadetime>FanartCrossFadeTime</fadetime>
@@ -915,7 +915,7 @@
 					<control type="image">
 						<!-- Estojo -->
 						<left>-30</left>
-						<top>285</top>
+						<top>261</top>
 						<width>417</width>
 						<height>364</height>
 						<texture>box/thumb_box_cd.png</texture>
