@@ -605,8 +605,7 @@
 					<label>$VAR[value_listinfofocus]</label>
 				</control>
 			</control>
-			<control type="group">
-				<!-- Default Group - Miniaturas -->
+			<control type="group">	<!-- Default Group - Miniaturas -->
 				<left>45</left>
 				<top>300</top>
 				<visible>Control.IsVisible(55)</visible>

@@ -321,7 +321,6 @@
 				<height>565</height>
 				<onleft condition="ControlGroup(200).HasFocus(201) | Integer.IsGreater(Container(51).NumItems,0)">100</onleft>
 				<onleft condition="ControlGroup(200).HasFocus(202) + Integer.IsEqual(Container(51).NumItems,0)">200</onleft>
-				<align>top</align>
 				<scrolltime tween="quadratic">200</scrolltime>
 				<include content="DefaultDialogButton">
 					<param name="id" value="21" />

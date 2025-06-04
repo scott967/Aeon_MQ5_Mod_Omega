@@ -86,8 +86,7 @@
 				<include>InvisibleButton</include>
 				<texture>$VAR[value_recordlabelsicon]</texture>
 			</control>
-			<control type="group">
-				<!-- default group -->
+			<control type="group">	<!-- default group -->
 				<include>Animation_Window</include>
 				<control type="button" id="9900">
 					<!-- to menu/kiosk condition -->
@@ -104,8 +103,7 @@
 					<onup>SetFocus(51)</onup>
 					<ondown>SetFocus(51)</ondown>
 				</control>
-				<control type="image" id="9921">
-					<!-- painel de info auto -->
+				<control type="image" id="9921">  <!-- info panel auto -->
 					<include>InvisibleButton</include>
 					<animation effect="fade" start="0" end="100" time="150" delay="1000" condition="String.Contains(skin.string(panel_seconds),1)">Visible</animation>
 					<animation effect="fade" start="0" end="100" time="150" delay="2000" condition="String.Contains(skin.string(panel_seconds),2)">Visible</animation>
@@ -114,12 +112,10 @@
 					<animation effect="fade" start="0" end="100" time="150" delay="5000" condition="String.Contains(skin.string(panel_seconds),5)">Visible</animation>
 					<visible>![Container.OnNext | Container.OnPrevious]</visible>
 				</control>
-				<control type="button" id="9922">
-					<!-- refresh das vistas -->
+				<control type="button" id="9922">  <!-- refresh view -->
 					<include>InvisibleButton</include>
 					<animation effect="fade" start="0" end="100" time="150" delay="3000">Hidden</animation>
-					<visible>Window.IsVisible(1103)</visible>
-					<!-- custom views music -->
+					<visible>Window.IsVisible(1103)</visible>  <!-- custom views music -->
 				</control>
 				<control type="group">
 					<animation effect="slide" time="400" start="0,-375" end="0,0" easing="inout" tween="cubic">WindowOpen</animation>
@@ -135,8 +131,7 @@
 						<texture flipy="true">shadow_mask.png</texture>
 						<colordiffuse>75000000</colordiffuse>
 					</control>
-					<control type="label">
-						<!-- Content set per view and listItem in focus -->
+					<control type="label">  <!-- Title Content set per view and listItem in focus -->
 						<left>45</left>
 						<top>27</top>
 						<width>1650</width>

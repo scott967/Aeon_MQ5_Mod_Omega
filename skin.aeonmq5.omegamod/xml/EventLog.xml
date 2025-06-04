@@ -244,8 +244,6 @@
 						<textureradioonnofocus>radiobutton_on.png</textureradioonnofocus>
 						<include>Animation_Fade</include>
 						<colordiffuse>FFFFFAF0</colordiffuse>
-						<left>15</left>
-						<top>150</top>
 						<width>240</width>
 						<font>Font_20</font>
 						<radioposx>165</radioposx>

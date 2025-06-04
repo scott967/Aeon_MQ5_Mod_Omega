@@ -2592,7 +2592,7 @@
 					<textcolor>FFFFFAF0</textcolor>
 					<label>[COLOR=$VAR[value_headercolor]]$LOCALIZE[21483] : [/COLOR]$INFO[Container.Viewmode]</label>
 					<scroll>true</scroll>
-					<visible>!String.Contains(skin.font,massive) + !Window.IsActive(LoginScreen)</visible>
+					<visible>![String.Contains(skin.font,massive) | String.Contains(skin.font,large)] + !Window.IsActive(LoginScreen)</visible>
 				</control>
 			</control>
 			<control type="label">  <!-- info for current view -->

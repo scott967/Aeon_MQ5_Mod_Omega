@@ -155,6 +155,7 @@
 				<animation effect="slide" start="0,0" end="0,334" time="0" condition="Container(52).Row(1)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,542" time="0" condition="Container(52).Row(2)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,748" time="0" condition="Container(52).Row(3)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,954" time="0" condition="Container(52).Row(4)">Conditional</animation>
 				<include>Banner_Plot</include>
 				<visible>!String.IsEqual(ListItem.Label,..)</visible>
 				<control type="image">

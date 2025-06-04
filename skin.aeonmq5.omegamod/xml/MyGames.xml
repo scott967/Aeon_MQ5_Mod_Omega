@@ -78,8 +78,7 @@
 					<shadowcolor>grey</shadowcolor>
 				</control>
 			</control>
-			<control type="group">
-				<!-- Grupo ocultar flags ou fanart -->
+			<control type="group">  <!-- Group Hide Flags or Fanart -->
 				<top>45</top>
 				<include>Animation_HiddenView</include>
 				<control type="group">

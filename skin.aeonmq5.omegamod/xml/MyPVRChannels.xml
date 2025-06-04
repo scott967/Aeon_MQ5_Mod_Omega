@@ -14,8 +14,7 @@
 			<include>WindowBG</include>
 			<imagepath background="true">$VAR[value_menutheme_livetv]</imagepath>
 		</control>
-		<control type="group">
-			<!-- Visualizacao de fundo background visualization -->
+		<control type="group">  <!-- background visualization -->
 			<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
 			<control type="image">
 				<left>0</left>
@@ -44,8 +43,7 @@
 				<animation effect="slide" start="0,0" end="-3000,0" time="0">WindowClose</animation>
 			</control>
 		</control>
-		<control type="group">
-			<!-- default group -->
+		<control type="group">  <!-- default group -->
 			<include>Animation_Window</include>
 			<visible>![Window.IsActive(PVRGuideInfo) | Window.IsActive(PVRRecordingInfo) | Window.IsActive(PVRGuideSearch) | Window.IsActive(PVRTimerSetting)]</visible>
 			<control type="button" id="9900">
@@ -63,7 +61,7 @@
 				<onup>SetFocus(51)</onup>
 				<ondown>SetFocus(51)</ondown>
 			</control>
-			<control type="group"> 			<!-- Recording/Time -->
+			<control type="group">  <!-- Recording/Time -->
 				<animation effect="slide" start="0,-105" end="0,0" time="500" delay="1000" easing="inout" tween="cubic">WindowOpen</animation>
 				<animation effect="slide" start="0,-105" end="0,0" time="500" delay="1000" easing="inout" tween="cubic">Visible</animation>
 				<animation effect="slide" start="0,0" end="0,-105" time="300" easing="inout" tween="cubic">WindowClose</animation>
@@ -110,7 +108,7 @@
 					<scroll>true</scroll>
 				</control>
 			</control>
-			<control type="group">	 		<!-- current EPG for selected channel furniture -->
+			<control type="group">  <!-- current EPG for selected channel furniture -->
 				<visible>Control.IsVisible(51)</visible>
 				<animation effect="slide" time="400" start="0,0" end="0,600" easing="in" tween="cubic" condition="Player.HasMedia + System.IdleTime(8) | Control.HasFocus(9920)">Conditional</animation>
 				<control type="image">
@@ -368,7 +366,7 @@
 					<visible>false</visible>
 				</control>
 			</control>
-			<control type="group">			<!-- ViewTypes 51 -->
+			<control type="group">  <!-- ViewTypes 51 -->
 				<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
 				<animation effect="slide" start="0,0" end="-480,0" time="300" easing="out" tween="cubic" condition="Player.HasVideo + System.IdleTime(8) | Control.HasFocus(9920)">Conditional</animation>
 				<visible>Control.IsVisible(51)</visible>

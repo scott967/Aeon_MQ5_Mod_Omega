@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Aeon MQ 5 -->
+<!--  Krypton 9.2.1 -->
+<!-- Nexus 12.5.0 -->
+<window>
+	<defaultcontrol>8</defaultcontrol>
+	<controls>
+		<control type="videowindow" id="20">
+			<description>videowindow</description>
+			<left>0</left>
+			<top>0</top>
+			<width>1920</width>
+			<height>1200</height>  <!-- 1200 -->
+		</control>
+		<control type="mover" id="8">
+			<description>top left mover</description>
+			<left>0</left>
+			<top>0</top>
+			<width>192</width>
+			<height>192</height>
+			<movingspeed acceleration="180" maxvelocity="300" resettimeout="200" delta="1">
+				<eventconfig type="up" />
+				<eventconfig type="down" />
+				<eventconfig type="left" />
+				<eventconfig type="right" />
+			</movingspeed>
+			<texturefocus>calibrate_topleft_focus.png</texturefocus>
+			<texturenofocus>calibrate_topleft.png</texturenofocus>
+		</control>
+		<control type="mover" id="9">
+			<description>right bottom mover</description>
+			<left>1050</left>
+			<top>750</top>
+			<width>192</width>
+			<height>192</height>
+			<movingspeed acceleration="180" maxvelocity="300" resettimeout="200" delta="1">
+				<eventconfig type="up" />
+				<eventconfig type="down" />
+				<eventconfig type="left" />
+				<eventconfig type="right" />
+			</movingspeed>
+			<texturefocus>calibrate_bottomright_focus.png</texturefocus>
+			<texturenofocus>calibrate_bottomright.png</texturenofocus>
+		</control>
+		<control type="mover" id="10">
+			<description>subtitle position mover</description>
+			<left>300</left>
+			<top>750</top>
+			<width>768</width>
+			<height>192</height>
+			<movingspeed acceleration="180" maxvelocity="300" resettimeout="200" delta="1">
+				<eventconfig type="up" />
+				<eventconfig type="down" />
+			</movingspeed>
+			<texturefocus>calibrate_subtitles_focusv2.png</texturefocus>
+			<texturenofocus>calibrate_subtitlesv2.png</texturenofocus>
+		</control>
+		<control type="resize" id="11">
+			<description>pixel aspect ratio box</description>
+			<left>0</left>
+			<top>405</top>
+			<width>432</width>
+			<height>432</height>
+			<movingspeed acceleration="140" maxvelocity="300" resettimeout="180" delta="1">
+				<eventconfig type="left" />
+				<eventconfig type="right" />
+			</movingspeed>
+			<texturefocus>calibrate_pixelratio_focus.png</texturefocus>
+			<texturenofocus>calibrate_pixelratio.png</texturenofocus>
+		</control>
+		<control type="resize" id="12">
+			<description>reset calibration</description>
+			<left>0</left>
+			<top>800</top>
+			<width>256</width>
+			<height>256</height>
+			<texturefocus>calibrate_reset_focus.png</texturefocus>
+			<texturenofocus>calibrate_reset.png</texturenofocus>
+		</control>
+		<control type="label">
+			<description>window title</description>
+			<left>0</left>
+			<top>30</top>
+			<width>100%</width>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>$LOCALIZE[214]</label>
+			<font>Font_32</font>
+		</control>
+		<control type="group">
+			<left>360</left>
+			<top>90</top>
+			<control type="label" id="2">
+				<description>resolution info</description>
+				<left>30</left>
+				<top>15</top>
+				<width>1125</width>
+				<label></label>
+				<font>Font_18A</font>
+				<align>center</align>
+			</control>
+			<control type="label" id="3">
+				<description>control description and help</description>
+				<left>30</left>
+				<top>60</top>
+				<width>1125</width>
+				<label></label>
+				<font>Font_18A</font>
+				<align>center</align>
+			</control>
+			<control type="label" id="4">
+				<description>calibration value</description>
+				<left>30</left>
+				<top>130</top>
+				<width>1125</width>
+				<align>center</align>
+				<label></label>
+				<font>Font_18A</font>
+			</control>
+		</control>
+	</controls>
+</window>

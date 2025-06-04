@@ -6,13 +6,12 @@
 <!-- Leia 10.2.5/10.3.0/10.4.0/10.5.2/10.6.0/10.6.1/10.6.2 -->
 <!-- Matrix 11.0.1/11.0.3/11.0.4/11.1.1/11.2.0 -->
 <!-- Nexus 12.3.0/12.5.0 -->
-<!-- Omega 13.7.0 versions -->
+<!-- Omega 13.7.0 versions/13.8.1 -->
 <window>
 	<onload>Control.SetFocus(50,0,absolute)</onload>
 	<onload>Control.SetFocus(149)</onload>
 	<controls>
-		<control type="group">
-			<!-- default group -->
+		<control type="group">  <!-- default group -->
 			<include>Animation_Window</include>
 			<!-- <animation effect="fade" start="100" end="0" time="300" condition="String.IsEqual(Window(home).Property(extendedinfo_running),true)">Conditional</animation> -->
 			<control type="group"><!-- folderarts check use extrafanart -->
@@ -316,7 +315,6 @@
 					<itemlayout height="30" condition="!Skin.HasSetting(Use_lang_flags)">
 						<control type="label">
 							<left>0</left>
-							<left>255</left>
 							<top>0</top>
 							<width>300</width>
 							<height>30</height>
@@ -345,7 +343,6 @@
 					<itemlayout height="30" condition="Skin.HasSetting(Use_lang_flags)">
 						<control type="label">
 							<left>0</left>
-							<left>255</left>
 							<top>0</top>
 							<width>300</width>
 							<height>30</height>
@@ -444,7 +441,6 @@
 					<focusedlayout height="30" condition="!Skin.HasSetting(Use_lang_flags)">
 						<control type="image">
 							<left>0</left>
-							<left>285</left>
 							<top>0</top>
 							<width>765</width>
 							<height>30</height>
@@ -453,7 +449,6 @@
 						</control>
 						<control type="label">
 							<left>0</left>
-							<left>255</left>
 							<top>0</top>
 							<width>300</width>
 							<height>30</height>
@@ -494,7 +489,6 @@
 					<focusedlayout height="30" condition="Skin.HasSetting(Use_lang_flags)">
 						<control type="image">
 							<left>0</left>
-							<left>285</left>
 							<top>0</top>
 							<width>765</width>
 							<height>30</height>
@@ -503,7 +497,6 @@
 						</control>
 						<control type="label">
 							<left>0</left>
-							<left>255</left>
 							<top>0</top>
 							<width>300</width>
 							<height>30</height>
@@ -830,8 +823,7 @@
 				<width>1920</width>
 				<texture>separator.png</texture>
 			</control>
-			<control type="image">
-				<!-- Fundo do rodape -->
+			<control type="image">  <!-- flag bar -->
 				<left>0</left>
 				<top>975</top>
 				<width>1920</width>
@@ -959,7 +951,6 @@
 				</control>
 			</control>
 			<control type="grouplist"> <!-- flags for container(50) movie in sets -->
-				<!-- Etiquetas -->
 				<left>165</left>
 				<top>1016</top>
 				<orientation>horizontal</orientation>
@@ -1058,8 +1049,7 @@
 					</control>
 				</control>
 			</control>
-			<control type="group">
-				<!-- Cast Name -->
+			<control type="group">	<!-- Cast Name -->
 				<left>0</left>
 				<top>1028</top>
 				<animation effect="slide" start="0,450" end="0,0" time="500" tween="sine" easing="out">WindowOpen</animation>
@@ -1075,7 +1065,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>Font_15</font>
-					<label>31703</label>
+					<label>$LOCALIZE[31703]</label>
 					<textcolor>$VAR[value_flagscolor]</textcolor>
 					<visible>![Container.Content(musicvideos) | Container.Content(sets)]</visible>
 				</control>
@@ -1087,7 +1077,7 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>Font_15</font>
-					<label>557</label>
+					<label>$LOCALIZE[557]</label>
 					<textcolor>$VAR[value_flagscolor]</textcolor>
 					<visible>Container.Content(musicvideos)</visible>
 				</control>
@@ -1107,6 +1097,7 @@
 					<left>472</left>
 					<top>0</top>
 					<width>975</width>
+					<height>40</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>Font_24A</font>
@@ -1123,7 +1114,7 @@
 				<texture>gradient_small.png</texture>
 			</control>
 			<control type="image">
-				<!-- Cast -->
+				<!-- Cast panel -->
 				<left>0</left>
 				<top>1018</top>
 				<width>1920</width>
@@ -1251,7 +1242,6 @@
 						</control>
 						<control type="label">
 							<left>0</left>
-							<left>10</left>
 							<top>1</top>
 							<height>38</height>
 							<width>254</width>
@@ -1384,13 +1374,13 @@
 							<visible>System.AddonIsEnabled(script.libraryeditor)</visible>
 						</item>
 						<item id="9">
-							<!-- actor bio -->
+							<!-- extended actor info -->
 							<label>31798</label>
 							<onclick>RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[Container(50).ListItem.Label])</onclick>
 							<visible>System.AddonIsEnabled(script.extendedinfo) + !Container.Content(sets) + !Container.Content(musicvideos)</visible>
 						</item>
 						<item id="991">
-							<!-- mv artist bio -->
+							<!-- extended mv artist info -->
 							<label>31798</label>
 							<onclick>RunScript(script.extendedinfo,info=artistdetails,artistname=$INFO[Container(50).ListItem.Label])</onclick>
 							<visible>System.AddonIsEnabled(script.extendedinfo) + Container.Content(musicvideos)</visible>

@@ -8,7 +8,7 @@
 		<system>1</system>
 	</coordinates>
 	<controls>
-		<control type="group">
+		<control type="group">  <!-- default -->
 			<visible>!Window.IsVisible(pvrgroupmanager)</visible>
 			<include>Animation_DialogPopup</include>
 			<control type="image">
@@ -429,7 +429,7 @@
 				<textcolor>$VAR[value_headercolor]</textcolor>
 				<label>$INFO[Container(20).NumItems] $LOCALIZE[19019] - $LOCALIZE[31757] $INFO[Container(20).CurrentPage]/$INFO[Container(20).NumPages]</label>
 			</control>
-			<control type="group" id="9002">
+			<control type="group" id="9002">  <!-- right options -->
 				<control type="group">
 					<left>960</left>
 					<top>150</top>
@@ -443,8 +443,7 @@
 						<textcolor>$VAR[value_headercolor]</textcolor>
 						<label>$LOCALIZE[31763] - $LOCALIZE[31011]</label>
 					</control>
-					<control type="radiobutton" id="7">
-						<!-- Channel activated -->
+					<control type="radiobutton" id="7">  <!-- Channel activated -->
 						<textoffsetx>60</textoffsetx>
 						<include>PVRSearchButton</include>
 						<left>0</left>
@@ -456,8 +455,7 @@
 						<onup>9000</onup>
 						<ondown>8</ondown>
 					</control>
-					<control type="edit" id="8">
-						<!-- Channel name -->
+					<control type="edit" id="8">  <!-- Channel name -->
 						<textoffsetx>60</textoffsetx>
 						<include>PVRSearchButton</include>
 						<left>0</left>
@@ -469,8 +467,7 @@
 						<onup>7</onup>
 						<ondown>9</ondown>
 					</control>
-					<control type="button" id="9">
-						<!-- Channel logo -->
+					<control type="button" id="9">  <!-- Channel name -->
 						<textoffsetx>60</textoffsetx>
 						<include>PVRSearchButton</include>
 						<left>0</left>
@@ -508,8 +505,7 @@
 						<texture fallback="DefaultRadio.png" background="true">$INFO[ListItem.Property(Icon)]</texture>
 						<visible>!String.IsEmpty(Window.Property(IsRadio))</visible>
 					</control>
-					<control type="radiobutton" id="12">
-						<!-- EPG activated -->
+					<control type="radiobutton" id="12">  <!-- EPG activated -->
 						<textoffsetx>60</textoffsetx>
 						<include>PVRSearchButton</include>
 						<left>0</left>
@@ -520,8 +516,7 @@
 						<onup>9</onup>
 						<ondown>13</ondown>
 					</control>
-					<control type="spincontrolex" id="13">
-						<!-- EPG source -->
+					<control type="spincontrolex" id="13">  <!-- EPG source -->
 						<textoffsetx>60</textoffsetx>
 						<include>PVRSearchButton</include>
 						<left>0</left>
@@ -532,8 +527,7 @@
 						<onup>12</onup>
 						<ondown>14</ondown>
 					</control>
-					<control type="radiobutton" id="14">
-						<!-- Parental Control -->
+					<control type="radiobutton" id="14">  <!-- Parental Control -->
 						<textoffsetx>60</textoffsetx>
 						<include>PVRSearchButton</include>
 						<left>0</left>
@@ -545,7 +539,7 @@
 						<ondown>30</ondown>
 					</control>
 				</control>
-				<control type="group">
+				<control type="group">  <!-- general settings -->
 					<left>960</left>
 					<top>480</top>
 					<control type="label">
@@ -558,8 +552,7 @@
 						<textcolor>$VAR[value_headercolor]</textcolor>
 						<label>$LOCALIZE[31375]</label>
 					</control>
-					<control type="button" id="30">
-						<!-- Group Manager -->
+					<control type="button" id="30">  <!-- Group Manager -->
 						<textoffsetx>60</textoffsetx>
 						<include>PVRSearchButton</include>
 						<left>0</left>
@@ -570,8 +563,7 @@
 						<onup>14</onup>
 						<ondown>34</ondown>
 					</control>
-					<control type="togglebutton" id="34">
-						<!-- TV/Radio -->
+					<control type="togglebutton" id="34">  <!-- TV/Radio -->
 						<textoffsetx>60</textoffsetx>
 						<include>PVRSearchButton</include>
 						<left>0</left>
@@ -584,8 +576,7 @@
 						<onup>30</onup>
 						<ondown>31</ondown>
 					</control>
-					<control type="button" id="31">
-						<!-- New channel -->
+					<control type="button" id="31">  <!-- New channel -->
 						<textoffsetx>60</textoffsetx>
 						<include>PVRSearchButton</include>
 						<left>0</left>
@@ -613,27 +604,24 @@
 				<texture>black.png</texture>
 				<colordiffuse>90FFFFFF</colordiffuse>
 			</control>
-			<control type="grouplist" id="9000">
+			<control type="grouplist" id="9000">  <!-- OK/apply/cancel -->
 				<left>210</left>
 				<top>900</top>
 				<onup>9002</onup>
 				<ondown>9002</ondown>
 				<orientation>horizontal</orientation>
 				<itemgap>0</itemgap>
-				<control type="button" id="4">
-					<!-- OK -->
+				<control type="button" id="4">  <!-- OK -->
 					<width>500</width>
 					<include>SettingsBottomButton</include>
 					<label>186</label>
 				</control>
-				<control type="button" id="5">
-					<!-- Aplicar -->
+				<control type="button" id="5">  <!-- Apply now -->
 					<width>500</width>
 					<include>SettingsBottomButton</include>
 					<label>14070</label>
 				</control>
-				<control type="button" id="6">
-					<!-- Cancelar -->
+				<control type="button" id="6">  <!-- Cancel -->
 					<width>500</width>
 					<include>SettingsBottomButton</include>
 					<label>222</label>

@@ -64,8 +64,7 @@
 		<include>Animation_ViewsCDart</include>
 	</include>
 	<include name="ViewWide">
-		<control type="group">
-			<!-- default group -->
+		<control type="group">  <!-- default group -->
 			<animation effect="fade" time="400">VisibleChange</animation>
 			<visible>Control.IsVisible(51)</visible>
 			<control type="group">
@@ -637,8 +636,7 @@
 					<label>$VAR[value_listinfofocus]</label>
 				</control>
 			</control>
-			<control type="group">
-<!-- Right side group +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+			<control type="group">  <!-- Right side group +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 				<left>960</left>
 				<top>0</top>
 				<animation effect="slide" time="1000" start="900,0" end="0,0" tween="cubic" easing="out">WindowOpen</animation>
@@ -1107,12 +1105,12 @@
 					<left>15</left>
 					<top>860</top>
 					<width>930</width>
-					<height>1</height>
+					<height>2</height>
 					<texture>line.png</texture>
 					<visible>![String.IsEmpty(Control.GetLabel(1018)) + String.IsEmpty(ListItem.Property(AudioLanguage.1)) + String.IsEmpty(ListItem.Property(SubtitleLanguage.1))] + Window.IsActive(videos) | !String.IsEmpty(Control.GetLabel(1017)) + [Window.IsActive(musicplaylist) | Window.IsActive(music)]</visible>
 				</control>
 				<control type="image" id="1017">
-					<!-- Music artist clearlogo -->
+					<!-- Music artist clearlogo for album/song -->
 					<left>630</left>
 					<top>867</top>
 					<width>300</width>
@@ -1160,8 +1158,7 @@
 				</control>
 			</control>
 <!-- End right side group ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-			<control type="group">
-<!--  right slide out panel B562 controlled ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+			<control type="group">  <!--  right slide out panel B562 controlled ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 				<top>15</top>
 				<animation effect="slide" start="1050,0" end="0,0" time="400" easing="inout" tween="cubic">Visible</animation>
 				<animation effect="slide" start="0,0" end="1050,0" time="400" easing="inout" tween="cubic">Hidden</animation>
@@ -1169,7 +1166,7 @@
 				<control type="image">
 					<left>975</left>
 					<top>420</top>
-					<height>1</height>
+					<height>2</height>
 					<width>930</width>
 					<texture>line.png</texture>
 				</control>

@@ -4,6 +4,7 @@
 <!-- Leia 10.3.0 -->
 <!-- Matrix 11.1.1 -->
 <window>
+	<menucontrol>9000</menucontrol>
 	<defaultcontrol always="true">50</defaultcontrol>
 	<onunload condition="Skin.HasSetting(kioskcode)">Skin.Reset($INFO[skin.string(custom_code)])</onunload>
 	<views>50</views>
@@ -13,8 +14,7 @@
 			<include>WindowBG</include>
 			<imagepath background="true">$VAR[value_menutheme_livetv]</imagepath>
 		</control>
-		<control type="group">
-			<!-- Visualizacao de fundo (visualization background) -->
+		<control type="group">  <!-- visualization background -->
 			<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
 			<control type="image">
 				<left>0</left>
@@ -43,8 +43,7 @@
 				<animation effect="slide" start="0,0" end="-3000,0" time="0">WindowClose</animation>
 			</control>
 		</control>
-		<control type="group">
-			<!-- default group -->
+		<control type="group">  <!-- default group -->
 			<include>Animation_Window</include>
 			<visible>![Window.IsActive(PVRGuideInfo) | Window.IsActive(PVRRecordingInfo) | Window.IsActive(PVRGuideSearch) | Window.IsActive(PVRTimerSetting)]</visible>
 			<control type="button" id="9900">
@@ -62,8 +61,7 @@
 				<onup>SetFocus(11)</onup>
 				<ondown>SetFocus(11)</ondown>
 			</control>
-			<!-- Recording/Time -->
-			<control type="group">
+			<control type="group">  <!-- Recording/Time -->
 				<animation effect="slide" start="0,-105" end="0,0" time="500" delay="1000" easing="inout" tween="cubic">WindowOpen</animation>
 				<animation effect="slide" start="0,-105" end="0,0" time="500" delay="1000" easing="inout" tween="cubic">Visible</animation>
 				<animation effect="slide" start="0,0" end="0,-105" time="300" easing="inout" tween="cubic">WindowClose</animation>
@@ -110,8 +108,7 @@
 					<scroll>true</scroll>
 				</control>
 			</control>
-			<control type="group">
-				<!-- Mobilia (furniture) -->
+			<control type="group">  <!-- furniture -->
 				<visible>Control.IsVisible(11) | Control.IsVisible(12)</visible>
 				<animation effect="slide" time="400" start="0,0" end="0,600" easing="in" tween="cubic" condition="Player.HasMedia + System.IdleTime(8) | Control.HasFocus(9920)">Conditional</animation>
 				<control type="image">
@@ -161,8 +158,7 @@
 					<aspectratio>keep</aspectratio>
 					<visible>Control.IsVisible(12)</visible>
 				</control>
-				<control type="label">
-					<!-- Nome do canal -->
+				<control type="label">  <!-- Channel -->
 					<left>922</left>
 					<top>630</top>
 					<width>938</width>
@@ -172,8 +168,7 @@
 					<label>$INFO[ListItem.Label]</label>
 					<scroll>true</scroll>
 				</control>
-				<control type="label">
-					<!-- Nome do programa -->
+				<control type="label">  <!-- program title -->
 					<left>922</left>
 					<top>668</top>
 					<width>938</width>
@@ -191,8 +186,7 @@
 					<align>left</align>
 					<texture flipx="true">divider.png</texture>
 				</control>
-				<control type="label">
-					<!-- Genero -->
+				<control type="label">  <!-- Genres -->
 					<left>922</left>
 					<top>705</top>
 					<width>938</width>
@@ -240,8 +234,7 @@
 					<autoscroll delay="15000" time="3000" repeat="15000">!Skin.HasSetting(noallowscroll)</autoscroll>
 					<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
 				</control>
-				<control type="group">
-					<!-- Controles -->
+				<control type="group">  <!-- Controls -->
 					<visible>Player.HasMedia</visible>
 					<animation effect="slide" start="1920,0" end="0,0" time="500" delay="1000" tween="sine" easing="out">WindowOpen</animation>
 					<animation effect="slide" start="1920,0" end="0,0" time="500" delay="1000" tween="sine" easing="out">Visible</animation>
@@ -387,7 +380,7 @@
 					<visible>false</visible>
 				</control>
 			</control>
-			<control type="group">			<!-- ViewTypes -->
+			<control type="group">  <!-- ViewType -->
 				<animation effect="fade" reversible="true" time="300">VisibleChange</animation>
 				<visible>Control.IsVisible(50)</visible>
 				<include>EPGMenu</include>

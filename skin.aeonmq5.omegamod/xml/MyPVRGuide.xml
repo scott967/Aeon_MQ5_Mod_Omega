@@ -69,7 +69,7 @@
 				<onfocus condition="Control.IsVisible(13) + !Pvr.IsPlayingTv">SetFocus(9900)</onfocus>
 				<onfocus condition="![Control.IsVisible(13) + !Pvr.IsPlayingTv]">SetFocus(50)</onfocus>
 			</control>
-			<control type="group">		<!-- Recording/Time -->
+			<control type="group">  <!-- Recording/Time -->
 				<animation effect="slide" start="0,-105" end="0,0" time="500" delay="1000" easing="inout" tween="cubic">WindowOpen</animation>
 				<animation effect="slide" start="0,-105" end="0,0" time="500" delay="1000" easing="inout" tween="cubic">Visible</animation>
 				<animation effect="slide" start="0,0" end="0,-105" time="300" easing="inout" tween="cubic">WindowClose</animation>
