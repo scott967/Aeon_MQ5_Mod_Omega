@@ -315,7 +315,6 @@
 					<itemlayout height="30" condition="!Skin.HasSetting(Use_lang_flags)">
 						<control type="label">
 							<left>0</left>
-							<left>255</left>
 							<top>0</top>
 							<width>300</width>
 							<height>30</height>
@@ -344,7 +343,6 @@
 					<itemlayout height="30" condition="Skin.HasSetting(Use_lang_flags)">
 						<control type="label">
 							<left>0</left>
-							<left>255</left>
 							<top>0</top>
 							<width>300</width>
 							<height>30</height>
@@ -443,7 +441,6 @@
 					<focusedlayout height="30" condition="!Skin.HasSetting(Use_lang_flags)">
 						<control type="image">
 							<left>0</left>
-							<left>285</left>
 							<top>0</top>
 							<width>765</width>
 							<height>30</height>
@@ -452,7 +449,6 @@
 						</control>
 						<control type="label">
 							<left>0</left>
-							<left>255</left>
 							<top>0</top>
 							<width>300</width>
 							<height>30</height>
@@ -493,7 +489,6 @@
 					<focusedlayout height="30" condition="Skin.HasSetting(Use_lang_flags)">
 						<control type="image">
 							<left>0</left>
-							<left>285</left>
 							<top>0</top>
 							<width>765</width>
 							<height>30</height>
@@ -502,7 +497,6 @@
 						</control>
 						<control type="label">
 							<left>0</left>
-							<left>255</left>
 							<top>0</top>
 							<width>300</width>
 							<height>30</height>
@@ -1248,7 +1242,6 @@
 						</control>
 						<control type="label">
 							<left>0</left>
-							<left>10</left>
 							<top>1</top>
 							<height>38</height>
 							<width>254</width>
