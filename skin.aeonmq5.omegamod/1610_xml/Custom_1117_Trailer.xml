@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Aeon MQ 5 Helix 6.1.0/6.1.3  -->
+<!-- Isengard 7.1.13 -->
+<!-- Jarvis 8.1.13 -->
+<!-- Krypton 9.2.4 -->
+<!-- Leia 10.3.0/10.5.2 -->
+<!-- Matrix 11.1.1 was window 639 11.3.0 -->
+<!-- Nexus 12.3.0/12.5.0 -->
+<window id="1117" type="dialog">
+	<!-- safe id -->
+	<defaultcontrol>9006</defaultcontrol>
+	<onunload>Skin.Reset(custom_trailer)</onunload>
+	<zorder>3</zorder>
+	<coordinates>
+		<system>1</system>
+		<left>0</left>
+		<top>0</top>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<left>615</left>
+			<top>180</top>
+			<include>Animation_DialogPopup</include>
+			<control type="image">
+				<left>0</left>
+				<top>45</top>
+				<width>681</width>
+				<height>58</height>
+				<texture>gradient_focus.png</texture>
+				<colordiffuse>$VAR[value_headercolor]</colordiffuse>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>681</width>
+				<height>75</height>
+				<texture>dialogs_context_nofocus.png</texture>
+				<colordiffuse>F9FFFFFF</colordiffuse>
+			</control>
+			<control type="label">
+				<left>120</left>
+				<top>7</top>
+				<width>450</width>
+				<height>60</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>31415</label>
+				<font>Font_20</font>
+				<textcolor>$VAR[value_headercolor]</textcolor>
+			</control>
+			<control type="grouplist" id="996">
+				<left>0</left>
+				<top>75</top>
+				<width>668</width>
+				<height max="1005">auto</height>
+				<itemgap>0</itemgap>
+				<control type="button" id="9006">
+					<include>DialogContext_Button</include>
+					<onleft>Dialog.Close(1117)</onleft>
+					<onright>Dialog.Close(1117)</onright>
+					<onclick>Dialog.Close(1117)</onclick>
+					<onclick>RunScript(service.skin.widgets,movieid=$INFO[skin.string(custom_id)])</onclick>
+					<label>31946</label>
+				</control>
+				<control type="button" id="9007">
+					<include>DialogContext_Button</include>
+					<onleft>Dialog.Close(1117)</onleft>
+					<onright>Dialog.Close(1117)</onright>
+					<onclick>Dialog.Close(1117)</onclick>
+					<onclick condition="!Skin.HasSetting(homefullscreentrailer)">SetFocus(9000)</onclick>
+					<onclick condition="!Skin.HasSetting(homefullscreentrailer)">PlayMedia($INFO[skin.string(custom_trailer)],1)</onclick>
+					<onclick condition="Skin.HasSetting(homefullscreentrailer)">PlayMedia($INFO[skin.string(custom_trailer)])</onclick>
+					<label>31945</label>
+					<visible>!String.IsEmpty(Skin.String(custom_trailer))</visible>
+				</control>
+				<control type="button" id="9008">
+					<include>DialogContext_Button</include>
+					<onleft>Dialog.Close(1117)</onleft>
+					<onright>Dialog.Close(1117)</onright>
+					<onclick>Dialog.Close(1117)</onclick>
+					<onclick>RunScript(script.cinema.experience,movieid=$INFO[skin.string(custom_id)])</onclick>
+					<label>31066</label>
+					<visible>System.AddonIsEnabled(script.cinema.experience)</visible>
+				</control>
+				<control type="button" id="9009">
+					<include>DialogContext_Button</include>
+					<onleft>Dialog.Close(1117)</onleft>
+					<onright>Dialog.Close(1117)</onright>
+					<onclick>Dialog.Close(1117)</onclick>
+					<onclick>RunScript(script.cinemavision,movieid=$INFO[skin.string(custom_id)])</onclick>
+					<label>$LOCALIZE[21480] $INFO[System.AddonTitle(script.cinemavision)</label>
+					<!-- <visible>System.HasAddon(script.cinemavision)</visible> -->
+					<visible>false</visible>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

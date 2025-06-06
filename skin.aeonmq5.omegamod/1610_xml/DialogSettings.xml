@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Aeon MQ5 Krypton 9.1.16/9.2.1 -->
+<window>
+	<include>Animation_DialogPopup</include>
+	<controls>
+		<control type="group">
+			<left>326</left>
+			<top>150</top>
+			<width>1270</width>
+			<height>780</height>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1270</width>
+				<height>1</height>
+				<texture>grey.png</texture>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>778</top>
+				<width>1270</width>
+				<height>1</height>
+				<texture>grey.png</texture>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1270</width>
+				<height>780</height>
+				<texture>darkgrey.png</texture>
+				<colordiffuse>F0FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<left>-45</left>
+				<top>0</top>
+				<width>45</width>
+				<height>780</height>
+				<texture flipx="true">shadow.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<left>748</left>
+				<top>0</top>
+				<width>45</width>
+				<height>780</height>
+				<texture>shadow.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1020</width>
+				<height>780</height>
+				<texture>black.png</texture>
+				<colordiffuse>90FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1020</width>
+				<height>48</height>
+				<texture>black.png</texture>
+				<colordiffuse>90FFFFFF</colordiffuse>
+			</control>
+			<control type="label" id="2">
+				<!-- header set by Kodi-->
+				<left>45</left>
+				<top>0</top>
+				<width>1020</width>
+				<height>48</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>$VAR[value_headercolor]</textcolor>
+				<font>Font_18</font>
+				<label></label>
+			</control>
+			<!-- Content List defaults for Kodi  -->
+			<control type="grouplist" id="5">
+				<description>control area</description>
+				<left>0</left>
+				<top>50</top>
+				<width>1020</width>
+				<height>730</height>
+				<itemgap>0</itemgap>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<visible>!Window.IsVisible(selectdialog)</visible>
+			</control>
+			<control type="button" id="7">
+				<width>1020</width>
+				<textoffsetx>30</textoffsetx>
+			</control>
+			<control type="radiobutton" id="8">
+				<width>870</width>
+				<textoffsetx>30</textoffsetx>
+				<textwidth>810</textwidth>
+				<radioposx>870</radioposx>
+			</control>
+			<control type="spincontrolex" id="9">
+				<width>870</width>
+				<textoffsetx>30</textoffsetx>
+				<spinposx>40</spinposx>
+			</control>
+			<control type="edit" id="12">
+				<width>1020</width>
+				<textoffsetx>30</textoffsetx>
+				<texturefocus>settings_button_focus.png</texturefocus>
+			</control>
+			<control type="sliderex" id="13">
+				<width>1020</width>
+				<textoffsetx>30</textoffsetx>
+			</control>
+			<control type="label" id="14">
+				<width>720</width>
+				<height>60</height>
+				<aligny>center</aligny>
+				<textoffsetx>30</textoffsetx>
+				<textcolor>$VAR[value_headercolor]</textcolor>
+			</control>
+			<control type="image">
+				<left>1269</left>
+				<top>0</top>
+				<width>45</width>
+				<height>780</height>
+				<texture>shadow.png</texture>
+				<colordiffuse>C3FFFFFF</colordiffuse>
+			</control>
+			<control type="image">
+				<left>1020</left>
+				<top>0</top>
+				<width>244</width>
+				<height>780</height>
+				<texture>grey.png</texture>
+				<colordiffuse>90FFFFFF</colordiffuse>
+			</control>
+			<control type="grouplist" id="9000">
+				<left>1020</left>
+				<top>63</top>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<visible>!Window.IsVisible(selectdialog)</visible>
+				<control type="button" id="28">
+					<!-- OK -->
+					<include>SettingsDialogButton</include>
+					<label></label>
+					<onleft>5</onleft>
+					<onright>5</onright>
+				</control>
+				<control type="button" id="29">
+					<!-- Cancel -->
+					<include>SettingsDialogButton</include>
+					<label></label>
+					<onleft>5</onleft>
+					<onright>5</onright>
+				</control>
+				<control type="button" id="30">
+					<!-- Clear/Settings -->
+					<include>SettingsDialogButton</include>
+					<label></label>
+					<onleft>5</onleft>
+					<onright>5</onright>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>
