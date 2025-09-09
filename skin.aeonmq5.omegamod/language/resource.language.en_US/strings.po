@@ -379,7 +379,7 @@ msgstr "CANCEL TIMER"
 
 msgctxt "#31057"
 msgid "SHUTDOWN"
-msgstr "EXIT"
+msgstr "SHUTDOWN"
 
 msgctxt "#31058"
 msgid "TURN OFF"
@@ -728,7 +728,7 @@ msgstr "SHUTDOWN OPTIONS"
 
 msgctxt "#31144"
 msgid "SHUTDOWN"
-msgstr "EXIT"
+msgstr "SHUTDOWN"
 
 msgctxt "#31145"
 msgid "Shutdown"
